@@ -1,0 +1,5007 @@
+﻿window.BUILD_SNAPSHOT = {
+    "snapshotDate":  "2026-08-22",
+    "source":  "Akasha",
+    "profileUrl":  "https://akasha.cv/profile/602235955?build=e3aa70f5616584cbaacbcfd6b7e4b3ab",
+    "endpoints":  [
+                      "https://akasha.cv/api/getCalculationsForUser/602235955",
+                      "https://akasha.cv/api/artifacts/602235955/{md5}"
+                  ],
+    "totalCharacters":  38,
+    "buildsFound":  26,
+    "buildsUnavailable":  12,
+    "builds":  {
+                   "mavuika":  {
+                                   "buildAvailable":  true,
+                                   "source":  "Akasha",
+                                   "snapshotDate":  "2026-08-22",
+                                   "sourceMd5":  "d5841bc3ea7831b2f3338c5eaf13d425",
+                                   "character":  {
+                                                     "name":  "Mavuika",
+                                                     "level":  null,
+                                                     "constellation":  0,
+                                                     "image":  "https://enka.network/ui/UI_AvatarIcon_Mavuika.png"
+                                                 },
+                                   "weapon":  {
+                                                  "name":  "Serpent Spine",
+                                                  "level":  90,
+                                                  "refinement":  1,
+                                                  "rarity":  4,
+                                                  "image":  "https://enka.network/ui/UI_EquipIcon_Claymore_Kione_Awaken.png"
+                                              },
+                                   "talents":  {
+                                                   "normal":  null,
+                                                   "skill":  null,
+                                                   "burst":  null
+                                               },
+                                   "stats":  {
+
+                                             },
+                                   "artifactSets":  [
+                                                        {
+                                                            "name":  "Obsidian Codex",
+                                                            "count":  4,
+                                                            "icon":  "UI_RelicIcon_15038_4"
+                                                        },
+                                                        {
+                                                            "name":  "Husk of Opulent Dreams",
+                                                            "count":  1,
+                                                            "icon":  "UI_RelicIcon_15021_3"
+                                                        }
+                                                    ],
+                                   "artifacts":  [
+                                                     {
+                                                         "slot":  "Flor",
+                                                         "setName":  "Obsidian Codex",
+                                                         "name":  "Reckoning of the Xenogenic",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15038_4.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Flat HP",
+                                                                          "value":  4780.0000004487
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "HP%",
+                                                                              "value":  5.830000417109538
+                                                                          },
+                                                                          {
+                                                                              "name":  "Energy Recharge",
+                                                                              "value":  11.010000558372546
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  13.989999966498424
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat ATK",
+                                                                              "value":  50.57000205087285
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Pena",
+                                                         "setName":  "Obsidian Codex",
+                                                         "name":  "Root of the Spirit-Marrow",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15038_2.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Flat ATK",
+                                                                          "value":  311.0000008635
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Flat HP",
+                                                                              "value":  239.0000008635
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  7.780000685878159
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  12.430000796146752
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat DEF",
+                                                                              "value":  55.55000200790918
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Areia",
+                                                         "setName":  "Obsidian Codex",
+                                                         "name":  "Myths of the Night Realm",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15038_5.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "ATK%",
+                                                                          "value":  46.6000006066
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  7.780000428978158
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  13.210000331822588
+                                                                          },
+                                                                          {
+                                                                              "name":  "DEF%",
+                                                                              "value":  21.140000085655405
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat ATK",
+                                                                              "value":  15.5600010262167
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Cálice",
+                                                         "setName":  "Obsidian Codex",
+                                                         "name":  "Pre-Banquet of the Contenders",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15038_1.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Pyro DMG Bonus",
+                                                                          "value":  46.6000006932
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  20.20000027894772
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat HP",
+                                                                              "value":  567.6300055760125
+                                                                          },
+                                                                          {
+                                                                              "name":  "DEF%",
+                                                                              "value":  13.850000448820957
+                                                                          },
+                                                                          {
+                                                                              "name":  "ATK%",
+                                                                              "value":  5.830000661609538
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Coroa",
+                                                         "setName":  "Husk of Opulent Dreams",
+                                                         "name":  "Skeletal Hat",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15021_3.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Crit DMG",
+                                                                          "value":  62.200000516
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "DEF%",
+                                                                              "value":  5.100000420632568
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat HP",
+                                                                              "value":  537.760010281625
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat ATK",
+                                                                              "value":  17.510000744881836
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  12.83000051421186
+                                                                          }
+                                                                      ]
+                                                     }
+                                                 ],
+                                   "availability":  {
+                                                        "character":  true,
+                                                        "weapon":  true,
+                                                        "talents":  false,
+                                                        "stats":  false,
+                                                        "artifacts":  true
+                                                    }
+                               },
+                   "citlali":  {
+                                   "buildAvailable":  false,
+                                   "source":  "Akasha",
+                                   "snapshotDate":  "2026-08-22",
+                                   "character":  {
+                                                     "name":  "Citlali"
+                                                 },
+                                   "unavailableReason":  "Build não disponível no perfil Akasha."
+                               },
+                   "xilonen":  {
+                                   "buildAvailable":  false,
+                                   "source":  "Akasha",
+                                   "snapshotDate":  "2026-08-22",
+                                   "character":  {
+                                                     "name":  "Xilonen"
+                                                 },
+                                   "unavailableReason":  "Build não disponível no perfil Akasha."
+                               },
+                   "bennett":  {
+                                   "buildAvailable":  false,
+                                   "source":  "Akasha",
+                                   "snapshotDate":  "2026-08-22",
+                                   "character":  {
+                                                     "name":  "Bennett"
+                                                 },
+                                   "unavailableReason":  "Build não disponível no perfil Akasha."
+                               },
+                   "arlecchino":  {
+                                      "buildAvailable":  true,
+                                      "source":  "Akasha",
+                                      "snapshotDate":  "2026-08-22",
+                                      "sourceMd5":  "e3aa70f5616584cbaacbcfd6b7e4b3ab",
+                                      "character":  {
+                                                        "name":  "Arlecchino",
+                                                        "level":  null,
+                                                        "constellation":  0,
+                                                        "image":  "https://enka.network/ui/UI_AvatarIcon_Arlecchino.png"
+                                                    },
+                                      "weapon":  {
+                                                     "name":  "Crimson Moon\u0027s Semblance",
+                                                     "level":  90,
+                                                     "refinement":  1,
+                                                     "rarity":  5,
+                                                     "image":  "https://enka.network/ui/UI_EquipIcon_Pole_BloodMoon_Awaken.png"
+                                                 },
+                                      "talents":  {
+                                                      "normal":  null,
+                                                      "skill":  null,
+                                                      "burst":  null
+                                                  },
+                                      "stats":  {
+
+                                                },
+                                      "artifactSets":  [
+                                                           {
+                                                               "name":  "Gladiator\u0027s Finale",
+                                                               "count":  4,
+                                                               "icon":  "UI_RelicIcon_15001_4"
+                                                           },
+                                                           {
+                                                               "name":  "Emblem of Severed Fate",
+                                                               "count":  1,
+                                                               "icon":  "UI_RelicIcon_15020_3"
+                                                           }
+                                                       ],
+                                      "artifacts":  [
+                                                        {
+                                                            "slot":  "Flor",
+                                                            "setName":  "Gladiator\u0027s Finale",
+                                                            "name":  "Gladiator\u0027s Nostalgia",
+                                                            "image":  "https://enka.network/ui/UI_RelicIcon_15001_4.png",
+                                                            "level":  20,
+                                                            "rarity":  5,
+                                                            "mainStat":  {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  4780.0000005438
+                                                                         },
+                                                            "substats":  [
+                                                                             {
+                                                                                 "name":  "Energy Recharge",
+                                                                                 "value":  11.660000853148107
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Crit RATE",
+                                                                                 "value":  11.670000277367238
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Crit DMG",
+                                                                                 "value":  13.980000264850263
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Elemental Mastery",
+                                                                                 "value":  18.650000162330272
+                                                                             }
+                                                                         ]
+                                                        },
+                                                        {
+                                                            "slot":  "Pena",
+                                                            "setName":  "Gladiator\u0027s Finale",
+                                                            "name":  "Gladiator\u0027s Destiny",
+                                                            "image":  "https://enka.network/ui/UI_RelicIcon_15001_2.png",
+                                                            "level":  20,
+                                                            "rarity":  5,
+                                                            "mainStat":  {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  311.0000001271
+                                                                         },
+                                                            "substats":  [
+                                                                             {
+                                                                                 "name":  "Elemental Mastery",
+                                                                                 "value":  41.95999921157266
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Crit RATE",
+                                                                                 "value":  13.609999917887697
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Crit DMG",
+                                                                                 "value":  6.989999987625131
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Flat DEF",
+                                                                                 "value":  16.200000890039455
+                                                                             }
+                                                                         ]
+                                                        },
+                                                        {
+                                                            "slot":  "Areia",
+                                                            "setName":  "Gladiator\u0027s Finale",
+                                                            "name":  "Gladiator\u0027s Longing",
+                                                            "image":  "https://enka.network/ui/UI_RelicIcon_15001_5.png",
+                                                            "level":  20,
+                                                            "rarity":  5,
+                                                            "mainStat":  {
+                                                                             "name":  "ATK%",
+                                                                             "value":  46.6000000815
+                                                                         },
+                                                            "substats":  [
+                                                                             {
+                                                                                 "name":  "Flat HP",
+                                                                                 "value":  209.1300049643125
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Elemental Mastery",
+                                                                                 "value":  23.309999547442384
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Crit DMG",
+                                                                                 "value":  19.429999671420045
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Crit RATE",
+                                                                                 "value":  10.890000022491401
+                                                                             }
+                                                                         ]
+                                                        },
+                                                        {
+                                                            "slot":  "Cálice",
+                                                            "setName":  "Gladiator\u0027s Finale",
+                                                            "name":  "Gladiator\u0027s Intoxication",
+                                                            "image":  "https://enka.network/ui/UI_RelicIcon_15001_1.png",
+                                                            "level":  20,
+                                                            "rarity":  5,
+                                                            "mainStat":  {
+                                                                             "name":  "ATK%",
+                                                                             "value":  46.6000009372
+                                                                         },
+                                                            "substats":  [
+                                                                             {
+                                                                                 "name":  "Flat HP",
+                                                                                 "value":  507.8800058200125
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Elemental Mastery",
+                                                                                 "value":  18.650000555730273
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Crit RATE",
+                                                                                 "value":  11.28000077447932
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Crit DMG",
+                                                                                 "value":  19.430000527120043
+                                                                             }
+                                                                         ]
+                                                        },
+                                                        {
+                                                            "slot":  "Coroa",
+                                                            "setName":  "Emblem of Severed Fate",
+                                                            "name":  "Ornate Kabuto",
+                                                            "image":  "https://enka.network/ui/UI_RelicIcon_15020_3.png",
+                                                            "level":  20,
+                                                            "rarity":  5,
+                                                            "mainStat":  {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  62.2000004653
+                                                                         },
+                                                            "substats":  [
+                                                                             {
+                                                                                 "name":  "Crit RATE",
+                                                                                 "value":  6.61000041254989
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Energy Recharge",
+                                                                                 "value":  18.140000570204176
+                                                                             },
+                                                                             {
+                                                                                 "name":  "ATK%",
+                                                                                 "value":  11.080000269796765
+                                                                             },
+                                                                             {
+                                                                                 "name":  "Flat HP",
+                                                                                 "value":  239.0000004653
+                                                                             }
+                                                                         ]
+                                                        }
+                                                    ],
+                                      "availability":  {
+                                                           "character":  true,
+                                                           "weapon":  true,
+                                                           "talents":  false,
+                                                           "stats":  false,
+                                                           "artifacts":  true
+                                                       }
+                                  },
+                   "fischl":  {
+                                  "buildAvailable":  true,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "sourceMd5":  "2b2d951f70c0ef909f9e7f6675bb0176",
+                                  "character":  {
+                                                    "name":  "Fischl",
+                                                    "level":  null,
+                                                    "constellation":  6,
+                                                    "image":  "https://enka.network/ui/UI_AvatarIcon_Fischl.png"
+                                                },
+                                  "weapon":  {
+                                                 "name":  "The Stringless",
+                                                 "level":  90,
+                                                 "refinement":  5,
+                                                 "rarity":  4,
+                                                 "image":  "https://enka.network/ui/UI_EquipIcon_Bow_Troupe_Awaken.png"
+                                             },
+                                  "talents":  {
+                                                  "normal":  null,
+                                                  "skill":  null,
+                                                  "burst":  null
+                                              },
+                                  "stats":  {
+
+                                            },
+                                  "artifactSets":  [
+                                                       {
+                                                           "name":  "Golden Troupe",
+                                                           "count":  4,
+                                                           "icon":  "UI_RelicIcon_15032_4"
+                                                       },
+                                                       {
+                                                           "name":  "Gladiator\u0027s Finale",
+                                                           "count":  1,
+                                                           "icon":  "UI_RelicIcon_15001_1"
+                                                       }
+                                                   ],
+                                  "artifacts":  [
+                                                    {
+                                                        "slot":  "Flor",
+                                                        "setName":  "Golden Troupe",
+                                                        "name":  "Golden Song\u0027s Variation",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15032_4.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat HP",
+                                                                         "value":  4780.0000006266
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  9.3300006099107
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  13.210000351822588
+                                                                         },
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  10.930000499642107
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  23.150000245130272
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Pena",
+                                                        "setName":  "Golden Troupe",
+                                                        "name":  "Golden Bird\u0027s Shedding",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15032_2.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat ATK",
+                                                                         "value":  311.0000002092
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  39.629999369966605
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  21.370000228869532
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  13.989999726998423
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  2.72000024526081
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Areia",
+                                                        "setName":  "Golden Troupe",
+                                                        "name":  "Golden Era\u0027s Prelude",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15032_5.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "ATK%",
+                                                                         "value":  46.600000433
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  46.299999670060544
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  7.780000255378159
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  20.979999811323555
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  268.8800053158125
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Cálice",
+                                                        "setName":  "Gladiator\u0027s Finale",
+                                                        "name":  "Gladiator\u0027s Intoxication",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15001_1.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Electro DMG Bonus",
+                                                                         "value":  46.600000052700004
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  10.49999991113897
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  15.539999358901936
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  46.61999898458477
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  39.35000043416973
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Coroa",
+                                                        "setName":  "Golden Troupe",
+                                                        "name":  "Golden Troupe\u0027s Reward",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15032_3.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Crit RATE",
+                                                                         "value":  31.100000028300002
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  43.97999957053633
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  58.279998807596876
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  11.660000337648107
+                                                                         },
+                                                                         {
+                                                                             "name":  "ATK%",
+                                                                             "value":  5.829999996709538
+                                                                         }
+                                                                     ]
+                                                    }
+                                                ],
+                                  "availability":  {
+                                                       "character":  true,
+                                                       "weapon":  true,
+                                                       "talents":  false,
+                                                       "stats":  false,
+                                                       "artifacts":  true
+                                                   }
+                              },
+                   "beidou":  {
+                                  "buildAvailable":  true,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "sourceMd5":  "cc2488e3588ee42aec864406ba90ff2f",
+                                  "character":  {
+                                                    "name":  "Beidou",
+                                                    "level":  null,
+                                                    "constellation":  6,
+                                                    "image":  "https://enka.network/ui/UI_AvatarIcon_Beidou.png"
+                                                },
+                                  "weapon":  {
+                                                 "name":  "Wolf\u0027s Gravestone",
+                                                 "level":  20,
+                                                 "refinement":  1,
+                                                 "rarity":  5,
+                                                 "image":  "https://enka.network/ui/UI_EquipIcon_Claymore_Wolfmound.png"
+                                             },
+                                  "talents":  {
+                                                  "normal":  null,
+                                                  "skill":  null,
+                                                  "burst":  null
+                                              },
+                                  "stats":  {
+
+                                            },
+                                  "artifactSets":  [
+                                                       {
+                                                           "name":  "Emblem of Severed Fate",
+                                                           "count":  4,
+                                                           "icon":  "UI_RelicIcon_15020_4"
+                                                       },
+                                                       {
+                                                           "name":  "Gladiator\u0027s Finale",
+                                                           "count":  1,
+                                                           "icon":  "UI_RelicIcon_15001_1"
+                                                       }
+                                                   ],
+                                  "artifacts":  [
+                                                    {
+                                                        "slot":  "Flor",
+                                                        "setName":  "Emblem of Severed Fate",
+                                                        "name":  "Magnificent Tsuba",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15020_4.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat HP",
+                                                                         "value":  4780.0000003616
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  11.010000471272546
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  6.220000226297456
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  11.660000298419076
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  46.29999959866055
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Pena",
+                                                        "setName":  "Emblem of Severed Fate",
+                                                        "name":  "Sundered Feather",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15020_2.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat ATK",
+                                                                         "value":  311.0000008885
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  14.580000335368897
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  3.500000903401161
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  19.430000478420045
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  60.18000119367578
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Areia",
+                                                        "setName":  "Emblem of Severed Fate",
+                                                        "name":  "Storm Cage",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15020_5.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "ATK%",
+                                                                         "value":  46.600000891
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  776.760010656625
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  39.6300000517666
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  13.990000408798423
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  11.010001000672546
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Cálice",
+                                                        "setName":  "Gladiator\u0027s Finale",
+                                                        "name":  "Gladiator\u0027s Intoxication",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15001_1.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Electro DMG Bonus",
+                                                                         "value":  46.6000004804
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  7.770000133500967
+                                                                         },
+                                                                         {
+                                                                             "name":  "HP%",
+                                                                             "value":  13.400000441656982
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  10.110000256286536
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  18.650000098930274
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Coroa",
+                                                        "setName":  "Emblem of Severed Fate",
+                                                        "name":  "Ornate Kabuto",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15020_3.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Crit RATE",
+                                                                         "value":  31.1000007694
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  52.53000145604551
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  7.770000422500967
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  16.200001532339453
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  53.61999970128477
+                                                                         }
+                                                                     ]
+                                                    }
+                                                ],
+                                  "availability":  {
+                                                       "character":  true,
+                                                       "weapon":  true,
+                                                       "talents":  false,
+                                                       "stats":  false,
+                                                       "artifacts":  true
+                                                   }
+                              },
+                   "chevreuse":  {
+                                     "buildAvailable":  false,
+                                     "source":  "Akasha",
+                                     "snapshotDate":  "2026-08-22",
+                                     "character":  {
+                                                       "name":  "Chevreuse"
+                                                   },
+                                     "unavailableReason":  "Build não disponível no perfil Akasha."
+                                 },
+                   "neuvillette":  {
+                                       "buildAvailable":  true,
+                                       "source":  "Akasha",
+                                       "snapshotDate":  "2026-08-22",
+                                       "sourceMd5":  "afd1198a1f6c3ecf017e9662fe34b126",
+                                       "character":  {
+                                                         "name":  "Neuvillette",
+                                                         "level":  null,
+                                                         "constellation":  0,
+                                                         "image":  "https://enka.network/ui/UI_AvatarIcon_Neuvillette.png"
+                                                     },
+                                       "weapon":  {
+                                                      "name":  "Tome of the Eternal Flow",
+                                                      "level":  90,
+                                                      "refinement":  1,
+                                                      "rarity":  5,
+                                                      "image":  "https://enka.network/ui/UI_EquipIcon_Catalyst_Iudex_Awaken.png"
+                                                  },
+                                       "talents":  {
+                                                       "normal":  null,
+                                                       "skill":  null,
+                                                       "burst":  null
+                                                   },
+                                       "stats":  {
+
+                                                 },
+                                       "artifactSets":  [
+                                                            {
+                                                                "name":  "Marechaussee Hunter",
+                                                                "count":  4,
+                                                                "icon":  "UI_RelicIcon_15031_4"
+                                                            },
+                                                            {
+                                                                "name":  "Shimenawa\u0027s Reminiscence",
+                                                                "count":  1,
+                                                                "icon":  "UI_RelicIcon_15019_5"
+                                                            }
+                                                        ],
+                                       "artifacts":  [
+                                                         {
+                                                             "slot":  "Flor",
+                                                             "setName":  "Marechaussee Hunter",
+                                                             "name":  "Hunter\u0027s Brooch",
+                                                             "image":  "https://enka.network/ui/UI_RelicIcon_15031_4.png",
+                                                             "level":  20,
+                                                             "rarity":  5,
+                                                             "mainStat":  {
+                                                                              "name":  "Flat HP",
+                                                                              "value":  4780.0000007239
+                                                                          },
+                                                             "substats":  [
+                                                                              {
+                                                                                  "name":  "HP%",
+                                                                                  "value":  5.830000692309539
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Crit DMG",
+                                                                                  "value":  24.860000589193504
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Elemental Mastery",
+                                                                                  "value":  39.6299998846666
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Energy Recharge",
+                                                                                  "value":  4.5300006654874485
+                                                                              }
+                                                                          ]
+                                                         },
+                                                         {
+                                                             "slot":  "Pena",
+                                                             "setName":  "Marechaussee Hunter",
+                                                             "name":  "Masterpiece\u0027s Overture",
+                                                             "image":  "https://enka.network/ui/UI_RelicIcon_15031_2.png",
+                                                             "level":  20,
+                                                             "rarity":  5,
+                                                             "mainStat":  {
+                                                                              "name":  "Flat ATK",
+                                                                              "value":  311.0000009379
+                                                                          },
+                                                             "substats":  [
+                                                                              {
+                                                                                  "name":  "Flat DEF",
+                                                                                  "value":  53.23000238748496
+                                                                              },
+                                                                              {
+                                                                                  "name":  "HP%",
+                                                                                  "value":  5.250000773987227
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Crit DMG",
+                                                                                  "value":  17.100000946840698
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Crit RATE",
+                                                                                  "value":  2.72000097396081
+                                                                              }
+                                                                          ]
+                                                         },
+                                                         {
+                                                             "slot":  "Areia",
+                                                             "setName":  "Shimenawa\u0027s Reminiscence",
+                                                             "name":  "Morning Dew\u0027s Moment",
+                                                             "image":  "https://enka.network/ui/UI_RelicIcon_15019_5.png",
+                                                             "level":  20,
+                                                             "rarity":  5,
+                                                             "mainStat":  {
+                                                                              "name":  "HP%",
+                                                                              "value":  46.600000593800004
+                                                                          },
+                                                             "substats":  [
+                                                                              {
+                                                                                  "name":  "Crit RATE",
+                                                                                  "value":  12.83000059201186
+                                                                              },
+                                                                              {
+                                                                                  "name":  "ATK%",
+                                                                                  "value":  5.250000429887227
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Flat DEF",
+                                                                                  "value":  37.04000150932735
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Flat ATK",
+                                                                                  "value":  13.620000479359081
+                                                                              }
+                                                                          ]
+                                                         },
+                                                         {
+                                                             "slot":  "Cálice",
+                                                             "setName":  "Marechaussee Hunter",
+                                                             "name":  "Forgotten Vessel",
+                                                             "image":  "https://enka.network/ui/UI_RelicIcon_15031_1.png",
+                                                             "level":  20,
+                                                             "rarity":  5,
+                                                             "mainStat":  {
+                                                                              "name":  "HP%",
+                                                                              "value":  46.6000006116
+                                                                          },
+                                                             "substats":  [
+                                                                              {
+                                                                                  "name":  "Flat ATK",
+                                                                                  "value":  13.620000497159083
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Crit RATE",
+                                                                                  "value":  9.3300005949107
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Flat DEF",
+                                                                                  "value":  78.71000160342129
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Crit DMG",
+                                                                                  "value":  6.220000476297456
+                                                                              }
+                                                                          ]
+                                                         },
+                                                         {
+                                                             "slot":  "Coroa",
+                                                             "setName":  "Marechaussee Hunter",
+                                                             "name":  "Veteran\u0027s Visage",
+                                                             "image":  "https://enka.network/ui/UI_RelicIcon_15031_3.png",
+                                                             "level":  20,
+                                                             "rarity":  5,
+                                                             "mainStat":  {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  31.100000938100003
+                                                                          },
+                                                             "substats":  [
+                                                                              {
+                                                                                  "name":  "HP%",
+                                                                                  "value":  15.740000649613519
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Flat DEF",
+                                                                                  "value":  20.830000861806056
+                                                                              },
+                                                                              {
+                                                                                  "name":  "Crit DMG",
+                                                                                  "value":  12.440000667494912
+                                                                              },
+                                                                              {
+                                                                                  "name":  "DEF%",
+                                                                                  "value":  16.760000779551646
+                                                                              }
+                                                                          ]
+                                                         }
+                                                     ],
+                                       "availability":  {
+                                                            "character":  true,
+                                                            "weapon":  true,
+                                                            "talents":  false,
+                                                            "stats":  false,
+                                                            "artifacts":  true
+                                                        }
+                                   },
+                   "furina":  {
+                                  "buildAvailable":  true,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "sourceMd5":  "b7796ea9bfc1087bb12d8781a90c0eeb",
+                                  "character":  {
+                                                    "name":  "Furina",
+                                                    "level":  null,
+                                                    "constellation":  0,
+                                                    "image":  "https://enka.network/ui/UI_AvatarIcon_Furina.png"
+                                                },
+                                  "weapon":  {
+                                                 "name":  "Festering Desire",
+                                                 "level":  90,
+                                                 "refinement":  5,
+                                                 "rarity":  4,
+                                                 "image":  "https://enka.network/ui/UI_EquipIcon_Sword_Magnum_Awaken.png"
+                                             },
+                                  "talents":  {
+                                                  "normal":  null,
+                                                  "skill":  null,
+                                                  "burst":  null
+                                              },
+                                  "stats":  {
+
+                                            },
+                                  "artifactSets":  [
+                                                       {
+                                                           "name":  "Golden Troupe",
+                                                           "count":  4,
+                                                           "icon":  "UI_RelicIcon_15032_4"
+                                                       },
+                                                       {
+                                                           "name":  "Emblem of Severed Fate",
+                                                           "count":  1,
+                                                           "icon":  "UI_RelicIcon_15020_3"
+                                                       }
+                                                   ],
+                                  "artifacts":  [
+                                                    {
+                                                        "slot":  "Flor",
+                                                        "setName":  "Golden Troupe",
+                                                        "name":  "Golden Song\u0027s Variation",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15032_4.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat HP",
+                                                                         "value":  4780.0000004688
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  5.830000437209538
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  18.650000266144207
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  5.830000437209538
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  41.67000054509395
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Pena",
+                                                        "setName":  "Golden Troupe",
+                                                        "name":  "Golden Bird\u0027s Shedding",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15032_2.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat ATK",
+                                                                         "value":  311.0000004521
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  18.140000929533205
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  10.11000041425105
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  507.8800053349125
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  5.44000052422162
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Areia",
+                                                        "setName":  "Golden Troupe",
+                                                        "name":  "Golden Era\u0027s Prelude",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15032_5.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "HP%",
+                                                                         "value":  46.6000006715
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  32.4000021973789
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  14.7600001851261
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  5.830000639909538
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  33.07000131999853
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Cálice",
+                                                        "setName":  "Golden Troupe",
+                                                        "name":  "Golden Night\u0027s Bustle",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15032_1.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "HP%",
+                                                                         "value":  46.6000006358
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  13.210000361022587
+                                                                         },
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  6.560000667986508
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  12.050000655171509
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  448.1300055186125
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Coroa",
+                                                        "setName":  "Emblem of Severed Fate",
+                                                        "name":  "Ornate Kabuto",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15020_3.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Crit DMG",
+                                                                         "value":  62.2000004737
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  657.260010239325
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  17.510000702581834
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  7.390000399790241
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  11.010000583372547
+                                                                         }
+                                                                     ]
+                                                    }
+                                                ],
+                                  "availability":  {
+                                                       "character":  true,
+                                                       "weapon":  true,
+                                                       "talents":  false,
+                                                       "stats":  false,
+                                                       "artifacts":  true
+                                                   }
+                              },
+                   "kazuha":  {
+                                  "buildAvailable":  true,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "sourceMd5":  "e4622b807381b9b439a29e6ea4522769",
+                                  "character":  {
+                                                    "name":  "Kaedehara Kazuha",
+                                                    "level":  null,
+                                                    "constellation":  0,
+                                                    "image":  "https://enka.network/ui/UI_AvatarIcon_Kazuha.png"
+                                                },
+                                  "weapon":  {
+                                                 "name":  "Iron Sting",
+                                                 "level":  90,
+                                                 "refinement":  4,
+                                                 "rarity":  4,
+                                                 "image":  "https://enka.network/ui/UI_EquipIcon_Sword_Exotic_Awaken.png"
+                                             },
+                                  "talents":  {
+                                                  "normal":  null,
+                                                  "skill":  null,
+                                                  "burst":  null
+                                              },
+                                  "stats":  {
+
+                                            },
+                                  "artifactSets":  [
+                                                       {
+                                                           "name":  "Viridescent Venerer",
+                                                           "count":  4,
+                                                           "icon":  "UI_RelicIcon_15002_4"
+                                                       },
+                                                       {
+                                                           "name":  "Deepwood Memories",
+                                                           "count":  1,
+                                                           "icon":  "UI_RelicIcon_15025_1"
+                                                       }
+                                                   ],
+                                  "artifacts":  [
+                                                    {
+                                                        "slot":  "Flor",
+                                                        "setName":  "Viridescent Venerer",
+                                                        "name":  "In Remembrance of Viridescent Fields",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15002_4.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat HP",
+                                                                         "value":  4780.0000002807
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  6.220000331661971
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  11.010000390372547
+                                                                         },
+                                                                         {
+                                                                             "name":  "ATK%",
+                                                                             "value":  10.499999952874454
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  41.959999365172656
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Pena",
+                                                        "setName":  "Viridescent Venerer",
+                                                        "name":  "Viridescent Arrow Feather",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15002_2.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat ATK",
+                                                                         "value":  311.0000007607
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  5.100000665332568
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  298.7500007607
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  10.890000701691402
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  26.420000211145176
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Areia",
+                                                        "setName":  "Viridescent Venerer",
+                                                        "name":  "Viridescent Venerer\u0027s Determination",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15002_5.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Elemental Mastery",
+                                                                         "value":  187.0000000299
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  9.3300000132107
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  13.619999915459083
+                                                                         },
+                                                                         {
+                                                                             "name":  "ATK%",
+                                                                             "value":  15.159999981620238
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  6.219999894597456
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Cálice",
+                                                        "setName":  "Deepwood Memories",
+                                                        "name":  "Lamp of the Lost",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15025_1.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Elemental Mastery",
+                                                                         "value":  187.0000006812
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "ATK%",
+                                                                             "value":  8.740000735440226
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  14.240000705637904
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  17.510000910081835
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  776.760010446825
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Coroa",
+                                                        "setName":  "Viridescent Venerer",
+                                                        "name":  "Viridescent Venerer\u0027s Diadem",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15002_3.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Elemental Mastery",
+                                                                         "value":  187.0000006678
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  55.55000181220918
+                                                                         },
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  12.390000295867017
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  3.1100006001487284
+                                                                         },
+                                                                         {
+                                                                             "name":  "HP%",
+                                                                             "value":  9.320000481833508
+                                                                         }
+                                                                     ]
+                                                    }
+                                                ],
+                                  "availability":  {
+                                                       "character":  true,
+                                                       "weapon":  true,
+                                                       "talents":  false,
+                                                       "stats":  false,
+                                                       "artifacts":  true
+                                                   }
+                              },
+                   "tartaglia":  {
+                                     "buildAvailable":  true,
+                                     "source":  "Akasha",
+                                     "snapshotDate":  "2026-08-22",
+                                     "sourceMd5":  "782ebe2f80d7ba7ef40654df0e027dc2",
+                                     "character":  {
+                                                       "name":  "Tartaglia",
+                                                       "level":  null,
+                                                       "constellation":  0,
+                                                       "image":  "https://enka.network/ui/UI_AvatarIcon_Tartaglia.png"
+                                                   },
+                                     "weapon":  {
+                                                    "name":  "Polar Star",
+                                                    "level":  90,
+                                                    "refinement":  1,
+                                                    "rarity":  5,
+                                                    "image":  "https://enka.network/ui/UI_EquipIcon_Bow_Worldbane_Awaken.png"
+                                                },
+                                     "talents":  {
+                                                     "normal":  null,
+                                                     "skill":  null,
+                                                     "burst":  null
+                                                 },
+                                     "stats":  {
+
+                                               },
+                                     "artifactSets":  [
+                                                          {
+                                                              "name":  "Nymph\u0027s Dream",
+                                                              "count":  4,
+                                                              "icon":  "UI_RelicIcon_15029_4"
+                                                          },
+                                                          {
+                                                              "name":  "Retracing Bolide",
+                                                              "count":  1,
+                                                              "icon":  "UI_RelicIcon_15015_5"
+                                                          }
+                                                      ],
+                                     "artifacts":  [
+                                                       {
+                                                           "slot":  "Flor",
+                                                           "setName":  "Nymph\u0027s Dream",
+                                                           "name":  "Odyssean Flower",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15029_4.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Flat HP",
+                                                                            "value":  4780.0000003954
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Energy Recharge",
+                                                                                "value":  11.660000704748107
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  6.610000342649889
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  13.980000116450263
+                                                                            },
+                                                                            {
+                                                                                "name":  "Elemental Mastery",
+                                                                                "value":  37.29999963246055
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Pena",
+                                                           "setName":  "Nymph\u0027s Dream",
+                                                           "name":  "Wicked Mage\u0027s Plumule",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15029_2.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  311.000000018
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  21.74999939215123
+                                                                            },
+                                                                            {
+                                                                                "name":  "Elemental Mastery",
+                                                                                "value":  16.31999971282422
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  7.38999994409024
+                                                                            },
+                                                                            {
+                                                                                "name":  "DEF%",
+                                                                                "value":  20.409999805807466
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Areia",
+                                                           "setName":  "Retracing Bolide",
+                                                           "name":  "Summer Night\u0027s Moment",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15015_5.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "ATK%",
+                                                                            "value":  46.6000009535
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Flat DEF",
+                                                                                "value":  34.720002174203124
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  12.430000886146752
+                                                                            },
+                                                                            {
+                                                                                "name":  "HP%",
+                                                                                "value":  9.3300009368107
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  10.890000894491402
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Cálice",
+                                                           "setName":  "Nymph\u0027s Dream",
+                                                           "name":  "Heroes\u0027 Tea Party",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15029_1.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Hydro DMG Bonus",
+                                                                            "value":  46.6000009076
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "ATK%",
+                                                                                "value":  11.080000712096766
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  6.220000958561971
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat ATK",
+                                                                                "value":  29.18000121277578
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat HP",
+                                                                                "value":  507.8800057904125
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Coroa",
+                                                           "setName":  "Nymph\u0027s Dream",
+                                                           "name":  "Fell Dragon\u0027s Monocle",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15029_3.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Crit DMG",
+                                                                            "value":  62.200000127200006
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Flat HP",
+                                                                                "value":  507.8800050100125
+                                                                            },
+                                                                            {
+                                                                                "name":  "ATK%",
+                                                                                "value":  14.570000149849765
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  6.610000074449889
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat DEF",
+                                                                                "value":  18.52000058496367
+                                                                            }
+                                                                        ]
+                                                       }
+                                                   ],
+                                     "availability":  {
+                                                          "character":  true,
+                                                          "weapon":  true,
+                                                          "talents":  false,
+                                                          "stats":  false,
+                                                          "artifacts":  true
+                                                      }
+                                 },
+                   "xiangling":  {
+                                     "buildAvailable":  true,
+                                     "source":  "Akasha",
+                                     "snapshotDate":  "2026-08-22",
+                                     "sourceMd5":  "6e091bc1473efe201ddd323bdfbe489a",
+                                     "character":  {
+                                                       "name":  "Xiangling",
+                                                       "level":  null,
+                                                       "constellation":  6,
+                                                       "image":  "https://enka.network/ui/UI_AvatarIcon_Xiangling.png"
+                                                   },
+                                     "weapon":  {
+                                                    "name":  "\"The Catch\"",
+                                                    "level":  90,
+                                                    "refinement":  5,
+                                                    "rarity":  4,
+                                                    "image":  "https://enka.network/ui/UI_EquipIcon_Pole_Mori_Awaken.png"
+                                                },
+                                     "talents":  {
+                                                     "normal":  null,
+                                                     "skill":  null,
+                                                     "burst":  null
+                                                 },
+                                     "stats":  {
+
+                                               },
+                                     "artifactSets":  [
+                                                          {
+                                                              "name":  "Emblem of Severed Fate",
+                                                              "count":  4,
+                                                              "icon":  "UI_RelicIcon_15020_4"
+                                                          },
+                                                          {
+                                                              "name":  "Retracing Bolide",
+                                                              "count":  1,
+                                                              "icon":  "UI_RelicIcon_15015_1"
+                                                          }
+                                                      ],
+                                     "artifacts":  [
+                                                       {
+                                                           "slot":  "Flor",
+                                                           "setName":  "Emblem of Severed Fate",
+                                                           "name":  "Magnificent Tsuba",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15020_4.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Flat HP",
+                                                                            "value":  4780.0000004964
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Elemental Mastery",
+                                                                                "value":  65.26999904681504
+                                                                            },
+                                                                            {
+                                                                                "name":  "Energy Recharge",
+                                                                                "value":  5.180000637663008
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  3.5000005113011614
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  19.430000086320042
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Pena",
+                                                           "setName":  "Emblem of Severed Fate",
+                                                           "name":  "Sundered Feather",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15020_2.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  311.0000007258
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  10.88000087004324
+                                                                            },
+                                                                            {
+                                                                                "name":  "Energy Recharge",
+                                                                                "value":  16.840000803882084
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  9.720000605398617
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat HP",
+                                                                                "value":  268.8800056086125
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Areia",
+                                                           "setName":  "Emblem of Severed Fate",
+                                                           "name":  "Storm Cage",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15020_5.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Energy Recharge",
+                                                                            "value":  51.8000008506
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  3.5000008655011614
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  6.220000715297457
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat ATK",
+                                                                                "value":  44.74000157539248
+                                                                            },
+                                                                            {
+                                                                                "name":  "ATK%",
+                                                                                "value":  15.75000035886168
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Cálice",
+                                                           "setName":  "Retracing Bolide",
+                                                           "name":  "Summer Night\u0027s Waterballoon",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15015_1.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Pyro DMG Bonus",
+                                                                            "value":  46.600000485900004
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Flat ATK",
+                                                                                "value":  35.010001668456155
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  26.410000139597013
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  3.890000397089079
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat DEF",
+                                                                                "value":  18.52000094366367
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Coroa",
+                                                           "setName":  "Emblem of Severed Fate",
+                                                           "name":  "Ornate Kabuto",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15020_3.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Crit RATE",
+                                                                            "value":  31.100000612600002
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Elemental Mastery",
+                                                                                "value":  86.24999870525137
+                                                                            },
+                                                                            {
+                                                                                "name":  "Energy Recharge",
+                                                                                "value":  5.830000581009538
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat HP",
+                                                                                "value":  298.7500006126
+                                                                            },
+                                                                            {
+                                                                                "name":  "DEF%",
+                                                                                "value":  17.490000517828616
+                                                                            }
+                                                                        ]
+                                                       }
+                                                   ],
+                                     "availability":  {
+                                                          "character":  true,
+                                                          "weapon":  true,
+                                                          "talents":  false,
+                                                          "stats":  false,
+                                                          "artifacts":  true
+                                                      }
+                                 },
+                   "sucrose":  {
+                                   "buildAvailable":  false,
+                                   "source":  "Akasha",
+                                   "snapshotDate":  "2026-08-22",
+                                   "character":  {
+                                                     "name":  "Sucrose"
+                                                 },
+                                   "unavailableReason":  "Build não disponível no perfil Akasha."
+                               },
+                   "clorinde":  {
+                                    "buildAvailable":  true,
+                                    "source":  "Akasha",
+                                    "snapshotDate":  "2026-08-22",
+                                    "sourceMd5":  "813b3c10ab6a9a7a5f5d9e0259c335da",
+                                    "character":  {
+                                                      "name":  "Clorinde",
+                                                      "level":  null,
+                                                      "constellation":  0,
+                                                      "image":  "https://enka.network/ui/UI_AvatarIcon_Clorinde.png"
+                                                  },
+                                    "weapon":  {
+                                                   "name":  "Calamity of Eshu",
+                                                   "level":  90,
+                                                   "refinement":  5,
+                                                   "rarity":  4,
+                                                   "image":  "https://enka.network/ui/UI_EquipIcon_Sword_SacrificialNgombe_Awaken.png"
+                                               },
+                                    "talents":  {
+                                                    "normal":  null,
+                                                    "skill":  null,
+                                                    "burst":  null
+                                                },
+                                    "stats":  {
+
+                                              },
+                                    "artifactSets":  [
+                                                         {
+                                                             "name":  "Noblesse Oblige",
+                                                             "count":  1,
+                                                             "icon":  "UI_RelicIcon_15007_1"
+                                                         },
+                                                         {
+                                                             "name":  "Gladiator\u0027s Finale",
+                                                             "count":  1,
+                                                             "icon":  "UI_RelicIcon_15001_3"
+                                                         }
+                                                     ],
+                                    "artifacts":  [
+                                                      {
+                                                          "slot":  "Cálice",
+                                                          "setName":  "Noblesse Oblige",
+                                                          "name":  "Royal Silver Urn",
+                                                          "image":  "https://enka.network/ui/UI_RelicIcon_15007_1.png",
+                                                          "level":  20,
+                                                          "rarity":  5,
+                                                          "mainStat":  {
+                                                                           "name":  "Electro DMG Bonus",
+                                                                           "value":  46.600000915
+                                                                       },
+                                                          "substats":  [
+                                                                           {
+                                                                               "name":  "Energy Recharge",
+                                                                               "value":  12.960001251170196
+                                                                           },
+                                                                           {
+                                                                               "name":  "Crit DMG",
+                                                                               "value":  12.440000644394912
+                                                                           },
+                                                                           {
+                                                                               "name":  "Crit RATE",
+                                                                               "value":  9.330000898310699
+                                                                           },
+                                                                           {
+                                                                               "name":  "Flat ATK",
+                                                                               "value":  36.96000190682129
+                                                                           }
+                                                                       ]
+                                                      },
+                                                      {
+                                                          "slot":  "Coroa",
+                                                          "setName":  "Gladiator\u0027s Finale",
+                                                          "name":  "Gladiator\u0027s Triumphus",
+                                                          "image":  "https://enka.network/ui/UI_RelicIcon_15001_3.png",
+                                                          "level":  20,
+                                                          "rarity":  5,
+                                                          "mainStat":  {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  62.2000007517
+                                                                       },
+                                                          "substats":  [
+                                                                           {
+                                                                               "name":  "Crit RATE",
+                                                                               "value":  3.500000766601161
+                                                                           },
+                                                                           {
+                                                                               "name":  "HP%",
+                                                                               "value":  5.830000720109538
+                                                                           },
+                                                                           {
+                                                                               "name":  "Flat DEF",
+                                                                               "value":  55.55000189610918
+                                                                           },
+                                                                           {
+                                                                               "name":  "Energy Recharge",
+                                                                               "value":  16.190001002635555
+                                                                           }
+                                                                       ]
+                                                      }
+                                                  ],
+                                    "availability":  {
+                                                         "character":  true,
+                                                         "weapon":  true,
+                                                         "talents":  false,
+                                                         "stats":  false,
+                                                         "artifacts":  false
+                                                     }
+                                },
+                   "nahida":  {
+                                  "buildAvailable":  true,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "sourceMd5":  "7897e6fcb7b9810b8630d432d03d711c",
+                                  "character":  {
+                                                    "name":  "Nahida",
+                                                    "level":  null,
+                                                    "constellation":  0,
+                                                    "image":  "https://enka.network/ui/UI_AvatarIcon_Nahida.png"
+                                                },
+                                  "weapon":  {
+                                                 "name":  "The Widsith",
+                                                 "level":  90,
+                                                 "refinement":  5,
+                                                 "rarity":  4,
+                                                 "image":  "https://enka.network/ui/UI_EquipIcon_Catalyst_Troupe_Awaken.png"
+                                             },
+                                  "talents":  {
+                                                  "normal":  null,
+                                                  "skill":  null,
+                                                  "burst":  null
+                                              },
+                                  "stats":  {
+
+                                            },
+                                  "artifactSets":  [
+                                                       {
+                                                           "name":  "Deepwood Memories",
+                                                           "count":  4,
+                                                           "icon":  "UI_RelicIcon_15025_4"
+                                                       },
+                                                       {
+                                                           "name":  "Vermillion Hereafter",
+                                                           "count":  1,
+                                                           "icon":  "UI_RelicIcon_15023_1"
+                                                       }
+                                                   ],
+                                  "artifacts":  [
+                                                    {
+                                                        "slot":  "Flor",
+                                                        "setName":  "Deepwood Memories",
+                                                        "name":  "Labyrinth Wayfarer",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15025_4.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat HP",
+                                                                         "value":  4780.0000005302
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  16.200001293139454
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  53.61999946208476
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  6.480000698285099
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  10.500000388638968
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Pena",
+                                                        "setName":  "Deepwood Memories",
+                                                        "name":  "Scholar of Vines",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15025_2.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat ATK",
+                                                                         "value":  311.0000001842
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  11.010000293872546
+                                                                         },
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  5.1000000888325685
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  39.6299993449666
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  8.940000084958266
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Areia",
+                                                        "setName":  "Deepwood Memories",
+                                                        "name":  "A Time of Insight",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15025_5.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Elemental Mastery",
+                                                                         "value":  187.0000006617
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  5.830000630109538
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  22.020000881045092
+                                                                         },
+                                                                         {
+                                                                             "name":  "HP%",
+                                                                             "value":  4.660000568716754
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  35.01000184425615
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Cálice",
+                                                        "setName":  "Vermillion Hereafter",
+                                                        "name":  "Moment of the Pact",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15023_1.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Elemental Mastery",
+                                                                         "value":  187.0000001089
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  12.829999920847346
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  20.830000032606055
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  209.1300049917125
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  9.710000191750456
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Coroa",
+                                                        "setName":  "Deepwood Memories",
+                                                        "name":  "Laurel Coronet",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15025_3.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Crit DMG",
+                                                                         "value":  62.200000933700004
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  23.310000399642384
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  507.8800058165125
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  16.840001011782086
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  31.13000104814092
+                                                                         }
+                                                                     ]
+                                                    }
+                                                ],
+                                  "availability":  {
+                                                       "character":  true,
+                                                       "weapon":  true,
+                                                       "talents":  false,
+                                                       "stats":  false,
+                                                       "artifacts":  true
+                                                   }
+                              },
+                   "raiden":  {
+                                  "buildAvailable":  true,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "sourceMd5":  "35382822b3504f77f6e5104119d1213d",
+                                  "character":  {
+                                                    "name":  "Raiden Shogun",
+                                                    "level":  null,
+                                                    "constellation":  0,
+                                                    "image":  "https://enka.network/ui/UI_AvatarIcon_Shougun.png"
+                                                },
+                                  "weapon":  {
+                                                 "name":  "Engulfing Lightning",
+                                                 "level":  90,
+                                                 "refinement":  1,
+                                                 "rarity":  5,
+                                                 "image":  "https://enka.network/ui/UI_EquipIcon_Pole_Narukami_Awaken.png"
+                                             },
+                                  "talents":  {
+                                                  "normal":  null,
+                                                  "skill":  null,
+                                                  "burst":  null
+                                              },
+                                  "stats":  {
+
+                                            },
+                                  "artifactSets":  [
+                                                       {
+                                                           "name":  "Emblem of Severed Fate",
+                                                           "count":  4,
+                                                           "icon":  "UI_RelicIcon_15020_4"
+                                                       },
+                                                       {
+                                                           "name":  "Bloodstained Chivalry",
+                                                           "count":  1,
+                                                           "icon":  "UI_RelicIcon_15008_1"
+                                                       }
+                                                   ],
+                                  "artifacts":  [
+                                                    {
+                                                        "slot":  "Flor",
+                                                        "setName":  "Emblem of Severed Fate",
+                                                        "name":  "Magnificent Tsuba",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15020_4.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat HP",
+                                                                         "value":  4780.0000000028
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  6.999999846337808
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  20.979999381123555
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  11.010000112472547
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  19.450000765739453
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Pena",
+                                                        "setName":  "Emblem of Severed Fate",
+                                                        "name":  "Sundered Feather",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15020_2.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat ATK",
+                                                                         "value":  311.0000002864
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  21.74999966055123
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  3.1100002187487283
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  507.8800051692125
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  64.80999975234238
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Areia",
+                                                        "setName":  "Emblem of Severed Fate",
+                                                        "name":  "Storm Cage",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15020_5.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Energy Recharge",
+                                                                         "value":  51.8000000611
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  10.499999919538968
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  39.629999221866605
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  23.149999679630273
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  776.760009826725
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Cálice",
+                                                        "setName":  "Bloodstained Chivalry",
+                                                        "name":  "Bloodstained Chevalier\u0027s Goblet",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15008_1.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Electro DMG Bonus",
+                                                                         "value":  46.6000000942
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  22.529999260927067
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  9.329999891246185
+                                                                         },
+                                                                         {
+                                                                             "name":  "ATK%",
+                                                                             "value":  5.830000062609538
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  209.1300049770125
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Coroa",
+                                                        "setName":  "Emblem of Severed Fate",
+                                                        "name":  "Ornate Kabuto",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15020_3.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Crit RATE",
+                                                                         "value":  31.1000008381
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  11.660000774919077
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  5.830000806509538
+                                                                         },
+                                                                         {
+                                                                             "name":  "HP%",
+                                                                             "value":  12.8200010395637
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  507.8800057209125
+                                                                         }
+                                                                     ]
+                                                    }
+                                                ],
+                                  "availability":  {
+                                                       "character":  true,
+                                                       "weapon":  true,
+                                                       "talents":  false,
+                                                       "stats":  false,
+                                                       "artifacts":  true
+                                                   }
+                              },
+                   "ganyu":  {
+                                 "buildAvailable":  true,
+                                 "source":  "Akasha",
+                                 "snapshotDate":  "2026-08-22",
+                                 "sourceMd5":  "3995ab80087f5e332883e345fce2dd40",
+                                 "character":  {
+                                                   "name":  "Ganyu",
+                                                   "level":  null,
+                                                   "constellation":  0,
+                                                   "image":  "https://enka.network/ui/UI_AvatarIcon_Ganyu.png"
+                                               },
+                                 "weapon":  {
+                                                "name":  "Prototype Crescent",
+                                                "level":  90,
+                                                "refinement":  5,
+                                                "rarity":  4,
+                                                "image":  "https://enka.network/ui/UI_EquipIcon_Bow_Proto_Awaken.png"
+                                            },
+                                 "talents":  {
+                                                 "normal":  null,
+                                                 "skill":  null,
+                                                 "burst":  null
+                                             },
+                                 "stats":  {
+
+                                           },
+                                 "artifactSets":  [
+                                                      {
+                                                          "name":  "Blizzard Strayer",
+                                                          "count":  4,
+                                                          "icon":  "UI_RelicIcon_14001_4"
+                                                      },
+                                                      {
+                                                          "name":  "Shimenawa\u0027s Reminiscence",
+                                                          "count":  1,
+                                                          "icon":  "UI_RelicIcon_15019_1"
+                                                      }
+                                                  ],
+                                 "artifacts":  [
+                                                   {
+                                                       "slot":  "Flor",
+                                                       "setName":  "Blizzard Strayer",
+                                                       "name":  "Snowswept Memory",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_14001_4.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Flat HP",
+                                                                        "value":  4780.0000002799
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "HP%",
+                                                                            "value":  4.080000427123473
+                                                                        },
+                                                                        {
+                                                                            "name":  "Energy Recharge",
+                                                                            "value":  11.660000216719077
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit DMG",
+                                                                            "value":  20.979999658223555
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit RATE",
+                                                                            "value":  5.830000248309538
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Pena",
+                                                       "setName":  "Blizzard Strayer",
+                                                       "name":  "Icebreaker\u0027s Resolve",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_14001_2.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Flat ATK",
+                                                                        "value":  311.0000005692
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Elemental Mastery",
+                                                                            "value":  18.650000187730274
+                                                                        },
+                                                                        {
+                                                                            "name":  "Energy Recharge",
+                                                                            "value":  16.840001019811115
+                                                                        },
+                                                                        {
+                                                                            "name":  "ATK%",
+                                                                            "value":  9.320000383233507
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit DMG",
+                                                                            "value":  13.210000294422587
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Areia",
+                                                       "setName":  "Blizzard Strayer",
+                                                       "name":  "Frozen Homeland\u0027s Demise",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_14001_5.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "ATK%",
+                                                                        "value":  46.600000102900005
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Flat DEF",
+                                                                            "value":  78.71000109472129
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit DMG",
+                                                                            "value":  5.44000017502162
+                                                                        },
+                                                                        {
+                                                                            "name":  "HP%",
+                                                                            "value":  8.160000397346945
+                                                                        },
+                                                                        {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  19.450000865839453
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Cálice",
+                                                       "setName":  "Shimenawa\u0027s Reminiscence",
+                                                       "name":  "Hopeful Heart",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15019_1.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Cryo DMG Bonus",
+                                                                        "value":  46.6000003813
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Flat DEF",
+                                                                            "value":  60.18000068647578
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit RATE",
+                                                                            "value":  5.44000045342162
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit DMG",
+                                                                            "value":  12.440000110694912
+                                                                        },
+                                                                        {
+                                                                            "name":  "ATK%",
+                                                                            "value":  10.490000256726292
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Coroa",
+                                                       "setName":  "Blizzard Strayer",
+                                                       "name":  "Broken Rime\u0027s Echo",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_14001_3.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Crit DMG",
+                                                                        "value":  62.2000009315
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  13.620000817059083
+                                                                        },
+                                                                        {
+                                                                            "name":  "DEF%",
+                                                                            "value":  23.320000432609124
+                                                                        },
+                                                                        {
+                                                                            "name":  "Energy Recharge",
+                                                                            "value":  12.960001267670197
+                                                                        },
+                                                                        {
+                                                                            "name":  "ATK%",
+                                                                            "value":  8.740000985740227
+                                                                        }
+                                                                    ]
+                                                   }
+                                               ],
+                                 "availability":  {
+                                                      "character":  true,
+                                                      "weapon":  true,
+                                                      "talents":  false,
+                                                      "stats":  false,
+                                                      "artifacts":  true
+                                                  }
+                             },
+                   "charlotte":  {
+                                     "buildAvailable":  false,
+                                     "source":  "Akasha",
+                                     "snapshotDate":  "2026-08-22",
+                                     "character":  {
+                                                       "name":  "Charlotte"
+                                                   },
+                                     "unavailableReason":  "Build não disponível no perfil Akasha."
+                                 },
+                   "travelerCryo":  {
+                                        "buildAvailable":  false,
+                                        "source":  "Akasha",
+                                        "snapshotDate":  "2026-08-22",
+                                        "character":  {
+                                                          "name":  "Traveler(Cryo)"
+                                                      },
+                                        "unavailableReason":  "Build não disponível no perfil Akasha."
+                                    },
+                   "diona":  {
+                                 "buildAvailable":  true,
+                                 "source":  "Akasha",
+                                 "snapshotDate":  "2026-08-22",
+                                 "sourceMd5":  "c99cb6fcffd41c9a3eaa9b8f4b0b87af",
+                                 "character":  {
+                                                   "name":  "Diona",
+                                                   "level":  null,
+                                                   "constellation":  6,
+                                                   "image":  "https://enka.network/ui/UI_AvatarIcon_Diona.png"
+                                               },
+                                 "weapon":  {
+                                                "name":  "Sacrificial Bow",
+                                                "level":  90,
+                                                "refinement":  3,
+                                                "rarity":  4,
+                                                "image":  "https://enka.network/ui/UI_EquipIcon_Bow_Fossil_Awaken.png"
+                                            },
+                                 "talents":  {
+                                                 "normal":  null,
+                                                 "skill":  null,
+                                                 "burst":  null
+                                             },
+                                 "stats":  {
+
+                                           },
+                                 "artifactSets":  [
+                                                      {
+                                                          "name":  "Noblesse Oblige",
+                                                          "count":  4,
+                                                          "icon":  "UI_RelicIcon_15007_4"
+                                                      },
+                                                      {
+                                                          "name":  "Gladiator\u0027s Finale",
+                                                          "count":  1,
+                                                          "icon":  "UI_RelicIcon_15001_1"
+                                                      }
+                                                  ],
+                                 "artifacts":  [
+                                                   {
+                                                       "slot":  "Flor",
+                                                       "setName":  "Noblesse Oblige",
+                                                       "name":  "Royal Flora",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15007_4.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Flat HP",
+                                                                        "value":  4780.0000006729
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Energy Recharge",
+                                                                            "value":  6.480000840985098
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit DMG",
+                                                                            "value":  13.210000398122588
+                                                                        },
+                                                                        {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  68.08000250395469
+                                                                        },
+                                                                        {
+                                                                            "name":  "Flat DEF",
+                                                                            "value":  16.200001435839454
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Pena",
+                                                       "setName":  "Noblesse Oblige",
+                                                       "name":  "Royal Plume",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15007_2.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Flat ATK",
+                                                                        "value":  311.0000008779
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Crit DMG",
+                                                                            "value":  5.44000095002162
+                                                                        },
+                                                                        {
+                                                                            "name":  "ATK%",
+                                                                            "value":  16.32000072173583
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit RATE",
+                                                                            "value":  7.000000907702322
+                                                                        },
+                                                                        {
+                                                                            "name":  "DEF%",
+                                                                            "value":  13.850000633520956
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Areia",
+                                                       "setName":  "Noblesse Oblige",
+                                                       "name":  "Royal Pocket Watch",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15007_5.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "ATK%",
+                                                                        "value":  46.6000002324
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  33.07000088089853
+                                                                        },
+                                                                        {
+                                                                            "name":  "Energy Recharge",
+                                                                            "value":  21.370000252069534
+                                                                        },
+                                                                        {
+                                                                            "name":  "Flat HP",
+                                                                            "value":  239.0000002324
+                                                                        },
+                                                                        {
+                                                                            "name":  "Elemental Mastery",
+                                                                            "value":  23.309999698342384
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Cálice",
+                                                       "setName":  "Gladiator\u0027s Finale",
+                                                       "name":  "Gladiator\u0027s Intoxication",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15001_1.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "HP%",
+                                                                        "value":  46.6000003281
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Flat HP",
+                                                                            "value":  268.8800052109125
+                                                                        },
+                                                                        {
+                                                                            "name":  "Flat DEF",
+                                                                            "value":  41.670000404393946
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit DMG",
+                                                                            "value":  19.429999918020044
+                                                                        },
+                                                                        {
+                                                                            "name":  "Elemental Mastery",
+                                                                            "value":  41.95999941257266
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Coroa",
+                                                       "setName":  "Noblesse Oblige",
+                                                       "name":  "Royal Masque",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15007_3.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "HP%",
+                                                                        "value":  46.6000004601
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  44.7500004601
+                                                                        },
+                                                                        {
+                                                                            "name":  "Energy Recharge",
+                                                                            "value":  16.190000711035555
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit RATE",
+                                                                            "value":  7.39000038619024
+                                                                        },
+                                                                        {
+                                                                            "name":  "Flat HP",
+                                                                            "value":  268.8800053429125
+                                                                        }
+                                                                    ]
+                                                   }
+                                               ],
+                                 "availability":  {
+                                                      "character":  true,
+                                                      "weapon":  true,
+                                                      "talents":  false,
+                                                      "stats":  false,
+                                                      "artifacts":  true
+                                                  }
+                             },
+                   "alyosha":  {
+                                   "buildAvailable":  false,
+                                   "source":  "Akasha",
+                                   "snapshotDate":  "2026-08-22",
+                                   "character":  {
+                                                     "name":  "Alyosha"
+                                                 },
+                                   "unavailableReason":  "Build não disponível no perfil Akasha."
+                               },
+                   "alhaitham":  {
+                                     "buildAvailable":  true,
+                                     "source":  "Akasha",
+                                     "snapshotDate":  "2026-08-22",
+                                     "sourceMd5":  "db0a0c544111b8a809fd45a7da8b4639",
+                                     "character":  {
+                                                       "name":  "Alhaitham",
+                                                       "level":  null,
+                                                       "constellation":  0,
+                                                       "image":  "https://enka.network/ui/UI_AvatarIcon_Alhatham.png"
+                                                   },
+                                     "weapon":  {
+                                                    "name":  "Wolf-Fang",
+                                                    "level":  90,
+                                                    "refinement":  1,
+                                                    "rarity":  4,
+                                                    "image":  "https://enka.network/ui/UI_EquipIcon_Sword_Boreas_Awaken.png"
+                                                },
+                                     "talents":  {
+                                                     "normal":  null,
+                                                     "skill":  null,
+                                                     "burst":  null
+                                                 },
+                                     "stats":  {
+
+                                               },
+                                     "artifactSets":  [
+                                                          {
+                                                              "name":  "Gilded Dreams",
+                                                              "count":  4,
+                                                              "icon":  "UI_RelicIcon_15026_4"
+                                                          },
+                                                          {
+                                                              "name":  "Nymph\u0027s Dream",
+                                                              "count":  1,
+                                                              "icon":  "UI_RelicIcon_15029_1"
+                                                          }
+                                                      ],
+                                     "artifacts":  [
+                                                       {
+                                                           "slot":  "Flor",
+                                                           "setName":  "Gilded Dreams",
+                                                           "name":  "Dreaming Steelbloom",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15026_4.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Flat HP",
+                                                                            "value":  4780.0000002436
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  5.44000031572162
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  10.890000184591402
+                                                                            },
+                                                                            {
+                                                                                "name":  "Elemental Mastery",
+                                                                                "value":  39.6299994043666
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat ATK",
+                                                                                "value":  35.01000142615615
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Pena",
+                                                           "setName":  "Gilded Dreams",
+                                                           "name":  "Feather of Judgment",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15026_2.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  311.0000003401
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Energy Recharge",
+                                                                                "value":  16.840000418182086
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  13.210000065322587
+                                                                            },
+                                                                            {
+                                                                                "name":  "Elemental Mastery",
+                                                                                "value":  39.6299995008666
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  3.5000003550011614
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Areia",
+                                                           "setName":  "Gilded Dreams",
+                                                           "name":  "The Sunken Years",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15026_5.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Elemental Mastery",
+                                                                            "value":  187.0000005153
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "ATK%",
+                                                                                "value":  13.400000476556981
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  2.72000055136081
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat HP",
+                                                                                "value":  507.8800053981125
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  17.100000524240695
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Cálice",
+                                                           "setName":  "Nymph\u0027s Dream",
+                                                           "name":  "Heroes\u0027 Tea Party",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15029_1.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Dendro DMG Bonus",
+                                                                            "value":  46.6000000836
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Flat ATK",
+                                                                                "value":  31.1200009228334
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit DMG",
+                                                                                "value":  13.989999601398424
+                                                                            },
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  9.720000149463132
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat HP",
+                                                                                "value":  268.8800049664125
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "slot":  "Coroa",
+                                                           "setName":  "Gilded Dreams",
+                                                           "name":  "Shadow of the Sand King",
+                                                           "image":  "https://enka.network/ui/UI_RelicIcon_15026_3.png",
+                                                           "level":  20,
+                                                           "rarity":  5,
+                                                           "mainStat":  {
+                                                                            "name":  "Crit DMG",
+                                                                            "value":  62.2000007328
+                                                                        },
+                                                           "substats":  [
+                                                                            {
+                                                                                "name":  "Crit RATE",
+                                                                                "value":  8.940000819822782
+                                                                            },
+                                                                            {
+                                                                                "name":  "Elemental Mastery",
+                                                                                "value":  20.98000027503633
+                                                                            },
+                                                                            {
+                                                                                "name":  "Flat DEF",
+                                                                                "value":  23.150000351330274
+                                                                            },
+                                                                            {
+                                                                                "name":  "HP%",
+                                                                                "value":  15.74000044431352
+                                                                            }
+                                                                        ]
+                                                       }
+                                                   ],
+                                     "availability":  {
+                                                          "character":  true,
+                                                          "weapon":  true,
+                                                          "talents":  false,
+                                                          "stats":  false,
+                                                          "artifacts":  true
+                                                      }
+                                 },
+                   "kuki":  {
+                                "buildAvailable":  false,
+                                "source":  "Akasha",
+                                "snapshotDate":  "2026-08-22",
+                                "character":  {
+                                                  "name":  "Kuki Shinobu"
+                                              },
+                                "unavailableReason":  "Build não disponível no perfil Akasha."
+                            },
+                   "xingqiu":  {
+                                   "buildAvailable":  true,
+                                   "source":  "Akasha",
+                                   "snapshotDate":  "2026-08-22",
+                                   "sourceMd5":  "89742c73e61db8fd06007f3c11f2b87d",
+                                   "character":  {
+                                                     "name":  "Xingqiu",
+                                                     "level":  null,
+                                                     "constellation":  6,
+                                                     "image":  "https://enka.network/ui/UI_AvatarIcon_Xingqiu.png"
+                                                 },
+                                   "weapon":  {
+                                                  "name":  "Sacrificial Sword",
+                                                  "level":  90,
+                                                  "refinement":  5,
+                                                  "rarity":  4,
+                                                  "image":  "https://enka.network/ui/UI_EquipIcon_Sword_Fossil_Awaken.png"
+                                              },
+                                   "talents":  {
+                                                   "normal":  null,
+                                                   "skill":  null,
+                                                   "burst":  null
+                                               },
+                                   "stats":  {
+
+                                             },
+                                   "artifactSets":  [
+                                                        {
+                                                            "name":  "Emblem of Severed Fate",
+                                                            "count":  4,
+                                                            "icon":  "UI_RelicIcon_15020_4"
+                                                        },
+                                                        {
+                                                            "name":  "Gladiator\u0027s Finale",
+                                                            "count":  1,
+                                                            "icon":  "UI_RelicIcon_15001_1"
+                                                        }
+                                                    ],
+                                   "artifacts":  [
+                                                     {
+                                                         "slot":  "Flor",
+                                                         "setName":  "Emblem of Severed Fate",
+                                                         "name":  "Magnificent Tsuba",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15020_4.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Flat HP",
+                                                                          "value":  4780.0000008884
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  12.430000821046752
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  7.39000081449024
+                                                                          },
+                                                                          {
+                                                                              "name":  "HP%",
+                                                                              "value":  8.160001182846946
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat DEF",
+                                                                              "value":  60.180001193575784
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Pena",
+                                                         "setName":  "Emblem of Severed Fate",
+                                                         "name":  "Sundered Feather",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15020_2.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Flat ATK",
+                                                                          "value":  311.0000001451
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  10.88000028934324
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  10.500000003538968
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat DEF",
+                                                                              "value":  16.200000908039453
+                                                                          },
+                                                                          {
+                                                                              "name":  "Energy Recharge",
+                                                                              "value":  9.710000227950456
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Areia",
+                                                         "setName":  "Emblem of Severed Fate",
+                                                         "name":  "Storm Cage",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15020_5.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "ATK%",
+                                                                          "value":  46.6000007607
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  5.830000729109538
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  14.7600002743261
+                                                                          },
+                                                                          {
+                                                                              "name":  "Energy Recharge",
+                                                                              "value":  6.480000928785098
+                                                                          },
+                                                                          {
+                                                                              "name":  "HP%",
+                                                                              "value":  13.410000891234173
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Cálice",
+                                                         "setName":  "Gladiator\u0027s Finale",
+                                                         "name":  "Gladiator\u0027s Intoxication",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15001_1.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Hydro DMG Bonus",
+                                                                          "value":  46.6000002613
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  12.830000259511861
+                                                                          },
+                                                                          {
+                                                                              "name":  "DEF%",
+                                                                              "value":  6.5600002934865085
+                                                                          },
+                                                                          {
+                                                                              "name":  "ATK%",
+                                                                              "value":  9.320000075333509
+                                                                          },
+                                                                          {
+                                                                              "name":  "Elemental Mastery",
+                                                                              "value":  32.63999965094844
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Coroa",
+                                                         "setName":  "Emblem of Severed Fate",
+                                                         "name":  "Ornate Kabuto",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15020_3.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Crit RATE",
+                                                                          "value":  31.1000005791
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "DEF%",
+                                                                              "value":  6.560000611286508
+                                                                          },
+                                                                          {
+                                                                              "name":  "HP%",
+                                                                              "value":  11.660000515919076
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  12.430000511746751
+                                                                          },
+                                                                          {
+                                                                              "name":  "Elemental Mastery",
+                                                                              "value":  62.93999920580899
+                                                                          }
+                                                                      ]
+                                                     }
+                                                 ],
+                                   "availability":  {
+                                                        "character":  true,
+                                                        "weapon":  true,
+                                                        "talents":  false,
+                                                        "stats":  false,
+                                                        "artifacts":  true
+                                                    }
+                               },
+                   "tighnari":  {
+                                    "buildAvailable":  true,
+                                    "source":  "Akasha",
+                                    "snapshotDate":  "2026-08-22",
+                                    "sourceMd5":  "0549bfa37f0b2d7cb5a8c0fa4a6ad582",
+                                    "character":  {
+                                                      "name":  "Tighnari",
+                                                      "level":  null,
+                                                      "constellation":  1,
+                                                      "image":  "https://enka.network/ui/UI_AvatarIcon_Tighnari.png"
+                                                  },
+                                    "weapon":  {
+                                                   "name":  "Slingshot",
+                                                   "level":  90,
+                                                   "refinement":  5,
+                                                   "rarity":  3,
+                                                   "image":  "https://enka.network/ui/UI_EquipIcon_Bow_Sling_Awaken.png"
+                                               },
+                                    "talents":  {
+                                                    "normal":  null,
+                                                    "skill":  null,
+                                                    "burst":  null
+                                                },
+                                    "stats":  {
+
+                                              },
+                                    "artifactSets":  [
+                                                         {
+                                                             "name":  "Wanderer\u0027s Troupe",
+                                                             "count":  4,
+                                                             "icon":  "UI_RelicIcon_15003_4"
+                                                         },
+                                                         {
+                                                             "name":  "Maiden Beloved",
+                                                             "count":  1,
+                                                             "icon":  "UI_RelicIcon_14004_2"
+                                                         }
+                                                     ],
+                                    "artifacts":  [
+                                                      {
+                                                          "slot":  "Flor",
+                                                          "setName":  "Wanderer\u0027s Troupe",
+                                                          "name":  "Troupe\u0027s Dawnlight",
+                                                          "image":  "https://enka.network/ui/UI_RelicIcon_15003_4.png",
+                                                          "level":  20,
+                                                          "rarity":  5,
+                                                          "mainStat":  {
+                                                                           "name":  "Flat HP",
+                                                                           "value":  4780.0000001289
+                                                                       },
+                                                          "substats":  [
+                                                                           {
+                                                                               "name":  "Crit RATE",
+                                                                               "value":  6.9999999724378075
+                                                                           },
+                                                                           {
+                                                                               "name":  "Crit DMG",
+                                                                               "value":  21.749999503051228
+                                                                           },
+                                                                           {
+                                                                               "name":  "Energy Recharge",
+                                                                               "value":  11.010000238572546
+                                                                           },
+                                                                           {
+                                                                               "name":  "Flat DEF",
+                                                                               "value":  32.400001654778904
+                                                                           }
+                                                                       ]
+                                                      },
+                                                      {
+                                                          "slot":  "Pena",
+                                                          "setName":  "Maiden Beloved",
+                                                          "name":  "Maiden\u0027s Heart-Stricken Infatuation",
+                                                          "image":  "https://enka.network/ui/UI_RelicIcon_14004_2.png",
+                                                          "level":  20,
+                                                          "rarity":  5,
+                                                          "mainStat":  {
+                                                                           "name":  "Flat ATK",
+                                                                           "value":  311.0000002566
+                                                                       },
+                                                          "substats":  [
+                                                                           {
+                                                                               "name":  "ATK%",
+                                                                               "value":  10.499999928774454
+                                                                           },
+                                                                           {
+                                                                               "name":  "Elemental Mastery",
+                                                                               "value":  37.29999949366055
+                                                                           },
+                                                                           {
+                                                                               "name":  "Crit RATE",
+                                                                               "value":  7.39000018269024
+                                                                           },
+                                                                           {
+                                                                               "name":  "Crit DMG",
+                                                                               "value":  20.979999634923555
+                                                                           }
+                                                                       ]
+                                                      },
+                                                      {
+                                                          "slot":  "Areia",
+                                                          "setName":  "Wanderer\u0027s Troupe",
+                                                          "name":  "Concert\u0027s Final Hour",
+                                                          "image":  "https://enka.network/ui/UI_RelicIcon_15003_5.png",
+                                                          "level":  20,
+                                                          "rarity":  5,
+                                                          "mainStat":  {
+                                                                           "name":  "ATK%",
+                                                                           "value":  46.6000003942
+                                                                       },
+                                                          "substats":  [
+                                                                           {
+                                                                               "name":  "Elemental Mastery",
+                                                                               "value":  55.94999924979082
+                                                                           },
+                                                                           {
+                                                                               "name":  "Crit RATE",
+                                                                               "value":  6.610000341449889
+                                                                           },
+                                                                           {
+                                                                               "name":  "Crit DMG",
+                                                                               "value":  11.660000331019077
+                                                                           },
+                                                                           {
+                                                                               "name":  "DEF%",
+                                                                               "value":  7.290000117634448
+                                                                           }
+                                                                       ]
+                                                      },
+                                                      {
+                                                          "slot":  "Cálice",
+                                                          "setName":  "Wanderer\u0027s Troupe",
+                                                          "name":  "Wanderer\u0027s String-Kettle",
+                                                          "image":  "https://enka.network/ui/UI_RelicIcon_15003_1.png",
+                                                          "level":  20,
+                                                          "rarity":  5,
+                                                          "mainStat":  {
+                                                                           "name":  "Dendro DMG Bonus",
+                                                                           "value":  46.6000005596
+                                                                       },
+                                                          "substats":  [
+                                                                           {
+                                                                               "name":  "Flat DEF",
+                                                                               "value":  43.980000101836325
+                                                                           },
+                                                                           {
+                                                                               "name":  "HP%",
+                                                                               "value":  9.3300005429107
+                                                                           },
+                                                                           {
+                                                                               "name":  "Crit DMG",
+                                                                               "value":  21.74999993375123
+                                                                           },
+                                                                           {
+                                                                               "name":  "Flat HP",
+                                                                               "value":  448.1300054424125
+                                                                           }
+                                                                       ]
+                                                      },
+                                                      {
+                                                          "slot":  "Coroa",
+                                                          "setName":  "Wanderer\u0027s Troupe",
+                                                          "name":  "Conductor\u0027s Top Hat",
+                                                          "image":  "https://enka.network/ui/UI_RelicIcon_15003_3.png",
+                                                          "level":  20,
+                                                          "rarity":  5,
+                                                          "mainStat":  {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  62.2000003542
+                                                                       },
+                                                          "substats":  [
+                                                                           {
+                                                                               "name":  "Crit RATE",
+                                                                               "value":  10.50000021263897
+                                                                           },
+                                                                           {
+                                                                               "name":  "Flat ATK",
+                                                                               "value":  33.07000100269853
+                                                                           },
+                                                                           {
+                                                                               "name":  "Flat DEF",
+                                                                               "value":  39.350000735669724
+                                                                           },
+                                                                           {
+                                                                               "name":  "Flat HP",
+                                                                               "value":  239.0000003542
+                                                                           }
+                                                                       ]
+                                                      }
+                                                  ],
+                                    "availability":  {
+                                                         "character":  true,
+                                                         "weapon":  true,
+                                                         "talents":  false,
+                                                         "stats":  false,
+                                                         "artifacts":  true
+                                                     }
+                                },
+                   "lisa":  {
+                                "buildAvailable":  true,
+                                "source":  "Akasha",
+                                "snapshotDate":  "2026-08-22",
+                                "sourceMd5":  "c95331107d102e37d56acb6349d2acc1",
+                                "character":  {
+                                                  "name":  "Lisa",
+                                                  "level":  null,
+                                                  "constellation":  1,
+                                                  "image":  "https://enka.network/ui/UI_AvatarIcon_Lisa.png"
+                                              },
+                                "weapon":  {
+                                               "name":  "Prototype Amber",
+                                               "level":  70,
+                                               "refinement":  5,
+                                               "rarity":  4,
+                                               "image":  "https://enka.network/ui/UI_EquipIcon_Catalyst_Proto_Awaken.png"
+                                           },
+                                "talents":  {
+                                                "normal":  null,
+                                                "skill":  null,
+                                                "burst":  null
+                                            },
+                                "stats":  {
+
+                                          },
+                                "artifactSets":  [
+
+                                                 ],
+                                "artifacts":  [
+
+                                              ],
+                                "availability":  {
+                                                     "character":  true,
+                                                     "weapon":  true,
+                                                     "talents":  false,
+                                                     "stats":  false,
+                                                     "artifacts":  false
+                                                 }
+                            },
+                   "zhongli":  {
+                                   "buildAvailable":  true,
+                                   "source":  "Akasha",
+                                   "snapshotDate":  "2026-08-22",
+                                   "sourceMd5":  "698b812d949f9ea59a5a126b9cbe4ad5",
+                                   "character":  {
+                                                     "name":  "Zhongli",
+                                                     "level":  null,
+                                                     "constellation":  0,
+                                                     "image":  "https://enka.network/ui/UI_AvatarIcon_Zhongli.png"
+                                                 },
+                                   "weapon":  {
+                                                  "name":  "Black Tassel",
+                                                  "level":  90,
+                                                  "refinement":  5,
+                                                  "rarity":  3,
+                                                  "image":  "https://enka.network/ui/UI_EquipIcon_Pole_Noire_Awaken.png"
+                                              },
+                                   "talents":  {
+                                                   "normal":  null,
+                                                   "skill":  null,
+                                                   "burst":  null
+                                               },
+                                   "stats":  {
+
+                                             },
+                                   "artifactSets":  [
+                                                        {
+                                                            "name":  "Archaic Petra",
+                                                            "count":  4,
+                                                            "icon":  "UI_RelicIcon_15014_4"
+                                                        },
+                                                        {
+                                                            "name":  "Maiden Beloved",
+                                                            "count":  1,
+                                                            "icon":  "UI_RelicIcon_14004_3"
+                                                        }
+                                                    ],
+                                   "artifacts":  [
+                                                     {
+                                                         "slot":  "Flor",
+                                                         "setName":  "Archaic Petra",
+                                                         "name":  "Flower of Creviced Cliff",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15014_4.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Flat HP",
+                                                                          "value":  4780.0000007788
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  5.830000747209538
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  7.770000431900967
+                                                                          },
+                                                                          {
+                                                                              "name":  "ATK%",
+                                                                              "value":  22.16000038779353
+                                                                          },
+                                                                          {
+                                                                              "name":  "DEF%",
+                                                                              "value":  5.830000747209538
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Pena",
+                                                         "setName":  "Archaic Petra",
+                                                         "name":  "Feather of Jagged Peaks",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15014_2.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "Flat ATK",
+                                                                          "value":  311.0000005777
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  5.44000064982162
+                                                                          },
+                                                                          {
+                                                                              "name":  "Energy Recharge",
+                                                                              "value":  5.180000718963008
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  24.090000447165828
+                                                                          },
+                                                                          {
+                                                                              "name":  "ATK%",
+                                                                              "value":  4.080000724923472
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Areia",
+                                                         "setName":  "Archaic Petra",
+                                                         "name":  "Sundial of Enduring Jade",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15014_5.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "HP%",
+                                                                          "value":  46.600000339800005
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Energy Recharge",
+                                                                              "value":  9.710000422650456
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit DMG",
+                                                                              "value":  5.44000041192162
+                                                                          },
+                                                                          {
+                                                                              "name":  "Elemental Mastery",
+                                                                              "value":  76.92999873762714
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  3.1100002721487283
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Cálice",
+                                                         "setName":  "Archaic Petra",
+                                                         "name":  "Goblet of Chiseled Crag",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_15014_1.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "HP%",
+                                                                          "value":  46.600000521700004
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "DEF%",
+                                                                              "value":  12.390000522296047
+                                                                          },
+                                                                          {
+                                                                              "name":  "Crit RATE",
+                                                                              "value":  7.000000365237807
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat HP",
+                                                                              "value":  507.8800054045125
+                                                                          },
+                                                                          {
+                                                                              "name":  "Energy Recharge",
+                                                                              "value":  16.190000772635553
+                                                                          }
+                                                                      ]
+                                                     },
+                                                     {
+                                                         "slot":  "Coroa",
+                                                         "setName":  "Maiden Beloved",
+                                                         "name":  "Maiden\u0027s Fading Beauty",
+                                                         "image":  "https://enka.network/ui/UI_RelicIcon_14004_3.png",
+                                                         "level":  20,
+                                                         "rarity":  5,
+                                                         "mainStat":  {
+                                                                          "name":  "HP%",
+                                                                          "value":  46.600000318700005
+                                                                      },
+                                                         "substats":  [
+                                                                          {
+                                                                              "name":  "Flat ATK",
+                                                                              "value":  17.510000547581836
+                                                                          },
+                                                                          {
+                                                                              "name":  "Energy Recharge",
+                                                                              "value":  21.370000710898562
+                                                                          },
+                                                                          {
+                                                                              "name":  "Flat HP",
+                                                                              "value":  567.6300052015125
+                                                                          },
+                                                                          {
+                                                                              "name":  "ATK%",
+                                                                              "value":  9.91000006180398
+                                                                          }
+                                                                      ]
+                                                     }
+                                                 ],
+                                   "availability":  {
+                                                        "character":  true,
+                                                        "weapon":  true,
+                                                        "talents":  false,
+                                                        "stats":  false,
+                                                        "artifacts":  true
+                                                    }
+                               },
+                   "venti":  {
+                                 "buildAvailable":  true,
+                                 "source":  "Akasha",
+                                 "snapshotDate":  "2026-08-22",
+                                 "sourceMd5":  "637daa0448563042cff33aab5496b372",
+                                 "character":  {
+                                                   "name":  "Venti",
+                                                   "level":  null,
+                                                   "constellation":  0,
+                                                   "image":  "https://enka.network/ui/UI_AvatarIcon_Venti.png"
+                                               },
+                                 "weapon":  {
+                                                "name":  "Mouun\u0027s Moon",
+                                                "level":  90,
+                                                "refinement":  3,
+                                                "rarity":  4,
+                                                "image":  "https://enka.network/ui/UI_EquipIcon_Bow_Maria_Awaken.png"
+                                            },
+                                 "talents":  {
+                                                 "normal":  null,
+                                                 "skill":  null,
+                                                 "burst":  null
+                                             },
+                                 "stats":  {
+
+                                           },
+                                 "artifactSets":  [
+                                                      {
+                                                          "name":  "Viridescent Venerer",
+                                                          "count":  3,
+                                                          "icon":  "UI_RelicIcon_15002_4"
+                                                      },
+                                                      {
+                                                          "name":  "Golden Troupe",
+                                                          "count":  1,
+                                                          "icon":  "UI_RelicIcon_15032_5"
+                                                      },
+                                                      {
+                                                          "name":  "Marechaussee Hunter",
+                                                          "count":  1,
+                                                          "icon":  "UI_RelicIcon_15031_3"
+                                                      }
+                                                  ],
+                                 "artifacts":  [
+                                                   {
+                                                       "slot":  "Flor",
+                                                       "setName":  "Viridescent Venerer",
+                                                       "name":  "In Remembrance of Viridescent Fields",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15002_4.png",
+                                                       "level":  4,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Flat HP",
+                                                                        "value":  1530.0000004669
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Elemental Mastery",
+                                                                            "value":  23.309999932842384
+                                                                        },
+                                                                        {
+                                                                            "name":  "DEF%",
+                                                                            "value":  6.560000499086509
+                                                                        },
+                                                                        {
+                                                                            "name":  "Energy Recharge",
+                                                                            "value":  6.480000634985099
+                                                                        },
+                                                                        {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  17.510000695781837
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Pena",
+                                                       "setName":  "Viridescent Venerer",
+                                                       "name":  "Viridescent Arrow Feather",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15002_2.png",
+                                                       "level":  4,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Flat ATK",
+                                                                        "value":  100.0000001066
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Crit RATE",
+                                                                            "value":  3.500000121501161
+                                                                        },
+                                                                        {
+                                                                            "name":  "DEF%",
+                                                                            "value":  5.100000011232568
+                                                                        },
+                                                                        {
+                                                                            "name":  "ATK%",
+                                                                            "value":  4.0800002538234725
+                                                                        },
+                                                                        {
+                                                                            "name":  "Flat HP",
+                                                                            "value":  298.7500001066
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Areia",
+                                                       "setName":  "Golden Troupe",
+                                                       "name":  "Golden Era\u0027s Prelude",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15032_5.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Energy Recharge",
+                                                                        "value":  51.8000009358
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Flat HP",
+                                                                            "value":  448.1300058186125
+                                                                        },
+                                                                        {
+                                                                            "name":  "Crit RATE",
+                                                                            "value":  6.2200008004974565
+                                                                        },
+                                                                        {
+                                                                            "name":  "ATK%",
+                                                                            "value":  9.91000105143301
+                                                                        },
+                                                                        {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  31.130001050240917
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Cálice",
+                                                       "setName":  "Viridescent Venerer",
+                                                       "name":  "Viridescent Venerer\u0027s Vessel",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15002_1.png",
+                                                       "level":  0,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Anemo DMG Bonus",
+                                                                        "value":  7.0000008179
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  13.620000703459082
+                                                                        },
+                                                                        {
+                                                                            "name":  "Elemental Mastery",
+                                                                            "value":  16.320000512724217
+                                                                        },
+                                                                        {
+                                                                            "name":  "HP%",
+                                                                            "value":  5.250000653987227
+                                                                        }
+                                                                    ]
+                                                   },
+                                                   {
+                                                       "slot":  "Coroa",
+                                                       "setName":  "Marechaussee Hunter",
+                                                       "name":  "Veteran\u0027s Visage",
+                                                       "image":  "https://enka.network/ui/UI_RelicIcon_15031_3.png",
+                                                       "level":  20,
+                                                       "rarity":  5,
+                                                       "mainStat":  {
+                                                                        "name":  "Crit DMG",
+                                                                        "value":  62.2000009738
+                                                                    },
+                                                       "substats":  [
+                                                                        {
+                                                                            "name":  "Flat ATK",
+                                                                            "value":  44.7500009738
+                                                                        },
+                                                                        {
+                                                                            "name":  "ATK%",
+                                                                            "value":  8.160001268246946
+                                                                        },
+                                                                        {
+                                                                            "name":  "Energy Recharge",
+                                                                            "value":  11.010001083472547
+                                                                        },
+                                                                        {
+                                                                            "name":  "HP%",
+                                                                            "value":  5.250000809887227
+                                                                        }
+                                                                    ]
+                                                   }
+                                               ],
+                                 "availability":  {
+                                                      "character":  true,
+                                                      "weapon":  true,
+                                                      "talents":  false,
+                                                      "stats":  false,
+                                                      "artifacts":  true
+                                                  }
+                             },
+                   "albedo":  {
+                                  "buildAvailable":  true,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "sourceMd5":  "3ac05446e1d319cfa59e02b0c9e94f2a",
+                                  "character":  {
+                                                    "name":  "Albedo",
+                                                    "level":  null,
+                                                    "constellation":  0,
+                                                    "image":  "https://enka.network/ui/UI_AvatarIcon_Albedo.png"
+                                                },
+                                  "weapon":  {
+                                                 "name":  "Cinnabar Spindle",
+                                                 "level":  90,
+                                                 "refinement":  5,
+                                                 "rarity":  4,
+                                                 "image":  "https://enka.network/ui/UI_EquipIcon_Sword_Opus_Awaken.png"
+                                             },
+                                  "talents":  {
+                                                  "normal":  null,
+                                                  "skill":  null,
+                                                  "burst":  null
+                                              },
+                                  "stats":  {
+
+                                            },
+                                  "artifactSets":  [
+                                                       {
+                                                           "name":  "Husk of Opulent Dreams",
+                                                           "count":  2,
+                                                           "icon":  "UI_RelicIcon_15021_4"
+                                                       },
+                                                       {
+                                                           "name":  "Golden Troupe",
+                                                           "count":  1,
+                                                           "icon":  "UI_RelicIcon_15032_2"
+                                                       },
+                                                       {
+                                                           "name":  "Archaic Petra",
+                                                           "count":  2,
+                                                           "icon":  "UI_RelicIcon_15014_1"
+                                                       }
+                                                   ],
+                                  "artifacts":  [
+                                                    {
+                                                        "slot":  "Flor",
+                                                        "setName":  "Husk of Opulent Dreams",
+                                                        "name":  "Bloom Times",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15021_4.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat HP",
+                                                                         "value":  4780.0000000808
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  10.11000004295105
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  16.200000843739453
+                                                                         },
+                                                                         {
+                                                                             "name":  "HP%",
+                                                                             "value":  10.489999956226292
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  10.88000022504324
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Pena",
+                                                        "setName":  "Golden Troupe",
+                                                        "name":  "Golden Bird\u0027s Shedding",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15032_2.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat ATK",
+                                                                         "value":  311.0000007988
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  21.869999969103343
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  7.000000642337808
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  41.95999988327266
+                                                                         },
+                                                                         {
+                                                                             "name":  "ATK%",
+                                                                             "value":  5.830000767209539
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Areia",
+                                                        "setName":  "Husk of Opulent Dreams",
+                                                        "name":  "Song of Life",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15021_5.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "DEF%",
+                                                                         "value":  58.300000225999995
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  43.979999768236326
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  12.310000362494636
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  776.750000226
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  6.990000086525131
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Cálice",
+                                                        "setName":  "Archaic Petra",
+                                                        "name":  "Goblet of Chiseled Crag",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15014_1.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Geo DMG Bonus",
+                                                                         "value":  46.6000007261
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  33.07000137459853
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  34.72000194680312
+                                                                         },
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  18.220000695105586
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  2.72000076216081
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Coroa",
+                                                        "setName":  "Archaic Petra",
+                                                        "name":  "Mask of Solitude Basalt",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15014_3.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Crit RATE",
+                                                                         "value":  31.100000572600003
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "HP%",
+                                                                             "value":  11.080000377096765
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  37.03000125924551
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  687.1400152210375
+                                                                         },
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  12.390000573196046
+                                                                         }
+                                                                     ]
+                                                    }
+                                                ],
+                                  "availability":  {
+                                                       "character":  true,
+                                                       "weapon":  true,
+                                                       "talents":  false,
+                                                       "stats":  false,
+                                                       "artifacts":  true
+                                                   }
+                              },
+                   "xiao":  {
+                                "buildAvailable":  true,
+                                "source":  "Akasha",
+                                "snapshotDate":  "2026-08-22",
+                                "sourceMd5":  "4b7a0cba30ba24f554e9b48dda4785df",
+                                "character":  {
+                                                  "name":  "Xiao",
+                                                  "level":  null,
+                                                  "constellation":  0,
+                                                  "image":  "https://enka.network/ui/UI_AvatarIcon_Xiao.png"
+                                              },
+                                "weapon":  {
+                                               "name":  "Primordial Jade Winged-Spear",
+                                               "level":  90,
+                                               "refinement":  1,
+                                               "rarity":  5,
+                                               "image":  "https://enka.network/ui/UI_EquipIcon_Pole_Morax_Awaken.png"
+                                           },
+                                "talents":  {
+                                                "normal":  null,
+                                                "skill":  null,
+                                                "burst":  null
+                                            },
+                                "stats":  {
+
+                                          },
+                                "artifactSets":  [
+                                                     {
+                                                         "name":  "Vermillion Hereafter",
+                                                         "count":  4,
+                                                         "icon":  "UI_RelicIcon_15023_4"
+                                                     },
+                                                     {
+                                                         "name":  "Gladiator\u0027s Finale",
+                                                         "count":  1,
+                                                         "icon":  "UI_RelicIcon_15001_1"
+                                                     }
+                                                 ],
+                                "artifacts":  [
+                                                  {
+                                                      "slot":  "Flor",
+                                                      "setName":  "Vermillion Hereafter",
+                                                      "name":  "Flowering Life",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15023_4.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Flat HP",
+                                                                       "value":  4780.0000005551
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Flat DEF",
+                                                                           "value":  16.200001318039455
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  33.40999986607031
+                                                                       },
+                                                                       {
+                                                                           "name":  "Flat ATK",
+                                                                           "value":  17.510000783981837
+                                                                       },
+                                                                       {
+                                                                           "name":  "ATK%",
+                                                                           "value":  5.830000523509538
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Pena",
+                                                      "setName":  "Vermillion Hereafter",
+                                                      "name":  "Feather of Nascent Light",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15023_2.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Flat ATK",
+                                                                       "value":  311.0000006676
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  7.780000489978159
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  14.760000181226099
+                                                                       },
+                                                                       {
+                                                                           "name":  "Elemental Mastery",
+                                                                           "value":  39.6299998283666
+                                                                       },
+                                                                       {
+                                                                           "name":  "DEF%",
+                                                                           "value":  16.760000509051643
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Areia",
+                                                      "setName":  "Vermillion Hereafter",
+                                                      "name":  "Solar Relic",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15023_5.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "ATK%",
+                                                                       "value":  46.600000827
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  10.110000602886535
+                                                                       },
+                                                                       {
+                                                                           "name":  "Energy Recharge",
+                                                                           "value":  6.480000995085098
+                                                                       },
+                                                                       {
+                                                                           "name":  "Elemental Mastery",
+                                                                           "value":  41.95999991147266
+                                                                       },
+                                                                       {
+                                                                           "name":  "HP%",
+                                                                           "value":  9.330000810310699
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Cálice",
+                                                      "setName":  "Gladiator\u0027s Finale",
+                                                      "name":  "Gladiator\u0027s Intoxication",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15001_1.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Anemo DMG Bonus",
+                                                                       "value":  46.600000060300005
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Elemental Mastery",
+                                                                           "value":  37.29999929736055
+                                                                       },
+                                                                       {
+                                                                           "name":  "HP%",
+                                                                           "value":  16.32999970088399
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  3.8899999714890794
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  13.209999785522587
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Coroa",
+                                                      "setName":  "Vermillion Hereafter",
+                                                      "name":  "Thundering Poise",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15023_3.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Crit DMG",
+                                                                       "value":  62.2000007304
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Flat ATK",
+                                                                           "value":  50.58000160778037
+                                                                       },
+                                                                       {
+                                                                           "name":  "Flat HP",
+                                                                           "value":  687.1300056132125
+                                                                       },
+                                                                       {
+                                                                           "name":  "Elemental Mastery",
+                                                                           "value":  18.650000348930273
+                                                                       },
+                                                                       {
+                                                                           "name":  "Flat DEF",
+                                                                           "value":  46.29999996746054
+                                                                       }
+                                                                   ]
+                                                  }
+                                              ],
+                                "availability":  {
+                                                     "character":  true,
+                                                     "weapon":  true,
+                                                     "talents":  false,
+                                                     "stats":  false,
+                                                     "artifacts":  true
+                                                 }
+                            },
+                   "faruzan":  {
+                                   "buildAvailable":  false,
+                                   "source":  "Akasha",
+                                   "snapshotDate":  "2026-08-22",
+                                   "character":  {
+                                                     "name":  "Faruzan"
+                                                 },
+                                   "unavailableReason":  "Build não disponível no perfil Akasha."
+                               },
+                   "jean":  {
+                                "buildAvailable":  true,
+                                "source":  "Akasha",
+                                "snapshotDate":  "2026-08-22",
+                                "sourceMd5":  "b2f42ebc4910a7b0abb0e74cbe8348a2",
+                                "character":  {
+                                                  "name":  "Jean",
+                                                  "level":  null,
+                                                  "constellation":  6,
+                                                  "image":  "https://enka.network/ui/UI_AvatarIcon_Qin.png"
+                                              },
+                                "weapon":  {
+                                               "name":  "Favonius Sword",
+                                               "level":  90,
+                                               "refinement":  2,
+                                               "rarity":  4,
+                                               "image":  "https://enka.network/ui/UI_EquipIcon_Sword_Zephyrus_Awaken.png"
+                                           },
+                                "talents":  {
+                                                "normal":  null,
+                                                "skill":  null,
+                                                "burst":  null
+                                            },
+                                "stats":  {
+
+                                          },
+                                "artifactSets":  [
+                                                     {
+                                                         "name":  "Viridescent Venerer",
+                                                         "count":  4,
+                                                         "icon":  "UI_RelicIcon_15002_4"
+                                                     },
+                                                     {
+                                                         "name":  "Emblem of Severed Fate",
+                                                         "count":  1,
+                                                         "icon":  "UI_RelicIcon_15020_1"
+                                                     }
+                                                 ],
+                                "artifacts":  [
+                                                  {
+                                                      "slot":  "Flor",
+                                                      "setName":  "Viridescent Venerer",
+                                                      "name":  "In Remembrance of Viridescent Fields",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15002_4.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Flat HP",
+                                                                       "value":  4780.0000000741
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Flat DEF",
+                                                                           "value":  53.2400017525668
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  2.72000011016081
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  5.44000014622162
+                                                                       },
+                                                                       {
+                                                                           "name":  "ATK%",
+                                                                           "value":  14.570000096749766
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Pena",
+                                                      "setName":  "Viridescent Venerer",
+                                                      "name":  "Viridescent Arrow Feather",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15002_2.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Flat ATK",
+                                                                       "value":  311.0000005072
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  10.11000046935105
+                                                                       },
+                                                                       {
+                                                                           "name":  "ATK%",
+                                                                           "value":  8.160000801646945
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  5.44000057932162
+                                                                       },
+                                                                       {
+                                                                           "name":  "DEF%",
+                                                                           "value":  10.200000316465136
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Areia",
+                                                      "setName":  "Viridescent Venerer",
+                                                      "name":  "Viridescent Venerer\u0027s Determination",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15002_5.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "ATK%",
+                                                                       "value":  46.6000008754
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Elemental Mastery",
+                                                                           "value":  34.97000018875449
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  14.760000389026098
+                                                                       },
+                                                                       {
+                                                                           "name":  "Energy Recharge",
+                                                                           "value":  17.490001153157646
+                                                                       },
+                                                                       {
+                                                                           "name":  "HP%",
+                                                                           "value":  4.660000782416754
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Cálice",
+                                                      "setName":  "Emblem of Severed Fate",
+                                                      "name":  "Scarlet Vessel",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15020_1.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "ATK%",
+                                                                       "value":  46.6000000206
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Energy Recharge",
+                                                                           "value":  5.180000161863008
+                                                                       },
+                                                                       {
+                                                                           "name":  "DEF%",
+                                                                           "value":  18.219999989605586
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  3.500000035501161
+                                                                       },
+                                                                       {
+                                                                           "name":  "Flat ATK",
+                                                                           "value":  44.74000074539248
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Coroa",
+                                                      "setName":  "Viridescent Venerer",
+                                                      "name":  "Viridescent Venerer\u0027s Diadem",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15002_3.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Crit RATE",
+                                                                       "value":  31.100000985700003
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "ATK%",
+                                                                           "value":  19.240001084643712
+                                                                       },
+                                                                       {
+                                                                           "name":  "DEF%",
+                                                                           "value":  10.930000858742106
+                                                                       },
+                                                                       {
+                                                                           "name":  "Flat HP",
+                                                                           "value":  239.0000009857
+                                                                       },
+                                                                       {
+                                                                           "name":  "Elemental Mastery",
+                                                                           "value":  23.310000451642384
+                                                                       }
+                                                                   ]
+                                                  }
+                                              ],
+                                "availability":  {
+                                                     "character":  true,
+                                                     "weapon":  true,
+                                                     "talents":  false,
+                                                     "stats":  false,
+                                                     "artifacts":  true
+                                                 }
+                            },
+                   "noelle":  {
+                                  "buildAvailable":  true,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "sourceMd5":  "ea5d46e57d0e86987c371cd24bf68d53",
+                                  "character":  {
+                                                    "name":  "Noelle",
+                                                    "level":  null,
+                                                    "constellation":  6,
+                                                    "image":  "https://enka.network/ui/UI_AvatarIcon_Noel.png"
+                                                },
+                                  "weapon":  {
+                                                 "name":  "Skyward Pride",
+                                                 "level":  80,
+                                                 "refinement":  1,
+                                                 "rarity":  5,
+                                                 "image":  "https://enka.network/ui/UI_EquipIcon_Claymore_Dvalin_Awaken.png"
+                                             },
+                                  "talents":  {
+                                                  "normal":  null,
+                                                  "skill":  null,
+                                                  "burst":  null
+                                              },
+                                  "stats":  {
+
+                                            },
+                                  "artifactSets":  [
+                                                       {
+                                                           "name":  "Archaic Petra",
+                                                           "count":  1,
+                                                           "icon":  "UI_RelicIcon_15014_1"
+                                                       }
+                                                   ],
+                                  "artifacts":  [
+                                                    {
+                                                        "slot":  "Cálice",
+                                                        "setName":  "Archaic Petra",
+                                                        "name":  "Goblet of Chiseled Crag",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15014_1.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Geo DMG Bonus",
+                                                                         "value":  46.600000071800004
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  14.579999518668897
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat ATK",
+                                                                             "value":  15.5600004914167
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  7.38999999789024
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  22.02000029114509
+                                                                         }
+                                                                     ]
+                                                    }
+                                                ],
+                                  "availability":  {
+                                                       "character":  true,
+                                                       "weapon":  true,
+                                                       "talents":  false,
+                                                       "stats":  false,
+                                                       "artifacts":  false
+                                                   }
+                              },
+                   "linnea":  {
+                                  "buildAvailable":  true,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "sourceMd5":  "7e95ee508392907eeb307dd63bbfe54b",
+                                  "character":  {
+                                                    "name":  "Linnea",
+                                                    "level":  null,
+                                                    "constellation":  0,
+                                                    "image":  "https://enka.network/ui/UI_AvatarIcon_Linnea.png"
+                                                },
+                                  "weapon":  {
+                                                 "name":  "Astral Vulture\u0027s Crimson Plumage",
+                                                 "level":  90,
+                                                 "refinement":  1,
+                                                 "rarity":  5,
+                                                 "image":  "https://enka.network/ui/UI_EquipIcon_Bow_Qoyllorsnova_Awaken.png"
+                                             },
+                                  "talents":  {
+                                                  "normal":  null,
+                                                  "skill":  null,
+                                                  "burst":  null
+                                              },
+                                  "stats":  {
+
+                                            },
+                                  "artifactSets":  [
+                                                       {
+                                                           "name":  "Aubade of Morningstar and Moon",
+                                                           "count":  4,
+                                                           "icon":  "UI_RelicIcon_15043_4"
+                                                       },
+                                                       {
+                                                           "name":  "Echoes of an Offering",
+                                                           "count":  1,
+                                                           "icon":  "UI_RelicIcon_15024_3"
+                                                       }
+                                                   ],
+                                  "artifacts":  [
+                                                    {
+                                                        "slot":  "Flor",
+                                                        "setName":  "Aubade of Morningstar and Moon",
+                                                        "name":  "Moonlit Offering\u0027s Opulent Dream",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15043_4.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat HP",
+                                                                         "value":  4780.0000008643
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  55.94999971989082
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  6.220000728997456
+                                                                         },
+                                                                         {
+                                                                             "name":  "Energy Recharge",
+                                                                             "value":  5.830000832709538
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  8.940000951322782
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Pena",
+                                                        "setName":  "Aubade of Morningstar and Moon",
+                                                        "name":  "Moonlit Offering\u0027s Parting Light",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15043_2.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Flat ATK",
+                                                                         "value":  311.000000912
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "ATK%",
+                                                                             "value":  16.910000684906304
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  18.520001369763673
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  9.720000977863133
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  15.540000218201936
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Areia",
+                                                        "setName":  "Aubade of Morningstar and Moon",
+                                                        "name":  "Moonlit Offering\u0027s Final Hour",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15043_5.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "DEF%",
+                                                                         "value":  58.300000458499994
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Flat HP",
+                                                                             "value":  567.6300053413125
+                                                                         },
+                                                                         {
+                                                                             "name":  "ATK%",
+                                                                             "value":  5.250000294587227
+                                                                         },
+                                                                         {
+                                                                             "name":  "HP%",
+                                                                             "value":  5.250000294587227
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  26.429999705693337
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Cálice",
+                                                        "setName":  "Aubade of Morningstar and Moon",
+                                                        "name":  "Moonlit Offering\u0027s Libation",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15043_1.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "DEF%",
+                                                                         "value":  58.3000003413
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  18.649999959830275
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit RATE",
+                                                                             "value":  8.16000044948243
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  5.44000041342162
+                                                                         },
+                                                                         {
+                                                                             "name":  "HP%",
+                                                                             "value":  16.320000185135832
+                                                                         }
+                                                                     ]
+                                                    },
+                                                    {
+                                                        "slot":  "Coroa",
+                                                        "setName":  "Echoes of an Offering",
+                                                        "name":  "Flowing Rings",
+                                                        "image":  "https://enka.network/ui/UI_RelicIcon_15024_3.png",
+                                                        "level":  20,
+                                                        "rarity":  5,
+                                                        "mainStat":  {
+                                                                         "name":  "Crit RATE",
+                                                                         "value":  31.1000000047
+                                                                     },
+                                                        "substats":  [
+                                                                         {
+                                                                             "name":  "DEF%",
+                                                                             "value":  10.199999813965137
+                                                                         },
+                                                                         {
+                                                                             "name":  "Crit DMG",
+                                                                             "value":  11.659999941519077
+                                                                         },
+                                                                         {
+                                                                             "name":  "Elemental Mastery",
+                                                                             "value":  34.96999931805449
+                                                                         },
+                                                                         {
+                                                                             "name":  "Flat DEF",
+                                                                             "value":  34.720001225403124
+                                                                         }
+                                                                     ]
+                                                    }
+                                                ],
+                                  "availability":  {
+                                                       "character":  true,
+                                                       "weapon":  true,
+                                                       "talents":  false,
+                                                       "stats":  false,
+                                                       "artifacts":  true
+                                                   }
+                              },
+                   "illuga":  {
+                                  "buildAvailable":  false,
+                                  "source":  "Akasha",
+                                  "snapshotDate":  "2026-08-22",
+                                  "character":  {
+                                                    "name":  "Illuga"
+                                                },
+                                  "unavailableReason":  "Build não disponível no perfil Akasha."
+                              },
+                   "itto":  {
+                                "buildAvailable":  true,
+                                "source":  "Akasha",
+                                "snapshotDate":  "2026-08-22",
+                                "sourceMd5":  "e547757f8932814032c5df4dd9f9edd4",
+                                "character":  {
+                                                  "name":  "Arataki Itto",
+                                                  "level":  null,
+                                                  "constellation":  1,
+                                                  "image":  "https://enka.network/ui/UI_AvatarIcon_Itto.png"
+                                              },
+                                "weapon":  {
+                                               "name":  "Whiteblind",
+                                               "level":  90,
+                                               "refinement":  5,
+                                               "rarity":  4,
+                                               "image":  "https://enka.network/ui/UI_EquipIcon_Claymore_Exotic_Awaken.png"
+                                           },
+                                "talents":  {
+                                                "normal":  null,
+                                                "skill":  null,
+                                                "burst":  null
+                                            },
+                                "stats":  {
+
+                                          },
+                                "artifactSets":  [
+                                                     {
+                                                         "name":  "Husk of Opulent Dreams",
+                                                         "count":  4,
+                                                         "icon":  "UI_RelicIcon_15021_4"
+                                                     },
+                                                     {
+                                                         "name":  "Wanderer\u0027s Troupe",
+                                                         "count":  1,
+                                                         "icon":  "UI_RelicIcon_15003_1"
+                                                     }
+                                                 ],
+                                "artifacts":  [
+                                                  {
+                                                      "slot":  "Flor",
+                                                      "setName":  "Husk of Opulent Dreams",
+                                                      "name":  "Bloom Times",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15021_4.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Flat HP",
+                                                                       "value":  4780.0000003262
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  14.759999839826099
+                                                                       },
+                                                                       {
+                                                                           "name":  "Flat DEF",
+                                                                           "value":  37.03000101284551
+                                                                       },
+                                                                       {
+                                                                           "name":  "Elemental Mastery",
+                                                                           "value":  44.28999933437871
+                                                                       },
+                                                                       {
+                                                                           "name":  "HP%",
+                                                                           "value":  9.3300003095107
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Pena",
+                                                      "setName":  "Husk of Opulent Dreams",
+                                                      "name":  "Plume of Luxury",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15021_2.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Flat ATK",
+                                                                       "value":  311.0000003863
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Flat DEF",
+                                                                           "value":  64.80999985224238
+                                                                       },
+                                                                       {
+                                                                           "name":  "DEF%",
+                                                                           "value":  5.830000354709538
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  6.220000250997456
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  11.660000323119077
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Areia",
+                                                      "setName":  "Husk of Opulent Dreams",
+                                                      "name":  "Song of Life",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15021_5.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "DEF%",
+                                                                       "value":  58.30000026
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  6.61000020724989
+                                                                       },
+                                                                       {
+                                                                           "name":  "Energy Recharge",
+                                                                           "value":  5.180000401263008
+                                                                       },
+                                                                       {
+                                                                           "name":  "Flat HP",
+                                                                           "value":  687.1400149084375
+                                                                       },
+                                                                       {
+                                                                           "name":  "Elemental Mastery",
+                                                                           "value":  44.28999926817871
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Cálice",
+                                                      "setName":  "Wanderer\u0027s Troupe",
+                                                      "name":  "Wanderer\u0027s String-Kettle",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15003_1.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Geo DMG Bonus",
+                                                                       "value":  46.600000508600004
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Flat ATK",
+                                                                           "value":  29.18000081377578
+                                                                       },
+                                                                       {
+                                                                           "name":  "Elemental Mastery",
+                                                                           "value":  34.969999821954495
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  9.720000388198617
+                                                                       },
+                                                                       {
+                                                                           "name":  "Crit DMG",
+                                                                           "value":  5.4400005807216205
+                                                                       }
+                                                                   ]
+                                                  },
+                                                  {
+                                                      "slot":  "Coroa",
+                                                      "setName":  "Husk of Opulent Dreams",
+                                                      "name":  "Skeletal Hat",
+                                                      "image":  "https://enka.network/ui/UI_RelicIcon_15021_3.png",
+                                                      "level":  20,
+                                                      "rarity":  5,
+                                                      "mainStat":  {
+                                                                       "name":  "Crit DMG",
+                                                                       "value":  62.2000006791
+                                                                   },
+                                                      "substats":  [
+                                                                       {
+                                                                           "name":  "Crit RATE",
+                                                                           "value":  6.220000543797457
+                                                                       },
+                                                                       {
+                                                                           "name":  "Flat DEF",
+                                                                           "value":  55.55000182350918
+                                                                       },
+                                                                       {
+                                                                           "name":  "Energy Recharge",
+                                                                           "value":  11.660000988448106
+                                                                       },
+                                                                       {
+                                                                           "name":  "ATK%",
+                                                                           "value":  4.660000586116754
+                                                                       }
+                                                                   ]
+                                                  }
+                                              ],
+                                "availability":  {
+                                                     "character":  true,
+                                                     "weapon":  true,
+                                                     "talents":  false,
+                                                     "stats":  false,
+                                                     "artifacts":  true
+                                                 }
+                            },
+                   "gorou":  {
+                                 "buildAvailable":  false,
+                                 "source":  "Akasha",
+                                 "snapshotDate":  "2026-08-22",
+                                 "character":  {
+                                                   "name":  "Gorou"
+                                               },
+                                 "unavailableReason":  "Build não disponível no perfil Akasha."
+                             }
+               }
+}
+;
+
+// Campos transcritos exclusivamente das capturas locais do Terminal Akasha.
+// Valores sem leitura inequívoca permanecem ausentes de propósito.
+window.BUILD_IMAGE_EXTRACTS = {
+  mavuika: { stats: { "Vida Máxima": 19408, ATQ: 1718, DEF: 1165, "Taxa Crítica": 61.0, "Dano Crítico": 210.4, "Recarga de Energia": 111.0, "Bônus de Dano Pyro": 46.6 }, metrics: { cv: 178.8 } },
+  citlali: { buildAvailable: true, weapon: { name: "Favonius Codex", level: 90, refinement: 5, rarity: 4 }, stats: { "Vida Máxima": 15970, ATQ: 1105, DEF: 872, "Proficiência Elemental": 557, "Taxa Crítica": 21.3, "Dano Crítico": 85.0, "Recarga de Energia": 235.3 }, artifactSets: [{ name: "Scroll of the Hero of Cinder City", count: 4 }] },
+  xilonen: { buildAvailable: true, character: { level: 90 }, weapon: { name: "Favonius Sword", level: 90, refinement: 4, rarity: 4 }, talents: { normal: 10, skill: 6 }, stats: { "Vida Máxima": 18508, ATQ: 1161, DEF: 2955, "Proficiência Elemental": 63, "Taxa Crítica": 56.7, "Dano Crítico": 63.2, "Recarga de Energia": 187.2 }, artifactSets: [{ name: "Scroll of the Hero of Cinder City", count: 4 }] },
+  bennett: { buildAvailable: true, character: { level: 90 }, weapon: { name: "Sapwood Blade", level: 90, refinement: 1, rarity: 4 }, stats: { "Vida Máxima": 27319, ATQ: 1435, DEF: 936, "Proficiência Elemental": 100, "Taxa Crítica": 8.1, "Dano Crítico": 50.0, "Bônus de Cura": 35.9, "Recarga de Energia": 236.9 }, artifactSets: [{ name: "Noblesse Oblige", count: 4 }] },
+  arlecchino: { character: { level: 90 }, talents: { normal: 10, skill: 6, burst: 9 }, stats: { "Vida Máxima": 18839, ATQ: 2570, DEF: 781, "Proficiência Elemental": 103, "Taxa Crítica": 81.1, "Dano Crítico": 210.4, "Recarga de Energia": 129.8, "Bônus de Dano Pyro": 46.6 } },
+  fischl: { character: { level: 90 }, stats: { "Vida Máxima": 14238, ATQ: 1641, DEF: 811, "Proficiência Elemental": 310, "Taxa Crítica": 66.4, "Dano Crítico": 113.7, "Recarga de Energia": 133.0, "Bônus de Dano Electro": 46.6 } },
+  beidou: { character: { level: 90 }, weapon: { level: 20, refinement: 1 }, stats: { "Vida Máxima": 20355, ATQ: 1008, DEF: 866, "Proficiência Elemental": 112, "Taxa Crítica": 55.9, "Dano Crítico": 110.6, "Recarga de Energia": 142.0, "Bônus de Dano Electro": 70.6 } },
+  chevreuse: { buildAvailable: true, weapon: { name: "Favonius Lance", level: 90, refinement: 5, rarity: 4 }, stats: { "Vida Máxima": 30017, ATQ: 1208, DEF: 735, "Proficiência Elemental": 37, "Taxa Crítica": 31.8, "Dano Crítico": 150.3, "Recarga de Energia": 151.3 }, artifactSets: [{ name: "Noblesse Oblige", count: 4 }] },
+  neuvillette: { character: { level: 90 }, stats: { "Vida Máxima": 39463, ATQ: 1128, DEF: 863, "Proficiência Elemental": 40, "Taxa Crítica": 61.0, "Dano Crítico": 237.2, "Recarga de Energia": 104.5 } },
+  furina: { character: { level: 90 }, stats: { "Vida Máxima": 35967, ATQ: 1115, DEF: 815, "Taxa Crítica": 65.4, "Dano Crítico": 164.3, "Recarga de Energia": 180.9 } },
+  kazuha: { character: { level: 90 }, weapon: { refinement: 4 }, stats: { "Vida Máxima": 20448, ATQ: 1426, DEF: 1004, "Proficiência Elemental": 882, "Taxa Crítica": 34.6, "Dano Crítico": 82.6, "Recarga de Energia": 125.3, "Bônus de Dano Anemo": 15.0 } },
+  tartaglia: { character: { level: 90 }, stats: { "Vida Máxima": 20121, ATQ: 1907, DEF: 1034, "Taxa Crítica": 75.8, "Dano Crítico": 160.4, "Recarga de Energia": 111.7, "Bônus de Dano Hydro": 90.4 } },
+  xiangling: { character: { level: 90 }, stats: { "Vida Máxima": 16223, ATQ: 1241, DEF: 804, "Proficiência Elemental": 248, "Taxa Crítica": 56.7, "Dano Crítico": 112.9, "Recarga de Energia": 245.6, "Bônus de Dano Pyro": 46.6 } },
+  sucrose: { buildAvailable: true, character: { level: 90 }, weapon: { name: "Sacrificial Fragments", level: 90, refinement: 5, rarity: 4 }, stats: { "Vida Máxima": 16906, ATQ: 1054, DEF: 761, "Proficiência Elemental": 666, "Taxa Crítica": 18.6, "Dano Crítico": 83.4, "Recarga de Energia": 148.6, "Bônus de Dano Anemo": 85.6 }, artifactSets: [{ name: "Viridescent Venerer", count: 4 }] },
+  clorinde: { character: { level: 90 }, talents: { normal: 1, skill: 9, burst: 9 }, stats: { "Vida Máxima": 13712, ATQ: 1188, DEF: 839, "Taxa Crítica": 37.0, "Dano Crítico": 124.6, "Recarga de Energia": 129.2, "Bônus de Dano Electro": 46.6 } },
+  nahida: { character: { level: 90 }, stats: { "Vida Máxima": 16340, ATQ: 1186, DEF: 736, "Proficiência Elemental": 605, "Taxa Crítica": 37.3, "Dano Crítico": 167.3, "Recarga de Energia": 166.1, "Bônus de Dano Dendro": 15.0 } },
+  raiden: { character: { level: 90 }, stats: { "Vida Máxima": 21344, ATQ: 1796, "Taxa Crítica": 66.0, "Dano Crítico": 126.9, "Recarga de Energia": 275.8, "Bônus de Dano Electro": 22.5 } },
+  ganyu: { character: { level: 90 }, stats: { "Vida Máxima": 15776, ATQ: 2172, DEF: 916, "Proficiência Elemental": 19, "Taxa Crítica": 16.3, "Dano Crítico": 202.7, "Recarga de Energia": 141.5, "Bônus de Dano Cryo": 61.6 } },
+  charlotte: { buildAvailable: true, character: { level: 50 }, weapon: { name: "Thrilling Tales of Dragon Slayers", level: 80, refinement: 5, rarity: 3 }, stats: { "Vida Máxima": 9360, ATQ: 639, DEF: 359, "Proficiência Elemental": 19, "Taxa Crítica": 10.8, "Dano Crítico": 50.0, "Recarga de Energia": 100.0 }, artifactSets: [{ name: "Marechaussee Hunter", count: 2 }] },
+  travelerCryo: { buildAvailable: true, character: { level: 80 }, weapon: { name: "Sabre da Ponta Estelar", level: 40, refinement: 2 }, stats: { "Vida Máxima": 16788, ATQ: 750, DEF: 738, "Proficiência Elemental": 80, "Taxa Crítica": 54.6, "Dano Crítico": 64.8, "Recarga de Energia": 110.6, "Bônus de Dano Pyro": 6.3 }, artifactSets: [{ name: "Instructor", count: 2 }] },
+  diona: { character: { level: 90 }, weapon: { refinement: 3 }, stats: { "Vida Máxima": 24046, ATQ: 1723, DEF: 742, "Proficiência Elemental": 65, "Taxa Crítica": 19.4, "Dano Crítico": 88.1, "Recarga de Energia": 174.7, "Bônus de Dano Cryo": 24.0 } },
+  kuki: { buildAvailable: true, character: { level: 90 }, weapon: { name: "Iron Sting", level: 90, refinement: 1, rarity: 4 }, stats: { "Vida Máxima": 22103, ATQ: 1136, DEF: 1121, "Proficiência Elemental": 889, "Taxa Crítica": 17.1, "Dano Crítico": 74.1, "Recarga de Energia": 130.4 }, artifactSets: [{ name: "Flower of Paradise Lost", count: 4 }] },
+  xingqiu: { character: { level: 90 }, stats: { "Vida Máxima": 18399, ATQ: 1492, DEF: 933, "Proficiência Elemental": 96, "Taxa Crítica": 72.7, "Dano Crítico": 100.5, "Recarga de Energia": 197.4, "Bônus de Dano Hydro": 66.6 } },
+  tighnari: { character: { level: 90 }, stats: { "Vida Máxima": 17329, ATQ: 1322, "Taxa Crítica": 67.7, "Dano Crítico": 188.3, "Recarga de Energia": 111.0, "Bônus de Dano Dendro": 46.6 } },
+  lisa: { character: { level: 20 }, weapon: { level: 70, refinement: 5 }, stats: { "Vida Máxima": 3567, ATQ: 452, DEF: 159, "Taxa Crítica": 5.0, "Dano Crítico": 50.0, "Recarga de Energia": 100.0 } },
+  zhongli: { character: { level: 90 }, talents: { normal: 2, skill: 9, burst: 9 }, stats: { "Vida Máxima": 47989, ATQ: 1153, DEF: 872, "Taxa Crítica": 26.4, "Dano Crítico": 87.3, "Recarga de Energia": 152.5, "Bônus de Dano Geo": 12.4 } },
+  venti: { character: { level: 90 }, stats: { "Vida Máxima": 13914, ATQ: 1446, DEF: 747, "Proficiência Elemental": 40, "Taxa Crítica": 14.7, "Dano Crítico": 112.2, "Recarga de Energia": 201.3 } },
+  albedo: { character: { level: 90 }, stats: { "Vida Máxima": 22322, ATQ: 1091, DEF: 2846, "Proficiência Elemental": 42, "Taxa Crítica": 55.9, "Dano Crítico": 67.9, "Recarga de Energia": 112.9, "Bônus de Dano Geo": 90.4 } },
+  xiao: { character: { level: 90 }, talents: { normal: 10, skill: 9, burst: 9 }, stats: { "Vida Máxima": 21471, ATQ: 2124, DEF: 996, "Proficiência Elemental": 138, "Taxa Crítica": 68.0, "Dano Crítico": 173.6, "Recarga de Energia": 106.5, "Bônus de Dano Anemo": 46.6 } },
+  faruzan: { buildAvailable: true, character: { level: 80, constellation: 3 }, weapon: { name: "Favonius Warbow", level: 90, refinement: 5, rarity: 4 }, talents: { normal: 1, skill: 7, burst: 8 }, stats: { "Vida Máxima": 13937, ATQ: 894, DEF: 752, "Proficiência Elemental": 105, "Taxa Crítica": 49.2, "Dano Crítico": 56.2, "Recarga de Energia": 267.0, "Bônus de Dano Anemo": 46.6 }, artifactSets: [{ name: "Emblem of Severed Fate", count: 2 }, { name: "The Exile", count: 2 }] },
+  jean: { character: { level: 90 }, weapon: { refinement: 2 }, stats: { "Vida Máxima": 20399, ATQ: 1987, DEF: 1124, "Proficiência Elemental": 58, "Taxa Crítica": 52.4, "Dano Crítico": 75.6, "Bônus de Cura": 22.8, "Recarga de Energia": 183.9 } },
+  noelle: { character: { level: 80 }, weapon: { level: 80, refinement: 1 }, stats: { "Vida Máxima": 12071, ATQ: 1155, "Taxa Crítica": 12.4, "Dano Crítico": 50.0, "Recarga de Energia": 155.5, "Bônus de Dano Geo": 46.6 } },
+  linnea: { stats: { ATQ: 1229, "Proficiência Elemental": 2110, "Taxa Crítica": 82.1, "Dano Crítico": 181.4, "Recarga de Energia": 105.8 } },
+  illuga: { buildAvailable: true, character: { level: 50 }, weapon: { name: "Dragon's Bane", level: 90, refinement: 5, rarity: 4 }, stats: { "Vida Máxima": 12347, ATQ: 725, DEF: 537, "Proficiência Elemental": 728, "Taxa Crítica": 17.5, "Dano Crítico": 54.4, "Recarga de Energia": 168.4 }, artifactSets: [{ name: "Instructor", count: 2 }] },
+  itto: { character: { level: 90 }, stats: { "Vida Máxima": 19525, ATQ: 2516, "Taxa Crítica": 53.0, "Dano Crítico": 144.1, "Recarga de Energia": 116.8, "Bônus de Dano Geo": 46.6 } },
+  gorou: { buildAvailable: true, character: { level: 70 }, weapon: { name: "Favonius Warbow", level: 90, refinement: 5, rarity: 4 }, stats: { "Vida Máxima": 9570, ATQ: 664, DEF: 716, "Taxa Crítica": 7.2, "Dano Crítico": 55.6, "Recarga de Energia": 188.3, "Bônus de Dano Geo": 24.0 }, artifactSets: [{ name: "The Exile", count: 2 }] },
+  alhaitham: { character: { level: 90 }, talents: { normal: 9, skill: 10, burst: 9 }, stats: { "Vida Máxima": 21006, ATQ: 1310, DEF: 805, "Proficiência Elemental": 367, "Taxa Crítica": 68.3, "Dano Crítico": 161.9, "Recarga de Energia": 116.8, "Bônus de Dano Dendro": 75.4 } },
+  alyosha: { buildAvailable: true, character: { level: 20 }, weapon: { name: "Beginner's Protector", level: 1, refinement: 1, rarity: 1 }, stats: { "Vida Máxima": 3326, ATQ: 195, "Taxa Crítica": 5.0, "Dano Crítico": 50.0, "Recarga de Energia": 100.0 } }
+};
+
+// Segunda passagem: valores conferidos visualmente nos 38 cards locais.
+var reviewedBuildValues = {
+  mavuika: { character: { level: 90 }, talents: { normal: 4, skill: 9, burst: 10 }, metrics: { cv: 178.8 } },
+  citlali: { character: { level: 80, constellation: 0 }, talents: { normal: 1, skill: 8, burst: 6 }, metrics: { cv: 67.6 } },
+  xilonen: { character: { constellation: 0 }, talents: { normal: 1, skill: 10, burst: 6 }, metrics: { cv: 116.6 } },
+  bennett: { character: { constellation: 6 }, talents: { normal: 1, skill: 4, burst: 12 }, metrics: { cv: 6.2 } },
+  arlecchino: { talents: { normal: 10, skill: 6, burst: 9 }, metrics: { cv: 230.1 } },
+  fischl: { talents: { normal: 5, skill: 12, burst: 12 }, metrics: { cv: 186.6 } },
+  beidou: { talents: { normal: 1, skill: 11, burst: 11 }, metrics: { cv: 162.5 } },
+  chevreuse: { character: { level: 80, constellation: 3 }, talents: { normal: 1, skill: 11, burst: 1 }, metrics: { cv: 153.9 } },
+  neuvillette: { talents: { normal: 10, skill: 6, burst: 7 }, metrics: { cv: 172.6 } },
+  furina: { talents: { normal: 1, skill: 10, burst: 10 }, metrics: { cv: 196.7 } },
+  kazuha: { talents: { normal: 1, skill: 9, burst: 9 }, metrics: { cv: 91.7 } },
+  tartaglia: { talents: { normal: 3, skill: 10, burst: 10 }, metrics: { cv: 185.8 } },
+  xiangling: { talents: { normal: 3, skill: 12, burst: 13 }, metrics: { cv: 166.4 } },
+  sucrose: { character: { constellation: 6 }, talents: { normal: 1, skill: 10, burst: 11 }, metrics: { cv: 60.6 } },
+  clorinde: { talents: { normal: 1, skill: 9, burst: 9 }, metrics: { cv: 100.3 } },
+  nahida: { talents: { normal: 1, skill: 10, burst: 9 }, metrics: { cv: 126.7 } },
+  raiden: { talents: { normal: 1, skill: 10, burst: 10 }, stats: { DEF: 877, "Proficiência Elemental": 40, "Bônus de Dano Electro": 116.9 }, metrics: { cv: 199.0 } },
+  ganyu: { talents: { normal: 9, skill: 6, burst: 10 }, metrics: { cv: 136.8 } },
+  charlotte: { character: { constellation: 6 }, talents: { normal: 1, skill: 4, burst: 4 }, metrics: { cv: 11.7 } },
+  travelerCryo: { character: { constellation: 0 }, talents: { normal: 1, skill: 1, burst: 1 }, artifactSets: [{ name: "Instructor", count: 4 }], metrics: { cv: 14.8 } },
+  diona: { talents: { normal: 1, skill: 12, burst: 12 }, metrics: { cv: 66.9 } },
+  alyosha: { character: { constellation: 2 }, talents: { normal: 1, skill: 1, burst: 1 }, stats: { ATQ: 97, DEF: 195 } },
+  alhaitham: { talents: { normal: 9, skill: 10, burst: 9 }, metrics: { cv: 183.5 } },
+  kuki: { character: { constellation: 1 }, talents: { normal: 1, skill: 9, burst: 1 }, metrics: { cv: 48.2 } },
+  xingqiu: { talents: { normal: 1, skill: 12, burst: 13 }, metrics: { cv: 185.8 } },
+  tighnari: { talents: { normal: 10, skill: 1, burst: 9 }, stats: { DEF: 792, "Proficiência Elemental": 173, "Bônus de Dano Dendro": 75.4 }, metrics: { cv: 201.3 } },
+  lisa: { talents: { normal: 1, skill: 1, burst: 1 } },
+  zhongli: { talents: { normal: 2, skill: 9, burst: 9 }, stats: { "Proficiência Elemental": 77, "Bônus de Dano Geo": 43.8 }, metrics: { cv: 80.1 } },
+  venti: { talents: { normal: 2, skill: 9, burst: 10 }, stats: { "Bônus de Dano Anemo": 22.0 }, metrics: { cv: 81.6 } },
+  albedo: { talents: { normal: 1, skill: 9, burst: 9 }, metrics: { cv: 119.7 } },
+  xiao: { talents: { normal: 10, skill: 9, burst: 9 }, metrics: { cv: 167.1 } },
+  faruzan: { talents: { normal: 1, skill: 7, burst: 8 }, metrics: { cv: 94.6 } },
+  jean: { talents: { normal: 1, skill: 12, burst: 12 }, stats: { "Bônus de Cura": 22.2, "Bônus de Dano Anemo": 15.0 }, metrics: { cv: 120.5 } },
+  noelle: { talents: { normal: 6, skill: 9, burst: 9 }, stats: { ATQ: 797, DEF: 1155 }, metrics: { cv: 14.8 } },
+  linnea: { character: { level: 90 }, talents: { normal: 1, skill: 9, burst: 6 }, stats: { "Vida Máxima": 17377, ATQ: 1229, DEF: 2110, "Proficiência Elemental": 190 }, metrics: { cv: 181.1 } },
+  illuga: { character: { constellation: 0 }, talents: { normal: 1, skill: 1, burst: 1 }, artifactSets: [{ name: "Instructor", count: 4 }], metrics: { cv: 29.3 } },
+  itto: { talents: { normal: 10, skill: 9, burst: 9 }, stats: { ATQ: 1111, DEF: 2516, "Proficiência Elemental": 124 }, metrics: { cv: 151.6 } },
+  gorou: { character: { constellation: 2 }, talents: { normal: 1, skill: 8, burst: 2 }, metrics: { cv: 10.0 } }
+};
+
+function mergeReviewedBuild(target, source) {
+  for (var key in source) {
+    if (!source.hasOwnProperty(key)) continue;
+    if (source[key] && Object.prototype.toString.call(source[key]) === "[object Object]") {
+      if (!target[key] || Object.prototype.toString.call(target[key]) !== "[object Object]") target[key] = {};
+      mergeReviewedBuild(target[key], source[key]);
+    } else {
+      target[key] = source[key];
+    }
+  }
+}
+
+for (var reviewedCharacterId in reviewedBuildValues) {
+  if (!reviewedBuildValues.hasOwnProperty(reviewedCharacterId)) continue;
+  if (!window.BUILD_IMAGE_EXTRACTS[reviewedCharacterId]) window.BUILD_IMAGE_EXTRACTS[reviewedCharacterId] = {};
+  mergeReviewedBuild(window.BUILD_IMAGE_EXTRACTS[reviewedCharacterId], reviewedBuildValues[reviewedCharacterId]);
+}

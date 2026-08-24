@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Arquivo pessoal de composi&ccedil;&otilde;es de times de Genshin Impact."
+    />
+    <title>Times - Genshin Impact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="archive-shell">
+      <header class="masthead">
+        <p class="eyebrow">Arquivo de composi&ccedil;&otilde;es</p>
+        <h1>Times <span>&mdash; Genshin Impact</span></h1>
+        <p class="subtitle">Composi&ccedil;&otilde;es dispon&iacute;veis na minha conta</p>
+        <div class="summary" aria-label="Resumo da conta">
+          <span><strong>14</strong> Times</span>
+          <span><strong>7</strong> Elementos</span>
+        </div>
+      </header>
+
+      <nav class="filters" aria-label="Filtrar times por elemento">
+        <div id="filter-list" class="filter-list"></div>
+        <p id="filter-count" class="filter-count" aria-live="polite">Todos os elementos &middot; 14 times</p>
+      </nav>
+
+      <section id="teams-root" class="teams-root" aria-live="polite"></section>
+    </main>
+
+    <template id="empty-state-template">
+      <div class="empty-state">Nenhuma composi&ccedil;&atilde;o encontrada.</div>
+    </template>
+
+    <div id="team-detail-modal" class="team-detail-modal" hidden>
+      <div class="team-detail-backdrop" data-close-detail></div>
+      <section class="team-detail-panel" role="dialog" aria-modal="true" aria-labelledby="detail-title" tabindex="-1">
+        <button class="detail-close" type="button" aria-label="Fechar detalhe" data-close-detail>&times;</button>
+        <div id="team-detail-content"></div>
+      </section>
+    </div>
+
+    <div id="akasha-lightbox" class="akasha-lightbox" hidden>
+      <div class="akasha-lightbox-backdrop" data-close-lightbox></div>
+      <section class="akasha-lightbox-panel" role="dialog" aria-modal="true" aria-label="Card Akasha ampliado">
+        <button class="akasha-lightbox-close" type="button" aria-label="Fechar imagem" data-close-lightbox>&times;</button>
+        <img id="akasha-lightbox-image" alt="" />
+      </section>
+    </div>
+
+    <script src="data/builds.js"></script>
+    <script src="data/guides.js"></script>
+    <script src="data/recommendations.js"></script>
+    <script src="data/recommendation-assets.js"></script>
+    <script src="data/recommendation-assets-global.js"></script>
+    <script src="data/team-guidance.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
