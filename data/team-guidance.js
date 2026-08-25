@@ -30,7 +30,7 @@
       raiden: profile(["ER", "ATQ%"], ["Bônus de Dano Electro", "ATQ%"], ["CRIT"], "ER até a meta > CRIT > ATQ%", "Q > E"),
       ganyu: profile(["ATQ%"], ["Bônus de Dano Cryo"], ["CRIT", "ATQ%"], "ER > Dano CRIT ≥ ATQ% > Taxa CRIT", "NA ≥ Q > E"),
       charlotte: profile(["ER", "ATQ%"], ["ATQ%"], ["Bônus de Cura", "Taxa CRIT¹"], "ER ≥ ATQ% > Taxa CRIT¹", "Q > E", ["¹ Taxa CRIT ganha importância com Favonius."]),
-      travelerCryo: profile(["ATQ%"], ["ATQ%"], ["CRIT"], "ER > CRIT > ATQ% > Proficiência Elemental", "Q > NA > E"),
+      travelerCryo: profile(["ATQ%"], ["ATQ%"], ["CRIT"], "Taxa CRIT > Dano CRIT > ATQ% > Proficiência Elemental > ER", "Q > NA > E", ["ATQ% / ATQ% / CRIT é a referência para Stellar-Conduct.", "Use a Skill e acumule 8 cargas antes do Supremo; o Ataque Carregado especial concede 2 cargas."]),
       diona: profile(["HP%", "ER"], ["HP%"], ["HP%", "Bônus de Cura", "Taxa CRIT¹"], "ER > HP% > Taxa CRIT¹ > HP Flat", "E ≥ Q", ["¹ Taxa CRIT ganha importância com Favonius."]),
       alyosha: profile(["ER", "ATQ%"], ["ATQ%"], ["Bônus de Cura", "ATQ%", "Taxa CRIT¹"], "ER > Taxa CRIT¹ > ATQ%", "E > Q", ["¹ Taxa CRIT ganha importância com Favonius."]),
       alhaitham: profile(["Proficiência Elemental", "ATQ%"], ["Bônus de Dano Dendro"], ["CRIT"], "ER > ~200–300 Proficiência Elemental > CRIT > Proficiência Elemental > ATQ%", "Nv.90 > E > NA ≥ Q"),
@@ -103,7 +103,7 @@
         kazuha: { energy: energy("190–200%", "Padrão", ["~160–170% com 1 Favonius; ~140–150% com dois procs."]) },
       },
       "traveler-cryo": {
-        travelerCryo: { energy: energyLabel("Sem valor exato publicado", "Não aplicar faixas de outra composição", ["ER é o primeiro subatributo, mas não há faixa específica consolidada para este quarteto."]) },
+        travelerCryo: { energy: { target: "120–140%", condition: "Segundo Cryo: Diona", source: "Guias 7.0", notes: ["A arma atual e C1 reduzem a necessidade; confirme o Supremo a cada rotação antes de diminuir ER.", "Beidou C6 e Diona C6 podem alternar os Supremos em rotações de 15s."] } },
         beidou: { energy: energyLabel("Sem linha específica com Alyosha", "Alyosha gera partículas Electro", ["A necessidade de ER ainda não deve receber um valor inventado."]) },
         diona: { energy: energyLabel("Depende de constelação e arma", "Diona", ["C0: Sacrificial 145–165%, Favonius 160–180%, outras 180–220%.", "C1+: Sacrificial 120–135%, Favonius 130–150%, outras 145–175%."]) },
         alyosha: { energy: energy("115–145%", "C1+ com 1 Electro; conta atual C2", ["C0: 145–180%. Com Favonius: C0 130–155%, C1+ 105–125%."]) },

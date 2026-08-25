@@ -279,11 +279,12 @@ window.CHARACTER_GUIDES = {
   travelerCryo: {
     teams: {
       "traveler-cryo": {
+        role: "Stellar-Conduct Main DPS",
         energy: {
-          target: null,
-          label: "Priorize ER até usar o Supremo conforme a rotação",
-          source: "KQM",
-          notes: ["Faixa numérica ainda não consolidada."],
+          target: "120–140%",
+          condition: "Segundo Cryo: Diona",
+          source: "Guias 7.0",
+          notes: ["A arma atual e C1 reduzem a necessidade; confirme o Supremo a cada rotação antes de diminuir ER.", "Beidou C6 e Diona C6 podem alternar os Supremos em rotações de 15s."],
         },
       },
     },

@@ -232,7 +232,7 @@
   });
 
   apply("travelerCryo", {
-    role: "Stellar Glimmer DPS",
+    role: "Stellar-Conduct Main DPS",
     ...recommendation(
       ["Sabre da Ponta Estelar", "Asa Gelada de Lago Branco", "Azul Brilhante ≈ Absolvição", "Cortadora da Neblina ≈ Luz das Folhas Cortadas", "Corrupção Sombria", "Urakugo Rensai ≈ Cortador de Jade ≈ Maremoto da Lua de Futsu ≈ Esplendor das Águas Silenciosas ≈ Fragmento Lunar", "Cortador de Montanhas", "Falcão ≈ Juramento pela Liberdade", "Lâmina Derretida do Herege R5", "Fonte da Ignição R5 ≈ Epílogo das Profundezas R5"],
       ["Desencantamento na Sombra Profunda ×4", "Ascensão Zéfira ×4 ≈ Sonhos Dourados ×4", "ATQ 2p + EM 2p"],
