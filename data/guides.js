@@ -24,6 +24,24 @@ window.GUIDE_NAME_ALIASES = {
 };
 
 window.CHARACTER_GUIDES = {
+  lanYan: {
+    general: { role: "Support / Shielder" },
+  },
+  mona: {
+    general: { role: "Support / Buffer" },
+  },
+  thoma: {
+    general: { role: "Support / Shielder" },
+    teams: {
+      "arlecchino-vaporize": { notes: ["Fornece o escudo da composição com Arlecchino, Xingqiu e Sucrose. Pode roubar algumas Vaporizações da Arlecchino."] },
+    },
+  },
+  collei: {
+    general: { role: "Support / Sub DPS" },
+    teams: {
+      "tighnari-spread": { notes: ["Segundo Dendro da versão principal; Lisa fica como alternativa por estar pouco investida."] },
+    },
+  },
   mavuika: {
     general: {
       role: "On-Field DPS / Melt",
@@ -207,10 +225,6 @@ window.CHARACTER_GUIDES = {
 
   fischl: {
     teams: {
-      "arlecchino-overload": {
-        role: "Off-Field normal",
-        energy: { target: "~120–140%", condition: "Supremo a cada rotação", source: "KQM", notes: ["~100% quando o Supremo é usado a cada duas rotações.", "Use como referência, não como obrigação absoluta."] },
-      },
       "clorinde-aggravate": {
         role: "Off-Field / Aggravate",
         energy: { target: "~120–140%", condition: "Supremo a cada rotação com Clorinde", source: "KQM", notes: ["Use como referência, não como obrigação absoluta."] },
@@ -234,7 +248,7 @@ window.CHARACTER_GUIDES = {
   tighnari: {
     teams: {
       "tighnari-spread": {
-        energy: { target: "~150–160%", condition: "Sem outro Dendro; uma Skill por Supremo", source: "KQM", notes: [] },
+        energy: { label: "Ajustar com Collei", condition: "Dois personagens Dendro", source: "Revisão da conta", notes: ["Reavalie a recarga na rotação com Collei; a antiga referência sem outro Dendro não se aplica à versão principal."] },
       },
     },
   },

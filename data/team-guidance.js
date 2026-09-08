@@ -58,11 +58,10 @@
         xilonen: { energy: energyLabel("Supremo opcional", "Bennett já fornece cura", ["Para usar Q toda rotação: ~170–190% com 1 E ou ~115–125% com 2 E em Solo Geo."]) },
         bennett: { energy: energy("175–220%", "Double Pyro") },
       },
-      "arlecchino-overload": {
+      "arlecchino-vaporize": {
         arlecchino: { energy: energy("100%", "Q para cura ou emergência", ["Não vale sacrificar dano buscando ER para o Supremo."]) },
-        fischl: { energy: energy("~100–125%") },
-        beidou: { energy: energy("140–185%", "Fischl C6 e contra-ataque consistente reduzem a necessidade", ["Com duas ativações completas de Oz, pode cair ainda mais."]) },
-        chevreuse: { energy: energy("100%") },
+        xingqiu: { notes: ["Aplicador Hydro da composição de Vaporize."] },
+        sucrose: { notes: ["Suporte Anemo da composição principal com Arlecchino, Xingqiu e Thoma."] },
       },
       "neuvillette-hypercarry": {
         neuvillette: { energy: energy("100–130%") },
@@ -115,13 +114,13 @@
         xingqiu: { energy: energyLabel("Depende de constelação e arma", "Solo Hydro", ["C0–C5: Sacrificial R3+ 150–180%, Favonius 190–220%, outras 220–260%.", "C6: Sacrificial R3+ 130–150%, Favonius 150–180%, outras 180–220%."]) },
       },
       "tighnari-spread": {
-        tighnari: { energy: energy("150–160%", "Uma E por Q; sem outro Dendro", ["Com duas E por Q, cai para ~100–110%."]) },
+        tighnari: { energy: { label: "Ajustar com Collei", condition: "Dois personagens Dendro", source: "Revisão da conta", notes: ["A antiga referência sem outro Dendro não se aplica à composição principal. Ajuste a recarga conforme a rotação e a geração de partículas com Collei."] } },
         fischl: {
           mainStats: { sands: ["ATQ%", "Proficiência Elemental"], goblet: ["Bônus de Dano Electro"], circlet: ["CRIT"] },
           substats: "ER > CRIT > ATQ% ≈ Proficiência Elemental",
           energy: energy("~100–125%"),
         },
-        lisa: { energy: energy("130–160%", "1 Hold E por rotação", ["Sem Hold E, pode subir para ~180–210%."]) },
+        collei: { notes: ["Segundo personagem Dendro da composição principal. Lisa permanece como alternativa por estar pouco investida na conta."] },
         zhongli: { energy: energyLabel("100% / sem ER", "Shield Support") },
       },
       "venti-hexerei": {
