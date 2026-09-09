@@ -54,15 +54,6 @@
   ] };
   // Substitua as orientações antigas, sem somá-las às prioridades conflitantes.
   window.TEAM_BUILD_GUIDANCE.teams["traveler-cryo"] = guidance;
-  // Capturas Akasha novas fornecidas pela conta. Estes valores substituem apenas
-  // os campos confirmados nas imagens; o restante do snapshot histórico é mantido.
-  Object.assign(window.BUILD_IMAGE_EXTRACTS, {
-    fischl: { character: { name: "Fischl", level: 90, constellation: 6 }, weapon: { name: "Vista da Jade Primordial", level: 90, refinement: 1, rarity: 5, baseAttack: 510, secondaryStat: "Taxa CRIT: 27,6%" }, stats: { "Vida Máxima": 14776, ATQ: 1701, DEF: 798, "Proficiência Elemental": 86, "Taxa Crítica": 62.9, "Dano Crítico": 175.9, "Recarga de Energia": 121.4, "Bônus de Dano Electro": 46.6 }, artifactSets: [{ name: "Trupe Dourada", count: 4 }], talents: { normal: 5, skill: 12, burst: 12 } },
-    beidou: { character: { name: "Beidou", level: 90, constellation: 6 }, weapon: { name: "Túmulo do Lobo", level: 70, refinement: 1, rarity: 5, baseAttack: 457, secondaryStat: "ATQ: 40,9%" }, stats: { "Vida Máxima": 21505, ATQ: 1468, DEF: 736, "Proficiência Elemental": 40, "Taxa Crítica": 66.0, "Dano Crítico": 126.9, "Recarga de Energia": 188.6, "Bônus de Dano Electro": 70.6 }, artifactSets: [{ name: "Selo da Insulação", count: 4 }], talents: { normal: 1, skill: 11, burst: 11 } },
-    travelerCryo: { character: { name: "Viajante", level: 90, constellation: 0 }, weapon: { name: "Sabre da Ponta Estelar", level: 90, refinement: 3, rarity: 4, baseAttack: 608, secondaryStat: "Taxa CRIT: 33,1%" }, stats: { "Vida Máxima": 19699, ATQ: 2531, DEF: 886, "Proficiência Elemental": 98, "Taxa Crítica": 51.7, "Dano Crítico": 172.8, "Recarga de Energia": 118.8 }, artifactSets: [{ name: "Desencantamento na Sombra Profunda", count: 4 }], talents: { normal: 9, skill: 6, burst: 10 } },
-    diona: { character: { name: "Diona", level: 90, constellation: 6 }, weapon: { name: "Arco do Sacrifício", level: 90, refinement: 3, rarity: 4, baseAttack: 565, secondaryStat: "Recarga de Energia: 30,6%" }, stats: { "Vida Máxima": 24046, ATQ: 1723, DEF: 742, "Proficiência Elemental": 65, "Taxa Crítica": 19.4, "Dano Crítico": 88.1, "Recarga de Energia": 174.7, "Bônus de Dano Cryo": 24.0 }, artifactSets: [{ name: "Antigo Ritual Real", count: 4 }], talents: { normal: 1, skill: 12, burst: 12 } },
-    qiqi: { character: { name: "Qiqi", level: 80 }, weapon: { name: "Espada do Sacrifício", level: 90, refinement: 5, rarity: 4, baseAttack: 454, secondaryStat: "Recarga de Energia: 61,3%" }, stats: { "Vida Máxima": 20447, ATQ: 2257, DEF: 964, "Proficiência Elemental": 75, "Taxa Crítica": 26.4, "Dano Crítico": 81.9, "Bônus de Cura": 16.6, "Recarga de Energia": 182.0 }, artifactSets: [{ name: "Millelith Firmes", count: 4 }], talents: { normal: 1, skill: 6, burst: 6 } },
-  });
   for (const [id, role] of Object.entries(roles)) {
     const guide = window.CHARACTER_GUIDES[id] ||= { general: {}, teams: {} };
     guide.teams ||= {};
@@ -91,14 +82,6 @@
     slots: {
       cryo: [{ id: "qiqi", label: "🗡️ Qiqi — Ofensivo" }, { id: "diona", label: "🛡️ Diona C6 — Defensivo" }],
       electro: [{ id: "fischl", label: "🎯 Fischl C6 — Single Target" }, { id: "beidou", label: "⚡ Beidou C6 — Multi Target" }],
-    },
-    account: {
-      travelerCryo: { weapon: { name: "Sabre da Ponta Estelar", level: 90, refinement: 3, rarity: 4 }, artifactSets: [{ name: "Desencantamento na Sombra Profunda", count: 4 }] },
-      qiqi: { character: { level: 80 }, weapon: { name: "Espada do Sacrifício", level: 90, refinement: 5, rarity: 4, baseAttack: 454, secondaryStat: "Recarga de Energia: 61,3%" }, artifactSets: [{ name: "Millelith Firmes", count: 4 }], stats: { "Vida Máxima": 20447, ATQ: 2257, DEF: 964, "Proficiência Elemental": 75, "Taxa Crítica": 26.4, "Dano Crítico": 81.9, "Bônus de Cura": 16.6, "Recarga de Energia": 182.0 }, talents: { normal: 1, skill: 6, burst: 6 } },
-      diona: { character: { constellation: 6 } },
-      alyosha: { character: { constellation: 3 }, weapon: {}, artifactSets: [{ name: "Coração Forjado", count: 4 }], stats: {}, weaponPending: true },
-      fischl: { character: { constellation: 6 }, weapon: { name: "Vista da Jade Primordial", refinement: 1, level: 90, rarity: 5, baseAttack: 510, secondaryStat: "Taxa CRIT: 27,6%", rankingStatus: "7.0 • WIP" }, artifactSets: [{ name: "Trupe Dourada", count: 4 }] },
-      beidou: { character: { constellation: 6 }, weapon: { name: "Túmulo do Lobo", level: 70, refinement: 1, rarity: 5, baseAttack: 457, secondaryStat: "ATQ: 40,9%" }, artifactSets: [{ name: "Selo da Insulação", count: 4 }] },
     },
     variants: {
       "qiqi-fischl": { tag: "Boss / Single Target", usage: "Priorize o dano total contra bosses ou um único inimigo, com cura e buffs distribuídos pela Qiqi.", rotation: ["Qiqi E → Fischl E → Alyosha E(Q) → Viajante combo", "Qiqi E → Fischl Q → Alyosha E → Viajante combo"] },

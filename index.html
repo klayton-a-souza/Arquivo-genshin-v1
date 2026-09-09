@@ -8,6 +8,7 @@
       content="Arquivo pessoal de composi&ccedil;&otilde;es de times de Genshin Impact."
     />
     <title>Times - Genshin Impact</title>
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -42,21 +43,29 @@
       </section>
     </div>
 
-    <div id="akasha-lightbox" class="akasha-lightbox" hidden>
-      <div class="akasha-lightbox-backdrop" data-close-lightbox></div>
-      <section class="akasha-lightbox-panel" role="dialog" aria-modal="true" aria-label="Card Akasha ampliado">
-        <button class="akasha-lightbox-close" type="button" aria-label="Fechar imagem" data-close-lightbox>&times;</button>
-        <img id="akasha-lightbox-image" alt="" />
+    <div id="build-lightbox" class="build-lightbox" hidden>
+      <div class="build-lightbox-backdrop" data-close-lightbox></div>
+      <section class="build-lightbox-panel" role="dialog" aria-modal="true" aria-label="Build HoYoLAB ampliada">
+        <div class="build-lightbox-toolbar">
+          <button class="build-image-open" type="button" data-zoom-build aria-pressed="false">Zoom 100%</button>
+          <button class="build-lightbox-close" type="button" aria-label="Fechar imagem" data-close-lightbox data-close-lightbox-button>&times;</button>
+        </div>
+        <div class="build-lightbox-viewport"><img id="build-lightbox-image" alt="" /></div>
       </section>
     </div>
 
-    <script src="data/builds.js"></script>
+    <script src="data/hoyolab-builds.js"></script>
+    <script src="data/hoyolab-stats.js"></script>
     <script src="data/guides.js"></script>
     <script src="data/recommendations.js"></script>
     <script src="data/recommendation-assets.js"></script>
     <script src="data/recommendation-assets-global.js"></script>
     <script src="data/team-guidance.js"></script>
     <script src="data/traveler-team.js"></script>
+    <script src="data/mavuika-team.js"></script>
+    <script src="data/arlecchino-team.js"></script>
+    <script src="data/hydro-teams.js"></script>
+    <script src="data/remaining-team-guides.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

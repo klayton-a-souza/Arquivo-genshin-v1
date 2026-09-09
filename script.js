@@ -89,30 +89,27 @@ const filterCount = document.querySelector("#filter-count");
 const detailModal = document.querySelector("#team-detail-modal");
 const detailContent = document.querySelector("#team-detail-content");
 const detailPanel = detailModal.querySelector(".team-detail-panel");
-const akashaLightbox = document.querySelector("#akasha-lightbox");
-const akashaLightboxImage = document.querySelector("#akasha-lightbox-image");
-const buildSnapshot = window.BUILD_SNAPSHOT || { builds: {}, snapshotDate: "2026-08-22" };
-const buildImageExtracts = window.BUILD_IMAGE_EXTRACTS || {};
+const buildLightbox = document.querySelector("#build-lightbox");
+const buildLightboxImage = document.querySelector("#build-lightbox-image");
+const buildLightboxZoom = document.querySelector("[data-zoom-build]");
+const hoyolabBuilds = window.HOYOLAB_BUILDS || {};
+Object.entries(hoyolabBuilds).forEach(([id, build]) => {
+  if (characters[id]) characters[id].hoyolabImage = build.hoyolabImage;
+});
+let lightboxTrigger = null;
 const characterGuides = window.CHARACTER_GUIDES || {};
 const guideNameAliases = window.GUIDE_NAME_ALIASES || { weapons: {}, artifactSets: {} };
+guideNameAliases.weapons["Plumagem Escarlate do Abutre Astral"] = "plumagem-escarlate";
 const teamBuildGuidance = window.TEAM_BUILD_GUIDANCE || { profiles: {}, teams: {} };
-const akashaCaptureIds = new Set([...portraitCharacterIds, "qiqi"]);
-const akashaImageSources = {
-  fischl: "assets/images/akasha/fischl.png",
-  beidou: "assets/images/akasha/beidou.png",
-  travelerCryo: "assets/images/akasha/travelerCryo.png",
-  diona: "assets/images/akasha/diona.png",
-  qiqi: "assets/images/akasha/qiqi.png",
-};
 let activeFilter = "all";
 let openTeamIndex = null;
 let detailCharacterId = null;
 let lastFocusedElement = null;
 let activeBuildView = "summary";
-let activeArtifactIndex = 0;
 const travelerConfig = window.TRAVELER_TEAM;
 const travelerSelection = { cryo: "qiqi", electro: "fischl" };
 let activeTravelerView = "builds";
+let activeTeamStrategyView = "builds";
 
 function getTeamMembers(team) {
   return team.id === "traveler-cryo"
@@ -170,6 +167,101 @@ function createTravelerStrategy() {
   </section>`;
 }
 
+function createMavuikaStrategySelector() {
+  return `<section class="traveler-selector traveler-toolbar" aria-label="Conteúdo do time Mavuika Melt">
+    <div class="traveler-toolbar-footer"><div class="traveler-view-tabs" role="tablist" aria-label="Conteúdo do time">${[["builds", "Builds"], ["strategy", "Como jogar"]].map(([id, label]) => `<button type="button" role="tab" id="mavuika-tab-${id}" data-team-strategy-view="${id}" aria-controls="mavuika-panel-${id}" aria-selected="${activeTeamStrategyView === id}">${label}</button>`).join("")}</div><span class="toolbar-variant" role="status">Melt · rotação recomendada</span></div>
+  </section>`;
+}
+
+function createMavuikaStrategy() {
+  const guide = window.MAVUIKA_TEAM_GUIDE || { summary: "Rotação de Mavuika Melt.", rotation: [], cycle: "", notes: [], sources: [] };
+  const list = (items) => `<ul class="guide-notes">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  return `<section class="traveler-strategy" aria-label="Como jogar Mavuika Melt">
+    <h3 class="strategy-heading">Como jogar este time</h3>
+    <div id="mavuika-strategy-content">
+      <p class="strategy-variant">${escapeHtml(guide.summary)}</p>
+      <div class="buff-grid"><section><h4>Ordem dos suportes</h4>${list(["Xilonen reduz a resistência elemental e fornece o bônus da equipe.", "Bennett mantém o buff de ATQ e a cura no campo.", "Citlali aplica Cryo e prepara o Melt do Supremo da Mavuika."])}</section><section><h4>Mavuika • em campo</h4>${list(["Acumule Fighting Spirit com as ações do time.", "Use Q apenas depois da aplicação Cryo de Citlali.", "Complete o combo de Ataques Carregados dentro do campo de Bennett."])}</section></div>
+      <section class="rotation-panel"><h4>Rotação • Melt</h4><ol class="rotation-steps">${guide.rotation.map((step, index) => `<li><strong>${index + 1}</strong><span>${escapeHtml(step)}</span></li>`).join("")}</ol><p class="rotation-cycle">${escapeHtml(guide.cycle)}</p>${list(guide.notes)}<p class="rotation-legend">E = Habilidade Elemental · Q = Explosão Elemental · N = Ataque Normal · C = Ataque Carregado</p></section>
+      <section class="rotation-panel"><h4>Notas do time</h4>${list(["Bennett é prioritário para Mavuika Melt nesta conta."])}</section>
+      <p class="strategy-sources">Rotação baseada nos guias consultados:<br>${guide.sources.map((source) => `<a href="${source.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.name)}</a>`).join(" · ")}</p>
+    </div>
+  </section>`;
+}
+
+function createArlecchinoStrategySelector() {
+  return `<section class="traveler-selector traveler-toolbar" aria-label="Conteúdo do time Arlecchino Vaporize">
+    <div class="traveler-toolbar-footer"><div class="traveler-view-tabs" role="tablist" aria-label="Conteúdo do time">${[["builds", "Builds"], ["strategy", "Como jogar"]].map(([id, label]) => `<button type="button" role="tab" id="arlecchino-tab-${id}" data-team-strategy-view="${id}" aria-controls="arlecchino-panel-${id}" aria-selected="${activeTeamStrategyView === id}">${label}</button>`).join("")}</div><span class="toolbar-variant" role="status">Vaporize · com escudo</span></div>
+  </section>`;
+}
+
+function createArlecchinoStrategy() {
+  const guide = window.ARLECCHINO_TEAM_GUIDE || { summary: "Rotação de Arlecchino Vaporize.", rotation: [], cycle: "", notes: [], sources: [] };
+  const list = (items) => `<ul class="guide-notes">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  return `<section class="traveler-strategy" aria-label="Como jogar Arlecchino Vaporize">
+    <h3 class="strategy-heading">Como jogar este time</h3>
+    <div id="arlecchino-strategy-content">
+      <p class="strategy-variant">${escapeHtml(guide.summary)}</p>
+      <div class="buff-grid"><section><h4>Preparação</h4>${list(["Xingqiu mantém Hydro para habilitar Vaporizações.", "Thoma fornece escudo, resistência à interrupção e Pyro adicional.", "Sucrose espalha Pyro e compartilha Proficiência Elemental."])}</section><section><h4>Arlecchino • em campo</h4>${list(["Marque primeiro com E e consuma a Dívida de Sangue apenas depois da preparação.", "Use C para absorver a marca evoluída.", "Continue com Ataques Normais e esquivas para aproveitar a Infusão Pyro."])}</section></div>
+      <section class="rotation-panel"><h4>Rotação • Vaporize</h4><ol class="rotation-steps">${guide.rotation.map((step, index) => `<li><strong>${index + 1}</strong><span>${escapeHtml(step)}</span></li>`).join("")}</ol><p class="rotation-cycle">${escapeHtml(guide.cycle)}</p>${list(guide.notes)}<p class="rotation-legend">E = Habilidade Elemental · Q = Explosão Elemental · N = Ataque Normal · C = Ataque Carregado · D = esquiva</p></section>
+      <section class="rotation-panel"><h4>Notas do time</h4>${list(["A versão principal usa Thoma para oferecer escudo e conforto.", "A versão com Bennett + Sucrose/Lan Yan ainda pode causar mais dano, mas Bennett é prioritário para Mavuika Melt."])}</section>
+      <p class="strategy-sources">Rotação baseada nos guias consultados:<br>${guide.sources.map((source) => `<a href="${source.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.name)}</a>`).join(" · ")}</p>
+    </div>
+  </section>`;
+}
+
+function createHydroStrategySelector(teamId) {
+  const guide = window.HYDRO_TEAM_GUIDES?.[teamId];
+  const prefix = teamId === "international" ? "tartaglia" : "neuvillette";
+  return `<section class="traveler-selector traveler-toolbar" aria-label="Conteúdo do time ${escapeHtml(guide?.label || "Hydro")}">
+    <div class="traveler-toolbar-footer"><div class="traveler-view-tabs" role="tablist" aria-label="Conteúdo do time">${[["builds", "Builds"], ["strategy", "Como jogar"]].map(([id, label]) => `<button type="button" role="tab" id="${prefix}-tab-${id}" data-team-strategy-view="${id}" aria-controls="${prefix}-panel-${id}" aria-selected="${activeTeamStrategyView === id}">${label}</button>`).join("")}</div><span class="toolbar-variant" role="status">${escapeHtml(guide?.status || "Hydro · rotação")}</span></div>
+  </section>`;
+}
+
+function createHydroStrategy(teamId) {
+  const guide = window.HYDRO_TEAM_GUIDES?.[teamId] || { summary: "Rotação Hydro.", rotation: [], cycle: "", notes: [], sources: [] };
+  const prefix = teamId === "international" ? "tartaglia" : "neuvillette";
+  const list = (items) => `<ul class="guide-notes">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  const fieldTitle = teamId === "international" ? "Preparação e aplicação" : "Preparação dos buffs";
+  const fieldItems = teamId === "international"
+    ? ["Bennett cria o campo de buff para Xiangling e Tartaglia.", "Sucrose precisa redemoinhar Pyro para ativar Sombra Verde.", "Xiangling lança o Pyronado antes do retorno de Tartaglia."]
+    : ["Furina inicia Fanfare com sua Habilidade e Supremo.", "Xilonen reduz RES, cura e ativa o bônus do Pergaminho.", "Kazuha agrupa e redemoinha Hydro antes do campo de Neuvillette."];
+  const carryItems = teamId === "international"
+    ? ["Use o Supremo à distância antes de entrar na postura corpo a corpo.", "Mantenha Tartaglia em campo pelo tempo necessário para a janela do Pyronado.", "Saia antes de estender demais o cooldown da postura melee."]
+    : ["Use os três Canhões dentro dos buffs de Furina, Xilonen e Kazuha.", "Posicione o feixe para atingir todos os inimigos agrupados.", "Colete as partículas e deixe a equipe preparar a próxima janela."];
+  return `<section class="traveler-strategy" aria-label="Como jogar ${escapeHtml(guide.label)}">
+    <h3 class="strategy-heading">Como jogar este time</h3>
+    <div id="${prefix}-strategy-content">
+      <p class="strategy-variant">${escapeHtml(guide.summary)}</p>
+      <div class="buff-grid"><section><h4>${fieldTitle}</h4>${list(fieldItems)}</section><section><h4>${teamId === "international" ? "Tartaglia • em campo" : "Neuvillette • em campo"}</h4>${list(carryItems)}</section></div>
+      <section class="rotation-panel"><h4>Rotação</h4><ol class="rotation-steps">${guide.rotation.map((step, index) => `<li><strong>${index + 1}</strong><span>${escapeHtml(step)}</span></li>`).join("")}</ol><p class="rotation-cycle">${escapeHtml(guide.cycle)}</p>${list(guide.notes)}<p class="rotation-legend">E = Habilidade Elemental · Q = Explosão Elemental · N = Ataque Normal · C = Ataque Carregado · D = esquiva</p></section>
+      <p class="strategy-sources">Rotação baseada nos guias consultados:<br>${guide.sources.map((source) => `<a href="${source.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.name)}</a>`).join(" · ")}</p>
+    </div>
+  </section>`;
+}
+
+function createRemainingStrategySelector(teamId) {
+  const guide = window.REMAINING_TEAM_GUIDES?.[teamId];
+  const prefix = teamId.split("-")[0];
+  return `<section class="traveler-selector traveler-toolbar" aria-label="Conteúdo do time ${escapeHtml(guide?.label || "Time")}">
+    <div class="traveler-toolbar-footer"><div class="traveler-view-tabs" role="tablist" aria-label="Conteúdo do time">${[["builds", "Builds"], ["strategy", "Como jogar"]].map(([id, label]) => `<button type="button" role="tab" id="${prefix}-tab-${id}" data-team-strategy-view="${id}" aria-controls="${prefix}-panel-${id}" aria-selected="${activeTeamStrategyView === id}">${label}</button>`).join("")}</div><span class="toolbar-variant" role="status">${escapeHtml(guide?.status || "Rotação recomendada")}</span></div>
+  </section>`;
+}
+
+function createRemainingStrategy(teamId) {
+  const guide = window.REMAINING_TEAM_GUIDES?.[teamId] || { label: "Time", summary: "Rotação.", preparation: [], carry: [], rotation: [], cycle: "", notes: [], sources: [] };
+  const prefix = teamId.split("-")[0];
+  const list = (items) => `<ul class="guide-notes">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  return `<section class="traveler-strategy" aria-label="Como jogar ${escapeHtml(guide.label)}">
+    <h3 class="strategy-heading">Como jogar este time</h3>
+    <div id="${prefix}-strategy-content">
+      <p class="strategy-variant">${escapeHtml(guide.summary)}</p>
+      <div class="buff-grid"><section><h4>Preparação</h4>${list(guide.preparation)}</section><section><h4>Personagem em campo</h4>${list(guide.carry)}</section></div>
+      <section class="rotation-panel"><h4>Rotação</h4><ol class="rotation-steps">${guide.rotation.map((step, index) => `<li><strong>${index + 1}</strong><span>${escapeHtml(step)}</span></li>`).join("")}</ol><p class="rotation-cycle">${escapeHtml(guide.cycle)}</p>${list(guide.notes)}<p class="rotation-legend">E = Habilidade Elemental · Q = Explosão Elemental · N = Ataque Normal · C = Ataque Carregado · D = esquiva · P = Ataque Imersivo</p></section>
+      <p class="strategy-sources">Rotação baseada nos guias consultados:<br>${guide.sources.map((source) => `<a href="${source.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.name)}</a>`).join(" · ")}</p>
+    </div>
+  </section>`;
+}
+
 function selectTravelerFlex(button, inDetail) {
   const { flexSlot: slot, flexCharacter: characterId } = button.dataset;
   if (!travelerConfig.slots[slot]?.some((option) => option.id === characterId)) return;
@@ -178,8 +270,6 @@ function selectTravelerFlex(button, inDetail) {
   renderTeams();
   if (inDetail) {
     detailCharacterId = characterId;
-    activeArtifactIndex = 0;
-    if (activeBuildView === "akasha" && !akashaCaptureIds.has(characterId)) activeBuildView = "summary";
     renderTeamDetail();
   }
   const root = inDetail ? detailContent : teamsRoot;
@@ -189,39 +279,9 @@ function selectTravelerFlex(button, inDetail) {
 const getElement = (id) => elements.find((element) => element.id === id);
 const initials = (name) => name.split(" ").map((part) => part[0]).join("").slice(0, 2).toUpperCase();
 const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", "\"": "&quot;" }[character]));
-const percentStat = (name) => /percent|rate|dmg|recharge|healing|physical|taxa|cr[ií]tica|dano|recarga|b[oô]nus|cura/i.test(name);
 
-function getBuild(characterId, teamId = teams[openTeamIndex]?.id) {
-  const base = buildSnapshot.builds?.[characterId] || {};
-  const extracted = buildImageExtracts[characterId] || {};
-  const build = {
-    ...base,
-    ...extracted,
-    character: { ...base.character, ...extracted.character },
-    weapon: { ...base.weapon, ...extracted.weapon },
-    talents: { ...base.talents, ...extracted.talents },
-    stats: { ...base.stats, ...extracted.stats },
-    artifactSets: extracted.artifactSets || base.artifactSets || [],
-    artifacts: base.artifacts || [],
-  };
-  const update = teamId === "traveler-cryo" ? travelerConfig.account[characterId] : null;
-  if (!update) return build;
-  return {
-    ...build, ...update,
-    character: { ...build.character, ...update.character },
-    // Arma substituída inteira: não herdar atributos/refinamento de outra arma.
-    weapon: update.weapon ?? build.weapon,
-    accountUpdated: true,
-    statsPending: !!update.stats && !Object.keys(update.stats).length,
-  };
-}
-
-function formatStatValue(name, value) {
-  if (typeof value !== "number") return escapeHtml(value);
-  if (name === "CV") return value.toFixed(1);
-  if (percentStat(name)) return `${value.toFixed(1)}%`;
-  if (Math.abs(value) >= 100) return Math.round(value).toLocaleString("pt-BR");
-  return Number(value.toFixed(1)).toLocaleString("pt-BR", { maximumFractionDigits: 1 });
+function getBuild(characterId) {
+  return hoyolabBuilds[characterId] || { weapon: {}, artifactSets: [] };
 }
 
 function getGuideContext(characterId, teamId) {
@@ -257,10 +317,6 @@ function resolveGuideItemId(type, name) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
-}
-
-function createBuildSection(title, content) {
-  return `<section class="build-section"><h5>${title}</h5>${content}</section>`;
 }
 
 function createFilters() {
@@ -372,74 +428,21 @@ function createDetailMember(characterId) {
   const character = characters[characterId];
   const role = getContextRole(characterId, teams[openTeamIndex]?.id);
   return `
-    <button class="detail-member${characterId === detailCharacterId ? " is-active" : ""}" type="button" role="tab" data-detail-character="${characterId}" aria-selected="${characterId === detailCharacterId}">
+    <button class="detail-member${characterId === detailCharacterId ? " is-active" : ""}" type="button" role="tab" data-detail-character="${characterId}" aria-selected="${characterId === detailCharacterId}" style="--character-color: ${getElement(character.element).color}">
       <img src="${character.image}" alt="" loading="lazy" decoding="async" />
       <span><strong>${escapeHtml(character.name)}</strong><small>${escapeHtml(role)}</small></span>
     </button>
   `;
 }
 
-function createWeaponDisplay(build) {
-  if (build.weaponPending) return '<p class="subtle-empty">Arma definitiva a definir.</p>';
-  if (!build.weapon?.name) return "<p class=\"subtle-empty\">Arma n&atilde;o identificada.</p>";
-  const weapon = build.weapon;
-  return `
-    <div class="weapon-display">
-      <div><strong>${escapeHtml(weapon.name)}</strong><span>Nv. ${weapon.level ?? "n&atilde;o registrado"} &middot; R${weapon.refinement ?? "-"}${weapon.rarity ? ` &middot; ${weapon.rarity} estrelas` : ""}</span>${weapon.baseAttack ? `<span>ATQ Base: ${weapon.baseAttack} · ${escapeHtml(weapon.secondaryStat)}</span>` : ""}${weapon.rankingStatus ? `<span>${escapeHtml(weapon.rankingStatus)}</span>` : ""}</div>
-    </div>
-  `;
-}
-
-function createDataList(values) {
-  return `<dl class="build-data-list">${values.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${value === null || value === undefined ? "N&atilde;o registrado" : escapeHtml(value)}</dd></div>`).join("")}</dl>`;
-}
-
-function createArtifactCard(artifact, index) {
-  const mainStat = `${artifact.mainStat.name}: ${formatStatValue(artifact.mainStat.name, artifact.mainStat.value)}`;
-  return `
-    <button class="artifact-card" type="button" data-artifact-index="${index}" aria-pressed="${index === activeArtifactIndex}">
-      <span class="artifact-slot">${escapeHtml(artifact.slot)}</span>
-      <strong>${escapeHtml(artifact.setName)}</strong>
-      <span class="artifact-level">+${artifact.level}</span>
-      <span class="artifact-main">${escapeHtml(mainStat)}</span>
-    </button>
-  `;
-}
-
-function createBuildIdentity(characterId, build) {
+function createCurrentBuild(characterId) {
   const character = characters[characterId];
-  const constellation = build?.character?.constellation === null || build?.character?.constellation === undefined
-    ? "Constela&ccedil;&atilde;o na captura"
-    : `C${build.character.constellation}`;
-  const level = build?.character?.level === null || build?.character?.level === undefined
-    ? "N&iacute;vel na captura"
-    : `N&iacute;vel ${build.character.level}`;
-
-  return `
-    <div class="build-identity">
-      <img class="build-character-image" src="${character.image}" alt="" />
-      <div><h4>${escapeHtml(character.name)}</h4><p>${constellation} &middot; ${level} &middot; ${escapeHtml(getElement(character.element).label)}</p></div>
-    </div>
-  `;
-}
-
-function createAkashaCard(characterId) {
-  if (!akashaCaptureIds.has(characterId)) return "<p class=\"subtle-empty\">Card n&atilde;o dispon&iacute;vel.</p>";
-  const character = characters[characterId];
-  const source = akashaImageSources[characterId] || `assets/images/akasha/${characterId}.png`;
-  return `<div class="akasha-card"><button type="button" data-open-lightbox aria-label="Ampliar card de ${escapeHtml(character.name)}"><img src="${source}" alt="Build de ${escapeHtml(character.name)} no Terminal Akasha" decoding="async" /></button><button class="akasha-open" type="button" data-open-lightbox>Abrir imagem</button></div>`;
-}
-
-function createSetSummary(build) {
-  const sets = build.artifactSets || [];
-  const active = sets.filter((set) => set.count >= 2).map((set) => `${escapeHtml(set.name)} &times;${set.count}`);
-  const offPieces = sets.filter((set) => set.count === 1).length;
-  return [...active, ...(offPieces ? [`${offPieces} Off-piece`] : [])].join(" &middot; ") || "Set n&atilde;o identificado";
-}
-
-function createArtifactDetail(artifact) {
-  if (!artifact) return "<p class=\"subtle-empty\">Detalhes individuais dispon&iacute;veis no Card Akasha.</p>";
-  return `<article class="artifact-detail"><p>${escapeHtml(artifact.slot)} &middot; +${artifact.level}</p><h5>${escapeHtml(artifact.setName)}</h5><div class="artifact-detail-main"><span>${escapeHtml(artifact.mainStat.name)}</span><strong>${formatStatValue(artifact.mainStat.name, artifact.mainStat.value)}</strong></div><ul>${artifact.substats.map((substat) => `<li><span>${escapeHtml(substat.name)}</span><strong>${formatStatValue(substat.name, substat.value)}</strong></li>`).join("")}</ul></article>`;
+  if (!character.hoyolabImage) return '<p class="subtle-empty">Card HoYoLAB ainda não adicionado para este personagem.</p>';
+  return `<figure class="current-build current-build-${characterId}">
+    <figcaption><strong>Build Atual · ${escapeHtml(character.name)}</strong><span>Equipamentos e atributos da conta na captura do HoYoLAB. Toque ou clique no card para ampliar.</span></figcaption>
+    <button class="current-build-image" type="button" data-open-lightbox aria-label="Ampliar build de ${escapeHtml(character.name)}"><img src="${character.hoyolabImage}" alt="Build atual de ${escapeHtml(character.name)} — card HoYoLAB em português" decoding="async" /></button>
+    <button class="build-image-open" type="button" data-open-lightbox>Ampliar imagem</button>
+  </figure>`;
 }
 
 function createGuideField(title, content, className = "") {
@@ -478,23 +481,50 @@ function createEnergyGuidance(energy) {
   `;
 }
 
+function createBuildDashboard(characterId) {
+  const character = characters[characterId];
+  const build = getBuild(characterId);
+  const capture = window.HOYOLAB_STATS?.[characterId];
+  if (!character || !capture) return "";
+  const weapon = build.weapon || {};
+  const talents = capture.talents || [];
+  const artifactSets = (build.artifactSets || []).filter((set) => set.count >= 2);
+  const setSummary = artifactSets.length
+    ? artifactSets.map((set) => `${set.name} ×${set.count}`).join(" · ")
+    : "Conjuntos não registrados";
+  return `
+    <section class="build-dashboard" aria-label="Resumo da build atual de ${escapeHtml(character.name)}">
+      <div class="dashboard-character">
+        <img src="${character.image}" alt="" loading="lazy" decoding="async" />
+        <div><h4>${escapeHtml(character.name)}</h4><p>${escapeHtml(getElement(character.element).label)} · Build atual</p><p class="set-summary">${escapeHtml(setSummary)}</p></div>
+      </div>
+      <div class="dashboard-weapon"><h5>Arma</h5><strong>${escapeHtml(weapon.name || "Não informada")}</strong><p>${weapon.refinement ? `R${weapon.refinement} · ` : ""}${weapon.rarity ? `${weapon.rarity} estrelas` : "Dados da captura HoYoLAB"}</p><h5>Talentos</h5><div class="talent-summary">${[["Ataque Normal", talents[0]], ["Skill", talents[1]], ["Burst", talents[2]]].map(([label, value]) => `<span><small>${label}</small><strong>${value ?? "—"}</strong></span>`).join("")}</div></div>
+      <div class="dashboard-stats"><h5>Atributos principais</h5><div class="stat-highlights">${capture.attributes.map(([label, value]) => `<div><strong>${escapeHtml(value)}</strong><span>${escapeHtml(label)}</span></div>`).join("")}</div></div>
+    </section>
+  `;
+}
+
 function createBuildGuideSummary(characterId, teamId) {
   const { general, team } = getGuideContext(characterId, teamId);
   const summaryGuidance = getSummaryGuidance(characterId, teamId);
   const hasGuide = Object.keys(general).length || Object.keys(team).length || Object.keys(summaryGuidance).length;
   if (!hasGuide) {
-    return `<section class="build-guide"><div class="build-guide-heading"><div><p>Guia de build</p><h5>Orienta&ccedil;&otilde;es</h5></div></div><p class="guide-empty guide-empty-panel">Informa&ccedil;&atilde;o ainda n&atilde;o cadastrada.</p></section>`;
+    return `${createBuildDashboard(characterId)}<section class="build-guide"><div class="build-guide-heading"><div><p>Guia de build</p><h5>Orienta&ccedil;&otilde;es</h5></div></div><p class="guide-empty guide-empty-panel">Informa&ccedil;&atilde;o ainda n&atilde;o cadastrada.</p></section>`;
   }
 
-  const role = team.role || general.role;
+  const role = team.role || general.role || characters[characterId].role;
+  const substats = summaryGuidance.substats || general.substats;
+  const topStats = typeof substats === "string" ? substats.split(/\s*[>≫≥≈]\s*/).filter(Boolean).slice(0, 3) : substats?.slice(0, 3);
   const notes = [...(general.notes || []), ...(team.notes || []), ...(summaryGuidance.notes || [])];
   return `
+    ${createBuildDashboard(characterId)}
     <section class="build-guide">
       <div class="build-guide-heading">
         <div><p>Guia de build</p><h5>Orienta&ccedil;&otilde;es para ${escapeHtml(teams.find((entry) => entry.id === teamId)?.name || "este time")}</h5></div>
         ${role ? `<span class="guide-role">${escapeHtml(role)}</span>` : ""}
       </div>
       <div class="guide-detail-grid">
+        ${createGuideField("Top 3 atributos recomendados", createSubstats(topStats), "guide-notes-field")}
         ${createGuideField("Atributos principais", createMainStats(summaryGuidance.mainStats || general.mainStats))}
         ${createGuideField("Subatributos", createSubstats(summaryGuidance.substats || general.substats))}
         ${createGuideField("Prioridade de talentos", createTalentPriority(summaryGuidance.talentPriority))}
@@ -543,7 +573,6 @@ function createRankingVisual(characterId, type, option) {
 }
 
 function createRankingGroup(group, type, build, currentIds, characterId) {
-  const currentSet = currentIds.artifactSets;
   return `
     <article class="ranking-group">
       <span class="ranking-position">#${group.rank}</span>
@@ -558,7 +587,7 @@ function createRankingGroup(group, type, build, currentIds, characterId) {
                 <strong>${optionIndex ? "<span class=\"ranking-equivalent\">&asymp;</span> " : ""}${escapeHtml(option.name)}</strong>
                 ${createItemMeta(option, currentData, isCurrent)}
               </div>
-              ${isCurrent ? `<span class="current-badge">${type === "weapons" ? "EM USO" : "SET ATUAL"}</span>` : ""}
+              ${isCurrent ? `<span class="current-badge">EM USO</span>` : ""}
               ${isCurrent && type === "weapons" && option.refinement && build.weapon?.refinement && option.refinement !== build.weapon.refinement ? `<small class="equipment-refinement">Conta: R${build.weapon.refinement}; ranking: R${option.refinement}</small>` : ""}
               ${option.f2p ? "<span class=\"f2p-badge\">F2P</span>" : ""}
             </div>
@@ -590,7 +619,7 @@ function createRecommendationColumn(title, label, groups, type, build, currentId
   return `
     <section class="recommendation-column">
       <div class="recommendation-column-heading"><span aria-hidden="true">${type === "weapons" ? "A" : "S"}</span><div><p>${label}</p><h4>${title}</h4></div></div>
-      ${unranked.map((item) => `<div class="unranked-equipment"><div class="ranking-option is-current">${createRankingVisual(characterId, type, item)}<div class="ranking-copy"><strong>${escapeHtml(item.name)}</strong>${createItemMeta(item, item, true)}<small>${escapeHtml(item.rankingStatus || "Sem posição na lista publicada")}</small></div><span class="current-badge">${type === "weapons" ? "EM USO" : "SET ATUAL"}</span></div></div>`).join("")}
+      ${unranked.map((item) => `<div class="unranked-equipment"><div class="ranking-option is-current">${createRankingVisual(characterId, type, item)}<div class="ranking-copy"><strong>${escapeHtml(item.name)}</strong>${createItemMeta(item, item, true)}<small>${escapeHtml(item.rankingStatus || "Sem posição na lista publicada")}</small></div><span class="current-badge">EM USO</span></div></div>`).join("")}
       <div class="ranking-list">${groups?.length ? groups.map((group) => createRankingGroup(group, type, build, currentIds, characterId)).join("") : "<p class=\"guide-empty\">Informa&ccedil;&atilde;o ainda n&atilde;o cadastrada.</p>"}</div>
       ${type === "artifactSets" ? createConditionalArtifactSets(conditionalArtifactSets, characterId) : ""}
     </section>
@@ -658,56 +687,34 @@ function createRecommendationsPanel(characterId, teamId, build) {
   `;
 }
 
-function createAvailableBuild(characterId, build, teamId) {
-  const character = characters[characterId];
-  const talentValues = [["Ataque Normal", build.talents.normal], ["Skill", build.talents.skill], ["Burst", build.talents.burst]];
-  const stats = Object.entries(build.stats || {});
-  const constellation = build.character?.constellation ?? "?";
-  const level = build.character?.level ?? "?";
-  const highlights = [["Taxa Crítica", build.stats?.["Taxa Crítica"]], ["Dano Crítico", build.stats?.["Dano Crítico"]], ["ATQ", build.stats?.ATQ]].filter(([, value]) => value !== undefined);
-  const remainingStats = stats.filter(([name]) => !["Taxa Crítica", "Dano Crítico", "ATQ"].includes(name));
-
-  return `
-    <section class="build-dashboard">
-      <div class="dashboard-character"><img src="${character.image}" alt="" /><div><h4>${escapeHtml(character.name)}</h4><p>C${constellation} &middot; Nv.${level} &middot; ${escapeHtml(getElement(character.element).label)}</p><p class="set-summary">${createSetSummary(build)}</p></div></div>
-      <div class="dashboard-weapon"><h5>Arma</h5>${createWeaponDisplay(build)}<h5>Talentos</h5><div class="talent-summary">${talentValues.map(([label, value]) => `<span><small>${label}</small><strong>${value ?? "-"}</strong></span>`).join("")}</div></div>
-      <div class="dashboard-stats"><h5>Atributos</h5>${build.statsPending ? '<p class="subtle-empty">Totais com os equipamentos atuais ainda não registrados. Consulte abaixo os atributos recomendados.</p>' : `<div class="stat-highlights">${highlights.map(([name, value]) => `<div><strong>${formatStatValue(name, value)}</strong><span>${escapeHtml(name)}</span></div>`).join("")}</div>${remainingStats.length ? createDataList(remainingStats.map(([name, value]) => [name, formatStatValue(name, value)])) : ""}`}</div>
-    </section>
-    ${createBuildGuideSummary(characterId, teamId)}
-  `;
-}
-
-function createCapturedBuild(characterId) {
-  return createAvailableBuild(characterId, getBuild(characterId), teams[openTeamIndex]?.id);
-}
-
 function renderTeamDetail() {
   const previousScroll = detailPanel.scrollTop;
   const team = teams[openTeamIndex];
   const element = getElement(team.element);
+  const characterElement = getElement(characters[detailCharacterId]?.element || team.element);
   const build = getBuild(detailCharacterId);
-  const hasCapture = akashaCaptureIds.has(detailCharacterId);
-  const body = activeBuildView === "akasha"
-    ? createAkashaCard(detailCharacterId)
+  const isStrategyTeam = ["traveler-cryo", "mavuika-carry", "arlecchino-vaporize", "neuvillette-hypercarry", "international", ...Object.keys(window.REMAINING_TEAM_GUIDES || {})].includes(team.id);
+  const strategyActive = team.id === "traveler-cryo" ? activeTravelerView === "strategy" : activeTeamStrategyView === "strategy";
+  const body = activeBuildView === "current"
+    ? createCurrentBuild(detailCharacterId)
     : activeBuildView === "recommendations"
       ? createRecommendationsPanel(detailCharacterId, team.id, build)
-      : createAvailableBuild(detailCharacterId, build, team.id);
+      : createBuildGuideSummary(detailCharacterId, team.id);
   detailContent.className = "detail-content";
-  detailContent.style.setProperty("--detail-color", element.color);
+  detailContent.style.setProperty("--detail-color", characterElement.color);
+  detailContent.style.setProperty("--team-color", element.color);
   detailContent.innerHTML = `
     <p class="detail-kicker">${escapeHtml(element.label)} &middot; Detalhe do time</p>
     <h2 id="detail-title" class="detail-team-heading">${escapeHtml(team.name)}</h2>
-    ${team.note ? `<p class="team-note">${escapeHtml(team.note)}</p>` : ""}
-    ${team.alternatives?.map((alternative) => `<p class="team-note"><strong>Alternativa:</strong> ${escapeHtml(alternative)}</p>`).join("") || ""}
-    ${team.id === "traveler-cryo" ? createTravelerSelector() : ""}
-    <div${team.id === "traveler-cryo" ? ` id="traveler-panel-builds" role="tabpanel" aria-labelledby="traveler-tab-builds"${activeTravelerView !== "builds" ? " hidden" : ""}` : ""}>
+    ${!isStrategyTeam && team.note ? `<p class="team-note">${escapeHtml(team.note)}</p>` : ""}
+    ${!isStrategyTeam ? team.alternatives?.map((alternative) => `<p class="team-note"><strong>Alternativa:</strong> ${escapeHtml(alternative)}</p>`).join("") || "" : ""}
+    ${team.id === "traveler-cryo" ? createTravelerSelector() : team.id === "mavuika-carry" ? createMavuikaStrategySelector() : team.id === "arlecchino-vaporize" ? createArlecchinoStrategySelector() : ["neuvillette-hypercarry", "international"].includes(team.id) ? createHydroStrategySelector(team.id) : window.REMAINING_TEAM_GUIDES?.[team.id] ? createRemainingStrategySelector(team.id) : ""}
+    <div${isStrategyTeam ? ` id="${team.id === "traveler-cryo" ? "traveler" : team.id === "mavuika-carry" ? "mavuika" : team.id === "arlecchino-vaporize" ? "arlecchino" : team.id === "international" ? "tartaglia" : team.id === "neuvillette" ? "neuvillette" : team.id.split("-")[0]}-panel-builds" role="tabpanel" aria-labelledby="${team.id === "traveler-cryo" ? "traveler" : team.id === "mavuika-carry" ? "mavuika" : team.id === "arlecchino-vaporize" ? "arlecchino" : team.id === "international" ? "tartaglia" : team.id === "neuvillette" ? "neuvillette" : team.id.split("-")[0]}-tab-builds"${strategyActive ? " hidden" : ""}` : ""}>
     <div class="detail-team-picker" role="tablist" aria-label="Personagens do time">${getTeamMembers(team).map(createDetailMember).join("")}</div>
-    <div class="build-view-tabs" role="tablist" aria-label="Visualiza&ccedil;&atilde;o da build"><button type="button" role="tab" data-build-view="summary" aria-selected="${activeBuildView === "summary"}">Resumo</button><button type="button" role="tab" data-build-view="recommendations" aria-selected="${activeBuildView === "recommendations"}">Recomenda&ccedil;&otilde;es</button><button type="button" role="tab" data-build-view="akasha" aria-selected="${activeBuildView === "akasha"}">Card Akasha</button></div>
+    <div class="build-view-tabs" role="tablist" aria-label="Visualização da build"><button type="button" role="tab" data-build-view="summary" aria-selected="${activeBuildView === "summary"}">Resumo</button><button type="button" role="tab" data-build-view="recommendations" aria-selected="${activeBuildView === "recommendations"}">Recomendações</button><button type="button" role="tab" data-build-view="current" aria-selected="${activeBuildView === "current"}">Build Atual</button></div>
     ${body}
-    ${build.accountUpdated ? `<p class="build-snapshot">Equipamentos e constelações informados pela conta em ${travelerConfig.updatedAt}. Cards Akasha e demais valores registrados representam a captura histórica abaixo.</p>` : ""}
-    <p class="build-snapshot">Snapshot Akasha &middot; ${escapeHtml(buildSnapshot.snapshotDate)} &middot; <a href="https://akasha.cv/profile/602235955" target="_blank" rel="noopener noreferrer">Visitar Akasha</a></p>
     </div>
-    ${team.id === "traveler-cryo" ? `<div id="traveler-panel-strategy" role="tabpanel" aria-labelledby="traveler-tab-strategy"${activeTravelerView !== "strategy" ? " hidden" : ""}>${createTravelerStrategy()}</div>` : ""}
+    ${team.id === "traveler-cryo" ? `<div id="traveler-panel-strategy" role="tabpanel" aria-labelledby="traveler-tab-strategy"${activeTravelerView !== "strategy" ? " hidden" : ""}>${createTravelerStrategy()}</div>` : team.id === "mavuika-carry" ? `<div id="mavuika-panel-strategy" role="tabpanel" aria-labelledby="mavuika-tab-strategy"${activeTeamStrategyView !== "strategy" ? " hidden" : ""}>${createMavuikaStrategy()}</div>` : team.id === "arlecchino-vaporize" ? `<div id="arlecchino-panel-strategy" role="tabpanel" aria-labelledby="arlecchino-tab-strategy"${activeTeamStrategyView !== "strategy" ? " hidden" : ""}>${createArlecchinoStrategy()}</div>` : ["neuvillette-hypercarry", "international"].includes(team.id) ? `<div id="${team.id === "international" ? "tartaglia" : "neuvillette"}-panel-strategy" role="tabpanel" aria-labelledby="${team.id === "international" ? "tartaglia" : "neuvillette"}-tab-strategy"${activeTeamStrategyView !== "strategy" ? " hidden" : ""}>${createHydroStrategy(team.id)}</div>` : window.REMAINING_TEAM_GUIDES?.[team.id] ? `<div id="${team.id.split("-")[0]}-panel-strategy" role="tabpanel" aria-labelledby="${team.id.split("-")[0]}-tab-strategy"${activeTeamStrategyView !== "strategy" ? " hidden" : ""}>${createRemainingStrategy(team.id)}</div>` : ""}
   `;
   detailPanel.scrollTop = previousScroll;
 }
@@ -716,8 +723,8 @@ function openTeamDetail(teamIndex, characterId = getTeamMembers(teams[teamIndex]
   openTeamIndex = teamIndex;
   detailCharacterId = characterId;
   activeBuildView = "summary";
-  activeArtifactIndex = 0;
   activeTravelerView = "builds";
+  activeTeamStrategyView = "builds";
   lastFocusedElement = document.activeElement;
   renderTeamDetail();
   detailPanel.scrollTop = 0;
@@ -741,12 +748,19 @@ detailContent.addEventListener("click", (event) => {
     detailContent.querySelector(`[data-traveler-view="${activeTravelerView}"]`)?.focus({ preventScroll: true });
     return;
   }
+  const teamStrategyTab = event.target.closest("[data-team-strategy-view]");
+  if (teamStrategyTab) {
+    activeTeamStrategyView = teamStrategyTab.dataset.teamStrategyView;
+    renderTeamDetail();
+    detailPanel.scrollTop = 0;
+    detailContent.querySelector(`[data-team-strategy-view="${activeTeamStrategyView}"]`)?.focus({ preventScroll: true });
+    return;
+  }
   const flex = event.target.closest("[data-flex-slot]");
   if (flex) { selectTravelerFlex(flex, true); return; }
   const button = event.target.closest("[data-detail-character]");
   if (button) {
     detailCharacterId = button.dataset.detailCharacter;
-    activeArtifactIndex = 0;
     renderTeamDetail();
     return;
   }
@@ -756,16 +770,17 @@ detailContent.addEventListener("click", (event) => {
     renderTeamDetail();
     return;
   }
-  const artifact = event.target.closest("[data-artifact-index]");
-  if (artifact) {
-    activeArtifactIndex = Number(artifact.dataset.artifactIndex);
-    renderTeamDetail();
-    return;
-  }
   if (event.target.closest("[data-open-lightbox]")) {
-    akashaLightboxImage.src = akashaImageSources[detailCharacterId] || `assets/images/akasha/${detailCharacterId}.png`;
-    akashaLightboxImage.alt = `Build de ${characters[detailCharacterId].name} no Terminal Akasha`;
-    akashaLightbox.hidden = false;
+    if (!characters[detailCharacterId].hoyolabImage) return;
+    lightboxTrigger = event.target.closest("[data-open-lightbox]");
+    buildLightboxImage.src = characters[detailCharacterId].hoyolabImage;
+    buildLightboxImage.alt = `Build atual de ${characters[detailCharacterId].name} — HoYoLAB`;
+    buildLightbox.classList.remove("is-zoomed");
+    buildLightboxZoom.setAttribute("aria-pressed", "false");
+    buildLightboxZoom.textContent = "Zoom 100%";
+    buildLightbox.hidden = false;
+    detailModal.inert = true;
+    buildLightbox.querySelector("[data-close-lightbox-button]").focus();
   }
 });
 
@@ -775,15 +790,35 @@ detailModal.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
-  if (!akashaLightbox.hidden) {
-    akashaLightbox.hidden = true;
+  if (!buildLightbox.hidden) {
+    closeBuildLightbox();
     return;
   }
   if (!detailModal.hidden) closeTeamDetail();
 });
 
-akashaLightbox.addEventListener("click", (event) => {
-  if (event.target.closest("[data-close-lightbox]")) akashaLightbox.hidden = true;
+function closeBuildLightbox() {
+  buildLightbox.hidden = true;
+  detailModal.inert = false;
+  lightboxTrigger?.focus({ preventScroll: true });
+}
+
+buildLightbox.addEventListener("click", (event) => {
+  if (event.target.closest("[data-close-lightbox]")) closeBuildLightbox();
+  if (event.target.closest("[data-zoom-build]")) {
+    const zoomed = buildLightbox.classList.toggle("is-zoomed");
+    buildLightboxZoom.setAttribute("aria-pressed", String(zoomed));
+    buildLightboxZoom.textContent = zoomed ? "Ajustar à tela" : "Zoom 100%";
+  }
+});
+buildLightbox.addEventListener("keydown", (event) => {
+  if (event.key !== "Tab") return;
+  const close = buildLightbox.querySelector("[data-close-lightbox-button]");
+  if (event.shiftKey && document.activeElement === buildLightboxZoom) {
+    event.preventDefault(); close.focus();
+  } else if (!event.shiftKey && document.activeElement === close) {
+    event.preventDefault(); buildLightboxZoom.focus();
+  }
 });
 
 createFilters();
