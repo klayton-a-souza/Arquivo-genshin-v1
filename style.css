@@ -177,7 +177,6 @@ h1 span { color: #d8ddea; font-size: 0.48em; white-space: nowrap; }
   .flex-portrait-image-1 { right: 0; }
 }
 .portrait::after { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(0deg, rgba(9, 11, 18, 0.78), transparent 66%); }
-.portrait-initials { position: relative; z-index: 2; padding: 8px; color: rgba(255, 255, 255, 0.88); font-size: clamp(1rem, 2vw, 1.7rem); line-height: 1; }
 .character-name { display: block; margin-top: 8px; overflow: hidden; font-family: Arial, sans-serif; font-size: 0.79rem; font-weight: 700; line-height: 1.18; text-overflow: ellipsis; white-space: nowrap; }
 .role-badge { display: block; width: fit-content; max-width: 100%; margin-top: 5px; overflow: hidden; color: var(--muted); font-family: Arial, sans-serif; font-size: 0.65rem; line-height: 1.15; text-overflow: ellipsis; white-space: nowrap; }
 .team-note { margin: 18px 0 0; padding: 10px 11px; border-left: 2px solid var(--element-color); color: #c9cfda; background: rgba(255, 255, 255, 0.045); font-family: Arial, sans-serif; font-size: 0.75rem; line-height: 1.45; }

@@ -1,13 +1,13 @@
 window.REMAINING_TEAM_GUIDES = {
   "clorinde-aggravate": {
     label: "Clorinde Aggravate", status: "Aggravate · Electro + Dendro",
-    summary: "Nahida mantém Quicken, Fischl gera dano e partículas, e Kazuha reduz RES Electro antes do combo da Clorinde.",
-    preparation: ["Fischl Q no início para colocar Oz e facilitar a abertura.", "Kazuha Q → tEP para redemoinhar Electro.", "Nahida E (Q quando disponível) para marcar os inimigos."],
+    summary: "Nahida mantém Quicken, Fischl gera dano e partículas, e Lan Yan reduz RES Electro enquanto protege a Clorinde com seu escudo.",
+    preparation: ["Fischl Q no início para colocar Oz e facilitar a abertura.", "Lan Yan E → N1 para redemoinhar Electro, ativar Sombra Verde e gerar o escudo.", "Nahida E (Q quando disponível) para marcar os inimigos."],
     carry: ["Clorinde E para entrar no estado de Juramento da Noite.", "Use o combo de ataques da Habilidade e finalize com Q quando necessário.", "Na rotação seguinte, renove os suportes antes de voltar ao campo."],
-    rotation: ["Abertura: Fischl Q → Kazuha Q → Nahida E.", "Fischl E (ou Q alternado) para manter Oz ativo.", "Kazuha N1 Q/tEP para renovar o redemoinho Electro.", "Clorinde E → combo de ataques → Q quando disponível."],
-    cycle: "Fischl → Kazuha → Nahida → Fischl → Clorinde E combo",
-    notes: ["Se usar Calamidade de Eshu, Lan Yan pode substituir Kazuha para ativar o escudo da arma.", "Fischl alterna E e Q para manter Oz ativo e reduzir a necessidade de ER."],
-    sources: [{ name: "KQM · Clorinde Quick Guide", url: "https://keqingmains.com/q/clorinde-quickguide/" }],
+    rotation: ["Abertura: Fischl Q → Lan Yan E N1 → Nahida E.", "Fischl E (ou Q alternado) para manter Oz ativo.", "Lan Yan N1 E N1 para renovar Sombra Verde e o escudo.", "Clorinde E → combo de ataques → Q quando disponível."],
+    cycle: "Nahida → Fischl → Lan Yan → Clorinde E combo",
+    notes: ["Lan Yan é a opção principal nesta atualização: o escudo ativa a Calamidade de Eshu e Sombra Verde reduz a RES Electro.", "Fischl alterna E e Q para manter Oz ativo e reduzir a necessidade de ER."],
+    sources: [{ name: "KQM · Lan Yan Quick Guide", url: "https://keqingmains.com/q/lan-yan-quickguide/" }, { name: "KQM · Clorinde Quick Guide", url: "https://keqingmains.com/q/clorinde-quickguide/" }],
   },
   "raiden-overload": {
     label: "Raiden Overload", status: "Overload · Chevreuse",

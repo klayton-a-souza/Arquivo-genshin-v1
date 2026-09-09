@@ -127,6 +127,30 @@
       ["Fragmento da Harmonia Fantástica ×4", "Último Juramento do Gladiador ×4", "Crônicas do Pavilhão do Deserto ×4", "Combinações 2p ATQ / Bruxa / Caçador ≈ Eco do Sacrifício ×4"],
     ),
   });
+  apply("lanYan", {
+    role: "Support / Shielder",
+    ...recommendation(
+      ["Anel de Hakushin", "Histórias Extraordinárias de Caçadores de Dragões R5", "Codex de Favonius", "Memórias de Sacrifício", "Sonhos Flutuantes das Mil Noites"],
+      ["Sombra Verde ×4", "Instrutor ×4", "Antigo Ritual Real ×4"],
+      { source: "KQM · Lan Yan Quick Guide", sourceUrl: "https://keqingmains.com/q/lan-yan-quickguide/" },
+    ),
+  });
+  apply("thoma", {
+    role: "Support / Shielder",
+    ...recommendation(
+      ["Lança de Favonius", "Lança Cruzada de Kitain", "Borla Preta", "Justa Recompensa", "Diálogos dos Sábios do Deserto"],
+      ["Antigo Ritual Real ×4", "Millelith Firmes ×4", "2p HP% + 2p Recarga de Energia"],
+      { source: "KQM · Thoma Quick Guide", sourceUrl: "https://keqingmains.com/q/thoma-quickguide/" },
+    ),
+  });
+  apply("collei", {
+    role: "Support / Sub DPS",
+    ...recommendation(
+      ["Elegia do Suspiro Final", "Arco de Favonius", "Arco do Sacrifício", "Último Acorde", "Arco Esmeralda"],
+      ["Memórias da Floresta ×4", "Instrutor ×4", "Antigo Ritual Real ×4", "Millelith Firmes ×4"],
+      { source: "KQM · Collei Quick Guide", sourceUrl: "https://keqingmains.com/q/collei-quickguide/" },
+    ),
+  });
   apply("fischl", {
     role: "Off-Field DPS normal",
     ...recommendation(
@@ -388,6 +412,21 @@
   applyTeam("xiangling", "raiden-overload", recommendation(
     ["Luz do Cortador de Grama", "A Fisgada R5", "Báculo das Areias Escarlates ≈ Resplendor Fragmentado ≈ Báculo de Homa ≈ Espinha Celestial ≈ Elegia Lumidouce ≈ Sinfonista de Aromas"],
     ["Selo da Insulação ×4", "Bruxa das Chamas ×4", "Sonhos Dourados ×4 ≈ Combinações 2p Ritual / Bruxa / ATQ / EM / ER", "Antigo Ritual Real ×4"],
+  ));
+  applyTeam("lanYan", "clorinde-aggravate", recommendation(
+    ["Anel de Hakushin", "Histórias Extraordinárias de Caçadores de Dragões R5", "Codex de Favonius", "Memórias de Sacrifício"],
+    ["Sombra Verde ×4", "Instrutor ×4", "Antigo Ritual Real ×4"],
+    { source: "KQM · Lan Yan Quick Guide", sourceUrl: "https://keqingmains.com/q/lan-yan-quickguide/", recommendationNotes: { sections: [{ title: "Nesta composição", paragraphs: ["Anel de Hakushin é priorizado porque Lan Yan redemoinha Electro e transforma a reação em bônus para Clorinde e Fischl.", "O escudo permite usar a Calamidade de Eshu com segurança; ATQ% ajuda a fortalecer o escudo."] }] } },
+  ));
+  applyTeam("thoma", "arlecchino-vaporize", recommendation(
+    ["Lança de Favonius", "Lança Cruzada de Kitain", "Borla Preta", "Justa Recompensa"],
+    ["Antigo Ritual Real ×4", "Millelith Firmes ×4", "2p HP% + 2p Recarga de Energia"],
+    { source: "KQM · Thoma Quick Guide", sourceUrl: "https://keqingmains.com/q/thoma-quickguide/", recommendationNotes: { sections: [{ title: "Nesta composição", paragraphs: ["Recarga suficiente mantém o escudo sem interromper o campo da Arlecchino.", "A aplicação Pyro fora de campo de Thoma pode roubar algumas Vaporizações; a prioridade é conforto e resistência à interrupção."] }] } },
+  ));
+  applyTeam("collei", "tighnari-spread", recommendation(
+    ["Elegia do Suspiro Final", "Arco de Favonius", "Arco do Sacrifício", "Último Acorde"],
+    ["Memórias da Floresta ×4", "Instrutor ×4", "Antigo Ritual Real ×4", "Millelith Firmes ×4"],
+    { source: "KQM · Collei Quick Guide", sourceUrl: "https://keqingmains.com/q/collei-quickguide/", recommendationNotes: { sections: [{ title: "Nesta composição", paragraphs: ["Memórias da Floresta reduz a RES Dendro para o dano de Tighnari quando ninguém mais usa o conjunto.", "Use o Supremo de Collei a cada rotação para manter Dendro e a ressonância ativa; priorize Recarga antes de dano pessoal."] }] } },
   ));
   const highEnergyFurina = recommendation(
     ["Esplendor das Águas Silenciosas", "Espada de Favonius", "Cortador de Jade Primordial ≈ Chamado da Serenidade R5 ≈ Urakugo Rensai", "Espada Pútrida R5 ≈ Chave de Hierofania", "Luz das Folhas Cortadas", "Fleuve Cendre R5", "Fragmento Lunar", "Maremoto da Lua de Futsu ≈ Farpa", "Espada Celestial", "Prenúncio do Alvorecer R5"],

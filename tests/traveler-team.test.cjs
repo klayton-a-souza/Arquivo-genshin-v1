@@ -65,6 +65,23 @@ test('overview shows alternating flex portraits and keeps selectors inside detai
   assert.ok(!node('#teams-root').innerHTML.includes('data-flex-slot'));
 });
 
+test('updated teams use Lan Yan and expose guides for Lan Yan, Thoma, and Collei', () => {
+  const { run, node } = app();
+  const clorinde = JSON.parse(run('JSON.stringify(teams.find(team => team.id === "clorinde-aggravate"))'));
+  assert.deepEqual(clorinde.characters, ['clorinde', 'nahida', 'fischl', 'lanYan']);
+  for (const [teamId, characterId, recommendationText] of [
+    ['clorinde-aggravate', 'lanYan', 'Anel de Hakushin'],
+    ['arlecchino-vaporize', 'thoma', 'Lança de Favonius'],
+    ['tighnari-spread', 'collei', 'Memórias da Floresta'],
+  ]) {
+    run(`openTeamDetail(teams.findIndex(team => team.id === '${teamId}'), '${characterId}')`);
+    run('activeBuildView = "summary"; renderTeamDetail()');
+    assert.match(node('#team-detail-content').innerHTML, /Atributos principais/);
+    run('activeBuildView = "recommendations"; renderTeamDetail()');
+    assert.match(node('#team-detail-content').innerHTML, new RegExp(recommendationText));
+  }
+});
+
 test('strategy tab remains selected while switching both flex slots', () => {
   const { run, node } = app();
   run('openTeamDetail(teams.findIndex(team => team.id === "traveler-cryo"))');

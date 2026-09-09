@@ -71,7 +71,7 @@ const teams = [
   { id: "arlecchino-vaporize", element: "pyro", name: "Arlecchino Vaporize", characters: ["arlecchino", "xingqiu", "sucrose", "thoma"], note: "Versão principal com o escudo de Thoma, preservando Bennett para Mavuika Melt. Thoma pode roubar algumas Vaporizações da Arlecchino.", alternatives: ["Maior dano: Arlecchino + Xingqiu + Bennett + Sucrose/Lan Yan ainda pode ser a versão de maior dano, quando Bennett estiver disponível."] },
   { id: "neuvillette-hypercarry", element: "hydro", name: "Neuvillette Hypercarry", characters: ["neuvillette", "furina", "kazuha", "xilonen"] },
   { id: "international", element: "hydro", name: "Tartaglia International", characters: ["tartaglia", "xiangling", "bennett", "sucrose"] },
-  { id: "clorinde-aggravate", element: "electro", name: "Clorinde Aggravate", characters: ["clorinde", "nahida", "fischl", "kazuha"], note: "Sucrose pode substituir Kazuha quando for necessário ativar Mágico: Ritual Secreto com Fischl.", alternatives: ["Com Calamidade de Eshu: Clorinde + Nahida + Fischl + Lan Yan. Lan Yan substitui Kazuha e fornece o escudo necessário para ativar o efeito da arma."] },
+  { id: "clorinde-aggravate", element: "electro", name: "Clorinde Aggravate", characters: ["clorinde", "nahida", "fischl", "lanYan"], note: "Lan Yan fornece o escudo para ativar a Calamidade de Eshu e usa Sombra Verde para reduzir a RES Electro.", alternatives: ["Kazuha continua uma alternativa ofensiva quando o escudo da Calamidade de Eshu não for necessário."] },
   { id: "raiden-overload", element: "electro", name: "Raiden Overload", characters: ["raiden", "chevreuse", "xiangling", "bennett"] },
   { id: "traveler-cryo", element: "cryo", name: "Viajante Cryo Stellar-Conduct", characters: ["travelerCryo", "qiqi", "fischl", "alyosha"] },
   { id: "ganyu-freeze", element: "cryo", name: "Ganyu Freeze", characters: ["ganyu", "furina", "charlotte", "kazuha"] },
@@ -339,7 +339,7 @@ function createCharacterCard(characterId, teamId) {
 
   return `
     <button class="character-card" type="button" data-character="${characterId}" aria-label="Destacar times com ${character.name}" style="--character-color: ${getElement(character.element).color}">
-      <span class="portrait${character.image ? " has-image" : ""}">${portraitImage}<span class="portrait-initials">${initials(character.name)}</span></span>
+      <span class="portrait${character.image ? " has-image" : ""}">${portraitImage}</span>
       <span class="character-name">${character.name}</span>
       <span class="role-badge">${escapeHtml(teamId === "traveler-cryo" ? getContextRole(characterId, teamId) : character.role)}</span>
     </button>
@@ -351,7 +351,7 @@ function createFlexCharacterCard(slot, selectedCharacterId) {
   const label = members.map((character) => character.name).join(" / ");
   const role = slot === "cryo" ? "Cryo Flex" : "Electro Flex";
   return `<button class="character-card flex-character-card" type="button" data-character="${selectedCharacterId}" aria-label="Abrir ${role}: ${escapeHtml(label)}" style="--character-color: ${getElement(members[0].element).color}">
-    <span class="portrait has-image flex-portrait">${members.map((character, index) => `<img class="portrait-image flex-portrait-image flex-portrait-image-${index}" src="${character.image}" alt="" loading="lazy" decoding="async" />`).join("")}<span class="portrait-initials">${members.map((character) => initials(character.name)).join("/")}</span></span>
+    <span class="portrait has-image flex-portrait">${members.map((character, index) => `<img class="portrait-image flex-portrait-image flex-portrait-image-${index}" src="${character.image}" alt="" loading="lazy" decoding="async" />`).join("")}</span>
     <span class="character-name">${escapeHtml(label)}</span>
     <span class="role-badge">${role}</span>
   </button>`;
