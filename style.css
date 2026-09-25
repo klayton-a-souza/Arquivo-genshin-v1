@@ -200,6 +200,7 @@ h1 span { color: #d8ddea; font-size: 0.48em; white-space: nowrap; }
 .detail-member:hover, .detail-member:focus-visible { border-color: rgba(255, 255, 255, 0.2); color: var(--text); outline: none; transform: translateY(-2px); }
 .detail-member.is-active { border-color: var(--character-color); color: var(--text); background: color-mix(in srgb, var(--character-color) 10%, rgba(255, 255, 255, 0.04)); }
 .detail-member img { width: 43px; height: 43px; flex: 0 0 auto; border: 1px solid var(--line); border-radius: 5px; object-fit: cover; object-position: center top; }
+.detail-member-placeholder, .dashboard-character-placeholder { display: block; width: 43px; height: 43px; flex: 0 0 auto; border: 1px solid var(--character-color, var(--detail-color)); border-radius: 5px; background: linear-gradient(145deg, color-mix(in srgb, var(--character-color, var(--detail-color)) 62%, #202431), #171b28); }
 .detail-member span { overflow: hidden; font-family: Arial, sans-serif; font-size: 0.76rem; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
 
 @keyframes detail-fade { from { opacity: 0; } to { opacity: 1; } }
@@ -263,6 +264,7 @@ h1 span { color: #d8ddea; font-size: 0.48em; white-space: nowrap; }
 .build-dashboard { display: grid; grid-template-columns: minmax(220px, 1.05fr) minmax(270px, 1.25fr) minmax(280px, 1.45fr); gap: 24px; align-items: center; margin: 0 0 24px; padding: 18px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
 .dashboard-character { display: flex; min-width: 0; align-items: center; gap: 14px; }
 .dashboard-character img { width: 78px; height: 78px; flex: 0 0 auto; border: 1px solid var(--detail-color); border-radius: 6px; object-fit: cover; object-position: center top; }
+.dashboard-character-placeholder { width: 78px; height: 78px; border-color: var(--detail-color); }
 .dashboard-character h4 { margin: 0 0 5px; font-family: Georgia, serif; font-size: 1.15rem; font-weight: 400; }
 .dashboard-character p, .dashboard-weapon p { margin: 3px 0 0; color: var(--muted); font-family: Arial, sans-serif; font-size: .7rem; }
 .dashboard-character .set-summary { color: #f2e5c5; line-height: 1.35; }

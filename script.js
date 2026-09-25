@@ -46,6 +46,9 @@ const characters = {
   albedo: { name: "Albedo", element: "geo", role: "Sub DPS" },
   xiao: { name: "Xiao", element: "anemo", role: "Main DPS" },
   faruzan: { name: "Faruzan", element: "anemo", role: "Support / Buffer" },
+  mizuki: { name: "Yumemizuki Mizuki", element: "anemo", role: "Main DPS / Stellar Swirl", image: "assets/images/characters/mizuki.png" },
+  varesa: { name: "Varesa", element: "electro", role: "Main DPS / Plunge", image: "assets/images/characters/varesa.png" },
+  ororon: { name: "Ororon", element: "electro", role: "Sub DPS / Support", image: "assets/images/characters/ororon.png" },
   jean: { name: "Jean", element: "anemo", role: "Healer / Buffer" },
   noelle: { name: "Noelle", element: "geo", role: "Main DPS / Healer" },
   linnea: { name: "Linnea", element: "geo", role: "Support" },
@@ -72,13 +75,15 @@ const teams = [
   { id: "neuvillette-hypercarry", element: "hydro", name: "Neuvillette Hypercarry", characters: ["neuvillette", "furina", "kazuha", "xilonen"] },
   { id: "international", element: "hydro", name: "Tartaglia International", characters: ["tartaglia", "xiangling", "bennett", "sucrose"] },
   { id: "clorinde-aggravate", element: "electro", name: "Clorinde Aggravate", characters: ["clorinde", "nahida", "fischl", "lanYan"], note: "Lan Yan fornece o escudo para ativar a Calamidade de Eshu e usa Sombra Verde para reduzir a RES Electro.", alternatives: ["Kazuha continua uma alternativa ofensiva quando o escudo da Calamidade de Eshu não for necessário."] },
-  { id: "raiden-overload", element: "electro", name: "Raiden Overload", characters: ["raiden", "chevreuse", "xiangling", "bennett"] },
+  { id: "raiden-rational", element: "electro", name: "Raiden Rational", characters: ["raiden", "xingqiu", "xiangling", "bennett"] },
+  { id: "varesa-overload", element: "electro", name: "Varesa Overload", characters: ["varesa", "mavuika", "chevreuse", "ororon"] },
   { id: "traveler-cryo", element: "cryo", name: "Viajante Cryo Stellar-Conduct", characters: ["travelerCryo", "qiqi", "fischl", "alyosha"] },
   { id: "ganyu-freeze", element: "cryo", name: "Ganyu Freeze", characters: ["ganyu", "furina", "charlotte", "kazuha"] },
   { id: "alhaitham-hyperbloom", element: "dendro", name: "Alhaitham Hyperbloom", characters: ["alhaitham", "nahida", "kuki", "xingqiu"] },
   { id: "tighnari-spread", element: "dendro", name: "Tighnari Spread", characters: ["tighnari", "fischl", "collei", "zhongli"], note: "Collei ocupa o segundo slot Dendro na versão principal.", alternatives: ["Lisa pode substituir Collei: Tighnari + Fischl + Lisa + Zhongli. Permanece alternativa porque está pouco investida na conta."] },
   { id: "xiao-hypercarry", element: "anemo", name: "Xiao Hypercarry", characters: ["xiao", "faruzan", "furina", "jean"] },
-  { id: "venti-hexerei", element: "anemo", name: "Venti Hexerei", characters: ["venti", "albedo", "fischl", "bennett"], note: "Time especial da conta, mantido como Anemo 2. Venti + Albedo + Fischl é a ativação mais clara de Hexerei na lista principal. Os Hexerei/Mágicos relevantes nos times principais são Fischl, Sucrose, Venti e Albedo.", alternatives: ["Sucrose + Fischl pode formar Sucrose Taser como alternativa forte, sem substituir Venti Hexerei entre os 14 times principais."] },
+  { id: "venti-hexerei", element: "anemo", name: "Venti Hexerei", characters: ["venti", "albedo", "fischl", "bennett"], note: "Time especial da conta, mantido como Anemo 2. Venti + Albedo + Fischl é a ativação mais clara de Hexerei na lista principal. Os Hexerei/Mágicos relevantes nos times principais são Fischl, Sucrose, Venti e Albedo.", alternatives: ["Sucrose + Fischl pode formar Sucrose Taser como alternativa forte, sem substituir Venti Hexerei na lista principal."] },
+  { id: "mizuki-stellar-swirl", element: "anemo", name: "Mizuki Stellar Swirl", characters: ["mizuki", "travelerCryo", "diona", "sucrose"] },
   { id: "noelle-geo", element: "geo", name: "Noelle Lunar-Crystallize", characters: ["noelle", "linnea", "furina", "illuga"], constellations: ["Noelle C6", "Linnea C0", "Furina C0", "Illuga C0"], future: "Futuro \u2192 Zibal" },
   { id: "itto-mono-geo", element: "geo", name: "Itto Mono Geo", characters: ["itto", "gorou", "albedo", "zhongli"] },
 ];
@@ -306,7 +311,8 @@ function getSummaryGuidance(characterId, teamId) {
 
 function getContextRole(characterId, teamId) {
   const context = getGuideContext(characterId, teamId);
-  return context.team.role || context.general.role || characters[characterId].role;
+  const guidanceRole = teamBuildGuidance.teams?.[teamId]?.[characterId]?.role;
+  return guidanceRole || context.team.role || context.general.role || characters[characterId].role;
 }
 
 function resolveGuideItemId(type, name) {
@@ -393,11 +399,13 @@ function renderTeams() {
 }
 
 function updateCount() {
-  if (activeFilter === "all") {
-  filterCount.textContent = "Todos os elementos \u00b7 14 times";
-    return;
-  }
-  filterCount.textContent = `${getElement(activeFilter).label} \u00b7 2 times`;
+  const teamTotal = document.querySelector("#team-total");
+  const elementTotal = document.querySelector("#element-total");
+  if (teamTotal) teamTotal.textContent = teams.length;
+  if (elementTotal) elementTotal.textContent = new Set(teams.map((team) => team.element)).size;
+  const count = activeFilter === "all" ? teams.length : teams.filter((team) => team.element === activeFilter).length;
+  const label = activeFilter === "all" ? "Todos os elementos" : getElement(activeFilter).label;
+  filterCount.textContent = `${label} \u00b7 ${count} ${count === 1 ? "time" : "times"}`;
 }
 
 filterList.addEventListener("click", (event) => {
@@ -427,9 +435,12 @@ teamsRoot.addEventListener("keydown", (event) => {
 function createDetailMember(characterId) {
   const character = characters[characterId];
   const role = getContextRole(characterId, teams[openTeamIndex]?.id);
+  const portrait = character.image
+    ? `<img src="${character.image}" alt="" loading="lazy" decoding="async" onerror="this.remove()" />`
+    : `<span class="detail-member-placeholder" aria-hidden="true"></span>`;
   return `
     <button class="detail-member${characterId === detailCharacterId ? " is-active" : ""}" type="button" role="tab" data-detail-character="${characterId}" aria-selected="${characterId === detailCharacterId}" style="--character-color: ${getElement(character.element).color}">
-      <img src="${character.image}" alt="" loading="lazy" decoding="async" />
+      ${portrait}
       <span><strong>${escapeHtml(character.name)}</strong><small>${escapeHtml(role)}</small></span>
     </button>
   `;
@@ -495,7 +506,7 @@ function createBuildDashboard(characterId) {
   return `
     <section class="build-dashboard" aria-label="Resumo da build atual de ${escapeHtml(character.name)}">
       <div class="dashboard-character">
-        <img src="${character.image}" alt="" loading="lazy" decoding="async" />
+        ${character.image ? `<img src="${character.image}" alt="" loading="lazy" decoding="async" onerror="this.remove()" />` : `<span class="dashboard-character-placeholder" aria-hidden="true"></span>`}
         <div><h4>${escapeHtml(character.name)}</h4><p>${escapeHtml(getElement(character.element).label)} · Build atual</p><p class="set-summary">${escapeHtml(setSummary)}</p></div>
       </div>
       <div class="dashboard-weapon"><h5>Arma</h5><strong>${escapeHtml(weapon.name || "Não informada")}</strong><p>${weapon.refinement ? `R${weapon.refinement} · ` : ""}${weapon.rarity ? `${weapon.rarity} estrelas` : "Dados da captura HoYoLAB"}</p><h5>Talentos</h5><div class="talent-summary">${[["Ataque Normal", talents[0]], ["Skill", talents[1]], ["Burst", talents[2]]].map(([label, value]) => `<span><small>${label}</small><strong>${value ?? "—"}</strong></span>`).join("")}</div></div>
@@ -512,7 +523,7 @@ function createBuildGuideSummary(characterId, teamId) {
     return `${createBuildDashboard(characterId)}<section class="build-guide"><div class="build-guide-heading"><div><p>Guia de build</p><h5>Orienta&ccedil;&otilde;es</h5></div></div><p class="guide-empty guide-empty-panel">Informa&ccedil;&atilde;o ainda n&atilde;o cadastrada.</p></section>`;
   }
 
-  const role = team.role || general.role || characters[characterId].role;
+  const role = summaryGuidance.role || team.role || general.role || characters[characterId].role;
   const substats = summaryGuidance.substats || general.substats;
   const topStats = typeof substats === "string" ? substats.split(/\s*[>≫≥≈]\s*/).filter(Boolean).slice(0, 3) : substats?.slice(0, 3);
   const notes = [...(general.notes || []), ...(team.notes || []), ...(summaryGuidance.notes || [])];

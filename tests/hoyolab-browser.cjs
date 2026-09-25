@@ -14,8 +14,11 @@ const path = require('node:path');
     page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
     const response = await page.goto('http://127.0.0.1:4175/');
     assert.equal(response.status(), 200);
-    assert.equal(await page.locator('.team-card').count(), 14);
-    for (const count of await page.locator('.element-section').evaluateAll(sections => sections.map(section => section.querySelectorAll('.team-card').length))) assert.equal(count, 2);
+    assert.equal(await page.locator('.team-card').count(), 16);
+    const elementCounts = await page.locator('.element-section').evaluateAll(sections => sections.map(section => ({ label: section.querySelector('h2').textContent, count: section.querySelectorAll('.team-card').length })));
+    assert.equal(elementCounts.find(section => section.label === 'Anemo').count, 3);
+    assert.equal(elementCounts.find(section => section.label === 'Electro').count, 3);
+    for (const section of elementCounts.filter(section => !['Anemo', 'Electro'].includes(section.label))) assert.equal(section.count, 2, section.label);
     const ids = await page.evaluate(() => Object.keys(window.HOYOLAB_BUILDS));
     for (const id of ids) {
       await page.evaluate(id => {
@@ -65,6 +68,6 @@ const path = require('node:path');
     await page.screenshot({ path: path.join(output, 'mobile-recommendations.png') });
     assert.ok(await page.locator('.team-detail-panel').evaluate(el => el.scrollWidth <= el.clientWidth + 1));
     assert.deepEqual(errors, []);
-    console.log('OK: 41 cards, equipamentos EM USO, 14 times/2 por elemento, abas, desktop/mobile, zoom e console.');
+    console.log('OK: 41 cards, equipamentos EM USO, 16 times (Anemo 3, Electro 3 e demais elementos 2), abas, desktop/mobile, zoom e console.');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; });

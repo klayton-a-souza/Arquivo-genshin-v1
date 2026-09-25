@@ -20,7 +20,7 @@ function app() {
   }, requestAnimationFrame: (fn) => fn() });
   const run = (code) => vm.runInContext(code, context);
   const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
-  for (const file of ['data/hoyolab-builds.js', 'data/guides.js', 'data/recommendations.js', 'data/recommendation-assets.js', 'data/recommendation-assets-global.js', 'data/team-guidance.js']) run(read(file));
+  for (const file of ['data/hoyolab-builds.js', 'data/hoyolab-stats.js', 'data/guides.js', 'data/recommendations.js', 'data/recommendation-assets.js', 'data/recommendation-assets-global.js', 'data/team-guidance.js']) run(read(file));
   const original = JSON.stringify(context.window.CHARACTER_GUIDES);
   run(read('data/traveler-team.js'));
   for (const file of ['data/mavuika-team.js', 'data/arlecchino-team.js', 'data/hydro-teams.js', 'data/remaining-team-guides.js']) run(read(file));
@@ -137,9 +137,9 @@ test('two pieces do not receive a four-piece badge', () => {
   assert.equal(run(`isEquippedOption({id:'millelith-firmes',pieces:4}, 'artifactSets', {artifactSets:[{name:'Millelith Firmes',count:2}]}, {})`), false);
 });
 
-test('Qiqi with HoYoLAB and every existing team render without errors', () => {
+test('Qiqi with HoYoLAB and every listed team render without errors', () => {
   const { run, node } = app();
-  for (let i = 0; i < 14; i++) {
+  for (let i = 0; i < run('teams.length'); i++) {
     run(`openTeamDetail(${i})`);
     for (const view of ['summary', 'recommendations', 'current']) {
       run(`activeBuildView='${view}'; renderTeamDetail()`);
@@ -152,7 +152,7 @@ test('Qiqi with HoYoLAB and every existing team render without errors', () => {
   assert.match(node('#team-detail-content').innerHTML, /assets\/images\/hoyolab\/qiqi\.webp/);
 });
 
-test('all 41 HoYoLAB images exist, cover every main and flex member and use unique names', () => {
+test('HoYoLAB images remain valid and new characters use the documented fallback', () => {
   const {run, context} = app();
   const builds = context.window.HOYOLAB_BUILDS;
   assert.equal(Object.keys(builds).length, 41);
@@ -165,12 +165,81 @@ test('all 41 HoYoLAB images exist, cover every main and flex member and use uniq
   }
   assert.equal(fs.readdirSync(path.join(root, 'assets/images/hoyolab')).length, 41);
   for (const id of JSON.parse(run('JSON.stringify([...new Set(teams.flatMap(team => team.characters).concat(["diona","beidou"]))])'))) {
-    assert.ok(builds[id], id);
+    if (['mizuki', 'varesa', 'ororon'].includes(id)) assert.equal(builds[id], undefined, id);
+    else assert.ok(builds[id], id);
   }
-  assert.equal(run('teams.length'), 14);
-  for (const element of ['pyro','hydro','electro','cryo','dendro','anemo','geo']) {
-    assert.equal(run(`teams.filter(team => team.element === '${element}').length`), 2);
+  assert.equal(run('teams.length'), 16);
+  assert.equal(run("new Set(teams.map(team => team.element)).size"), 7);
+  assert.equal(run("teams.filter(team => team.element === 'anemo').length"), 3);
+  assert.equal(run("teams.filter(team => team.element === 'electro').length"), 3);
+  for (const element of ['pyro','hydro','cryo','dendro','geo']) assert.equal(run(`teams.filter(team => team.element === '${element}').length`), 2);
+});
+
+test('new teams preserve guides and old-team data', () => {
+  const { run, node, context } = app();
+  const mizuki = JSON.parse(run('JSON.stringify(teams.find(team => team.id === "mizuki-stellar-swirl"))'));
+  const varesa = JSON.parse(run('JSON.stringify(teams.find(team => team.id === "varesa-overload"))'));
+  assert.deepEqual(mizuki.characters, ['mizuki', 'travelerCryo', 'diona', 'sucrose']);
+  assert.deepEqual(varesa.characters, ['varesa', 'mavuika', 'chevreuse', 'ororon']);
+  const raiden = JSON.parse(run('JSON.stringify(teams.find(team => team.id === "raiden-rational"))'));
+  assert.equal(raiden.name, 'Raiden Rational');
+  assert.deepEqual(raiden.characters, ['raiden', 'xingqiu', 'xiangling', 'bennett']);
+  assert.equal(mizuki.constellations, undefined);
+  assert.equal(varesa.constellations, undefined);
+  for (const [id, image] of [['mizuki', 'assets/images/characters/mizuki.png'], ['varesa', 'assets/images/characters/varesa.png'], ['ororon', 'assets/images/characters/ororon.png']]) {
+    assert.equal(run(`characters.${id}.image`), image);
+    assert.ok(fs.existsSync(path.join(root, image)), image);
   }
+  for (const image of [
+    'assets/images/recommendations/weapons/cortinas-noturnas.webp',
+    'assets/images/recommendations/weapons/estrela-gelada.webp',
+    'assets/images/recommendations/artifact-sets/prova-escarlate.webp',
+  ]) assert.ok(fs.existsSync(path.join(root, image)), image);
+  run('renderTeams()');
+  assert.doesNotMatch(node('#teams-root').innerHTML, /Varesa C0|Ororon C1|Mizuki C0/);
+  assert.equal(run('teams.filter(team => team.id === "raiden-rational").length'), 1);
+  assert.equal(run('teams.some(team => team.id === ["raiden", "overload"].join("-"))'), false);
+  assert.equal(run('teams.find(team => team.id === "raiden-rational").characters.includes("chevreuse")'), false);
+  assert.ok(context.window.CHARACTER_GUIDES.chevreuse);
+  assert.ok(context.window.HOYOLAB_BUILDS.chevreuse);
+  assert.ok(context.window.HOYOLAB_STATS.chevreuse);
+  assert.ok(context.window.CHARACTER_GUIDES.raiden);
+  assert.ok(context.window.HOYOLAB_BUILDS.raiden);
+  assert.ok(context.window.HOYOLAB_STATS.raiden);
+  assert.ok(context.window.REMAINING_TEAM_GUIDES['raiden-rational']);
+  assert.ok(context.window.REMAINING_TEAM_GUIDES['mizuki-stellar-swirl']);
+  assert.ok(context.window.REMAINING_TEAM_GUIDES['varesa-overload']);
+  for (const [teamId, characterId, text] of [
+    ['mizuki-stellar-swirl', 'mizuki', 'Stellar Swirl DPS'],
+    ['mizuki-stellar-swirl', 'travelerCryo', 'Coração Forjado'],
+    ['varesa-overload', 'varesa', 'Juramento da Noite'],
+    ['varesa-overload', 'ororon', 'Pergaminho'],
+  ]) {
+    run(`openTeamDetail(teams.findIndex(team => team.id === '${teamId}'), '${characterId}')`);
+    run('activeBuildView = "summary"; renderTeamDetail()');
+    assert.match(node('#team-detail-content').innerHTML, /Atributos principais|Guia de build/);
+    run('activeBuildView = "recommendations"; renderTeamDetail()');
+    assert.match(node('#team-detail-content').innerHTML, new RegExp(text));
+    run('activeBuildView = "current"; renderTeamDetail()');
+    assert.doesNotMatch(node('#team-detail-content').innerHTML, /src="undefined"/);
+  }
+  assert.match(run('createRemainingStrategy("mizuki-stellar-swirl")'), /Diona hE/);
+  assert.match(run('createRemainingStrategy("varesa-overload")'), /Varesa ECP/);
+  run('openTeamDetail(teams.findIndex(team => team.id === "raiden-rational"), "raiden")');
+  assert.match(node('#team-detail-content').innerHTML, /Raiden Rational/);
+  const legacyName = ['Raiden', 'Overload'].join(' ');
+  assert.doesNotMatch(node('#team-detail-content').innerHTML, new RegExp(`${legacyName}|Chevreuse`));
+  run('activeBuildView = "summary"; renderTeamDetail()');
+  assert.match(node('#team-detail-content').innerHTML, /200–220%|269,9%/);
+  run('activeBuildView = "recommendations"; renderTeamDetail()');
+  assert.match(node('#team-detail-content').innerHTML, /Engulfing Lightning|Luz do Cortador de Grama/);
+  assert.match(node('#team-detail-content').innerHTML, /Raiden C0 no Rational/);
+  run('activeTeamStrategyView = "strategy"; renderTeamDetail()');
+  assert.match(node('#team-detail-content').innerHTML, /4\[N4D\]|Xingqiu E/);
+  assert.doesNotMatch(node('#team-detail-content').innerHTML, /Chevreuse/);
+  assert.equal(run('getSummaryGuidance("xiangling", "international").energy.target'), '190–200%');
+  assert.equal(run('getSummaryGuidance("xiangling", "raiden-rational").energy.target'), '195–205%');
+  assert.equal(run('getSummaryGuidance("bennett", "raiden-rational").energy.target'), '145–210%');
 });
 
 test('current capture is separate from recommended stats and old dashboard is gone', () => {
@@ -179,7 +248,8 @@ test('current capture is separate from recommended stats and old dashboard is go
   const html = node('#team-detail-content').innerHTML;
   assert.equal(run('activeBuildView'), 'summary');
   assert.match(html, /Top 3 atributos recomendados/);
-  assert.doesNotMatch(html, /build-dashboard|Card Akasha|Snapshot Akasha|current-build-image/);
+  assert.match(html, /build-dashboard/);
+  assert.doesNotMatch(html, /Card Akasha|Snapshot Akasha|current-build-image/);
   run("activeBuildView='current'; renderTeamDetail()");
   assert.match(node('#team-detail-content').innerHTML, /hoyolab\/mavuika\.webp/);
   assert.doesNotMatch(node('#team-detail-content').innerHTML, /build-dashboard|Card Akasha|Snapshot Akasha|Top 3 atributos/);

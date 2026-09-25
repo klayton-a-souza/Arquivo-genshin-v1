@@ -409,10 +409,33 @@
     ["Mil Sóis Ardentes", "Chave da Transcendência ≈ Sinal dos Mares", "Veredito ≈ Balada do Poderoso Lobo ≈ Túmulo do Lobo ≈ Mega Ultra Espada Mágica R5", "Espada Áspera ≈ Lâmina das Ondas R5", "Orgulho Celestial", "Katsuragi R5 ≈ Chifres Vermelhos ≈ Presa do Rei da Montanha ≈ Espinha Dorsal da Serpente", "Favonius ≈ Lâmina da Redenção R5", "Akuoumaru"],
     ["Selo da Insulação ×4", "2p + 2p ER / Ritual / Trovão / ATQ ≈ Ascensão Zéfira ×4", "Antigo Ritual Real ×4 ≈ Pergaminho ×4"],
   ));
-  applyTeam("xiangling", "raiden-overload", recommendation(
-    ["Luz do Cortador de Grama", "A Fisgada R5", "Báculo das Areias Escarlates ≈ Resplendor Fragmentado ≈ Báculo de Homa ≈ Espinha Celestial ≈ Elegia Lumidouce ≈ Sinfonista de Aromas"],
-    ["Selo da Insulação ×4", "Bruxa das Chamas ×4", "Sonhos Dourados ×4 ≈ Combinações 2p Ritual / Bruxa / ATQ / EM / ER", "Antigo Ritual Real ×4"],
+  applyTeam("raiden", "raiden-rational", {
+    role: "On-Field DPS / Battery / Burst Buffer",
+    recommendationNotes: {
+      sections: [{ title: "Raiden C0 no Rational", paragraphs: ["Engulfing Lightning R1 e Selo da Insulação ×4 continuam como a combinação principal da conta.", "A referência Solo Electro de 200–220% ER é um ponto de partida; com Engulfing, ER adicional também possui valor ofensivo. Os 269,9% atuais não devem ser tratados automaticamente como excesso ou erro."] }],
+    },
+  });
+  applyTeam("xingqiu", "raiden-rational", {
+    role: "Off-Field Hydro DPS / Hydro Enabler",
+    recommendationNotes: {
+      sections: [{ title: "Xingqiu C6 no Rational", paragraphs: ["A Espada do Sacrifício R5 é totalmente funcional e mantém conforto de Energia. O segundo uso da Skill não precisa ser consumido em toda rotação se isso alongar o ciclo.", "Com C6, Sacrificial R5 e Raiden, a necessidade de ER é baixa. A faixa geral da KQM para C6 + Sacrificial R3+ é 130–150%, mas isso não é uma meta exata do Rational; ajuste pela rotação. A Build Atual tem 197,4% ER."] }],
+    },
+  });
+  applyTeam("xiangling", "raiden-rational", recommendation(
+    ["Báculo das Areias Escarlates", "Elegia Lumidouce ≈ Resplendor Fragmentado ≈ Báculo de Homa ≈ Espinha Celestial", "A Fisgada R5 ≈ Lança de Jade ≈ Sinfonista de Aromas ≈ Lança do Duelo ≈ Canção do Fiorde", "Perfuradora Prismática ≈ Subjugadora de Calamidades ≈ Semblante da Lua Carmesim ≈ Ruínas Ensanguentadas ≈ Barbatana do Quebra Ondas ≈ Perdição do Dragão"],
+    ["Selo da Insulação ×4", "Bruxa das Chamas ×4", "Sonhos Dourados ×4 ≈ Combinações Ritual / Bruxa / ATQ / EM / ER 2p", "Antigo Ritual Real ×4"],
+    {
+      recommendationNotes: {
+        sections: [{ title: "Xiangling C6 no Rational", paragraphs: ["A Fisgada R5 continua marcada como EM USO e combina muito bem com o Supremo, CRIT do Supremo, Recarga e Selo da Insulação ×4.", "A referência de ER no Rational é aproximadamente 195–205%. Com 245,6% atuais, não troque a build automaticamente; se a rotação permanecer estável, parte da ER pode virar CRIT, Proficiência Elemental ou ATQ%. Uma Areia de EM é especialmente relevante quando a meta de ER já estiver satisfeita."] }],
+      },
+    },
   ));
+  applyTeam("bennett", "raiden-rational", {
+    role: "ATQ Buffer / Healer / Pyro Battery",
+    recommendationNotes: {
+      sections: [{ title: "Bennett C6 no Rational", paragraphs: ["Aquila Favonia R1 é utilizável pelo Base ATQ alto e deve permanecer como EM USO; Favonius é apenas uma alternativa caso o time tenha problema de Energia.", "A faixa geral com Raiden é 145–210% ER, e os 206,3% atuais já estão dentro dela. Bennett C6 não conflita com a conversão Electro da Raiden durante Musou Isshin e ainda fortalece a Xiangling Pyro."] }],
+    },
+  });
   applyTeam("lanYan", "clorinde-aggravate", recommendation(
     ["Anel de Hakushin", "Histórias Extraordinárias de Caçadores de Dragões R5", "Codex de Favonius", "Memórias de Sacrifício"],
     ["Sombra Verde ×4", "Instrutor ×4", "Antigo Ritual Real ×4"],
@@ -427,6 +450,73 @@
     ["Elegia do Suspiro Final", "Arco de Favonius", "Arco do Sacrifício", "Último Acorde"],
     ["Memórias da Floresta ×4", "Instrutor ×4", "Antigo Ritual Real ×4", "Millelith Firmes ×4"],
     { source: "KQM · Collei Quick Guide", sourceUrl: "https://keqingmains.com/q/collei-quickguide/", recommendationNotes: { sections: [{ title: "Nesta composição", paragraphs: ["Memórias da Floresta reduz a RES Dendro para o dano de Tighnari quando ninguém mais usa o conjunto.", "Use o Supremo de Collei a cada rotação para manter Dendro e a ressonância ativa; priorize Recarga antes de dano pessoal."] }] } },
+  ));
+  apply("mizuki", {
+    role: "On-Field Stellar Swirl DPS",
+    ...recommendation(
+      ["Hibernação Matinal do Ano Novo", "Relicário da Verdade", "Observatório do Chamador de Estrelas", "Cortinas Noturnas", "Sacrifício de Jade", "Estrela Gelada", "Sinfonia dos Indolentes", "Memórias de Sacrifício"],
+      ["Sonhos Dourados ×4", "Prova Escarlate ×4", "EM 2p + EM 2p"],
+      {
+        source: "Genshin Builds · Stellar Swirl DPS 7.1",
+        sourceUrl: "https://genshin-impact-helper-team.github.io/genshin-builds/en/yumemizuki-mizuki/",
+        guideVersion: "Stellar Swirl DPS 7.1",
+        recommendationNotes: { sections: [{ title: "Stellar Swirl", paragraphs: ["Esta lista usa a seção nova de Stellar Swirl DPS, separada da seção antiga de Reaction DPS / Swirl.", "Priorize CRIT ≥ Proficiência Elemental >> Recarga de Energia; com Sucrose, aproximadamente 100–120% de ER costuma bastar para o Supremo a cada duas rotações."] }] },
+      },
+    ),
+  });
+  apply("varesa", {
+    role: "Main DPS / Plunge DPS",
+    ...recommendation(
+      ["Coração Resplandecente", "Relicário da Verdade", "Prova de Kagura", "Oração Perdida", "Rito do Fluxo Eterno", "Hora do Surfe", "Supervisão de Caixa", "Sinfonia dos Indolentes"],
+      ["Juramento da Noite Eterna ×4", "Códice de Obsidiana ×4", "ATQ 2p + Bônus Electro 2p"],
+      {
+        source: "Genshin Builds · Varesa",
+        sourceUrl: "https://genshin-impact-helper-team.github.io/genshin-builds/en/varesa/",
+        recommendationNotes: { sections: [{ title: "DPS de Ataques Imersivos", paragraphs: ["Juramento da Noite Eterna pode superar ou empatar com Códice de Obsidiana conforme buffs, armas e equipe; Códice de Obsidiana costuma ser mais eficiente em resina para muitos jogadores.", "Areia ATQ%, Cálice Electro ou ATQ% em cenários com muito Bônus de Dano, e Tiara CRIT."] }] },
+      },
+    ),
+  });
+  apply("ororon", {
+    role: "Off-Field Electro DPS / Support",
+    ...recommendation(
+    ["Elegia do Suspiro Final", "Estrela Invernal", "Último Acorde", "Arco de Favonius", "Arco do Sacrifício"],
+      ["Pergaminho do Herói da Cidade Incandescente ×4", "Trupe Dourada ×4", "ATQ 2p + Bônus Electro 2p"],
+      {
+        source: "Genshin Builds · Ororon",
+        sourceUrl: "https://genshin-impact-helper-team.github.io/genshin-builds/en/ororon/",
+        recommendationNotes: { sections: [{ title: "Suporte Electro", paragraphs: ["Pergaminho do Herói da Cidade Incandescente é a opção padrão quando Ororon participa do time de Varesa.", "A configuração padrão é ATQ/ER + Electro + CRIT; full EM é condicional quando ele for o principal dono das reações."] }] },
+      },
+    ),
+  });
+  applyTeam("travelerCryo", "mizuki-stellar-swirl", recommendation(
+    ["Sabre da Ponta Estelar", "Espada de Favonius", "Espada do Sacrifício"],
+    ["Coração Forjado ×4", "ATQ 2p + Cryo DMG 2p"],
+    { source: "KQM · Mizuki team context", sourceUrl: "https://keqingmains.com/q/mizuki-quickguide/", recommendationNotes: { sections: [{ title: "Override deste time", paragraphs: ["Viajante Cryo é o holder padrão de Coração Forjado neste time sem Odette. Isso é uma recomendação específica e não altera a Build Atual.", "A constelação exibida é C0; C2 e C6 são upgrades futuros, ainda não possuídos."] }] } },
+  ));
+  applyTeam("diona", "mizuki-stellar-swirl", recommendation(
+    ["Arco de Favonius", "Arco do Sacrifício", "Elegia do Suspiro Final"],
+    ["Antigo Ritual Real ×4", "Instrutor ×4", "HP 2p + ER 2p"],
+    { source: "KQM · Diona Quick Guide", sourceUrl: "https://keqingmains.com/q/diona-quickguide/", recommendationNotes: { sections: [{ title: "Diona C6 neste time", paragraphs: ["Diona combina escudo, cura e o buff do C6; Arco do Sacrifício R3+ ganha valor quando ela ajuda outro Cryo a gerar partículas.", "Coração Forjado fica com o Viajante Cryo para evitar redundância de conjuntos."] }] } },
+  ));
+  applyTeam("sucrose", "mizuki-stellar-swirl", recommendation(
+    ["Memórias de Sacrifício", "Sonhos Flutuantes das Mil Noites", "Histórias Extraordinárias de Caçadores de Dragões"],
+    ["Sombra Verde ×4", "Instrutor ×4"],
+    { source: "KQM · Sucrose Quick Guide", sourceUrl: "https://keqingmains.com/q/sucrose-quickguide/", recommendationNotes: { sections: [{ title: "Sucrose C6 neste time", paragraphs: ["Use EM/EM/EM; Sombra Verde ganha valor pela contribuição Cryo do Viajante. Instrutor é uma alternativa para aumentar ainda mais a Proficiência Elemental.", "Memórias de Sacrifício é a opção de EM mais direta; TTDS pode ser usado como buff quando a rotação comportar."] }] } },
+  ));
+  applyTeam("mavuika", "varesa-overload", recommendation(
+    ["Mil Sóis Ardentes", "Códice de Obsidiana", "Espinha Dorsal da Serpente"],
+    ["Códice de Obsidiana ×4", "Pergaminho do Herói da Cidade Incandescente ×4", "ATQ 2p + Pyro DMG 2p"],
+    { source: "KQM · Mavuika Quick Guide", sourceUrl: "https://keqingmains.com/q/mavuika-quickguide/", recommendationNotes: { sections: [{ title: "Override para Varesa Overload", paragraphs: ["Mavuika atua fora de campo como aplicadora Pyro, dano e buffer; não usa ER neste perfil.", "Ororon é o portador do Pergaminho, então Códice de Obsidiana continua excelente para o dano pessoal de Mavuika. O perfil de Mavuika Melt permanece intacto."] }] } },
+  ));
+  applyTeam("chevreuse", "varesa-overload", recommendation(
+    ["Justa Recompensa", "Lança de Favonius", "Borla Preta"],
+    ["Antigo Ritual Real ×4", "Canção do Passado ×4", "HP 2p + ER 2p"],
+    { source: "KQM · Chevreuse Quick Guide", sourceUrl: "https://keqingmains.com/q/chevreuse-quickguide/", recommendationNotes: { sections: [{ title: "Chevreuse C3 neste time", paragraphs: ["Antigo Ritual Real ×4 aproveita o Supremo da Chevreuse; mire até aproximadamente 40.000 HP para o teto do buff A4.", "Se usar Favonius, mantenha Taxa CRIT funcional. A meta de HP é recomendada e não substitui os valores da Build Atual."] }] } },
+  ));
+  applyTeam("ororon", "varesa-overload", recommendation(
+    ["Elegia do Suspiro Final", "Estrela Invernal", "Último Acorde", "Arco de Favonius"],
+    ["Pergaminho do Herói da Cidade Incandescente ×4", "Trupe Dourada ×4", "ATQ 2p + Bônus Electro 2p"],
+    { source: "KQM · Ororon Quick Guide", sourceUrl: "https://keqingmains.com/q/ororon-quickguide/", recommendationNotes: { sections: [{ title: "Ororon C1 neste time", paragraphs: ["Ororon segura o Pergaminho, fornece Electro fora de campo e ajuda na energia de Varesa. C1 melhora a efetividade de Hypersense; C6 é upgrade futuro.", "A passiva pode ser ativada pelo dano alinhado a Nightsoul de Varesa/Mavuika, então Hydro não é necessário nesta composição."] }] } },
   ));
   const highEnergyFurina = recommendation(
     ["Esplendor das Águas Silenciosas", "Espada de Favonius", "Cortador de Jade Primordial ≈ Chamado da Serenidade R5 ≈ Urakugo Rensai", "Espada Pútrida R5 ≈ Chave de Hierofania", "Luz das Folhas Cortadas", "Fleuve Cendre R5", "Fragmento Lunar", "Maremoto da Lua de Futsu ≈ Farpa", "Espada Celestial", "Prenúncio do Alvorecer R5"],

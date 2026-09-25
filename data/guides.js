@@ -6,6 +6,12 @@ window.GUIDE_NAME_ALIASES = {
     "Espada de Madeira": "sapwood-blade",
     "Favonius Sword": "favonius-sword",
     "Espada de Favonius": "favonius-sword",
+    "Hibernação Matinal do Ano Novo": "hibernacao-matinal-do-ano-novo",
+    "Relicário da Verdade": "relicario-da-verdade",
+    "Observatório do Chamador de Estrelas": "observatorio-do-chamador-de-estrelas",
+    "Cortinas Noturnas": "cortinas-noturnas",
+    "Estrela Gelada": "estrela-gelada",
+    "Coração Resplandecente": "coracao-resplandecente",
   },
   artifactSets: {
     "Obsidian Codex": "obsidian-codex",
@@ -20,6 +26,8 @@ window.GUIDE_NAME_ALIASES = {
     "Pedra Arcaica": "archaic-petra",
     "Golden Troupe": "golden-troupe",
     "Trupe Dourada": "golden-troupe",
+    "Juramento da Noite Eterna": "juramento-da-noite-eterna",
+    "Prova Escarlate": "prova-escarlate",
   },
 };
 

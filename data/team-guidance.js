@@ -52,6 +52,9 @@
       illuga: profile(["Proficiência Elemental", "ER"], ["Proficiência Elemental"], ["Proficiência Elemental", "Taxa CRIT¹"], "ER > Proficiência Elemental > CRIT > DEF%", "Q > Nv.90", ["¹ Taxa CRIT ganha importância com Favonius."]),
       itto: profile(["DEF%"], ["Bônus de Dano Geo"], ["CRIT"], "ER > CRIT > DEF%", "NA > Q > E"),
       gorou: profile(["ER"], ["Qualquer"], ["Taxa CRIT¹"], "ER > Taxa CRIT¹ ≫ DEF%", "E ≫ Q", ["¹ Taxa CRIT ganha importância com Favonius."]),
+      mizuki: profile(["Proficiência Elemental"], ["Proficiência Elemental"], ["Taxa CRIT", "Dano CRIT"], "CRIT ≥ Proficiência Elemental >> Recarga de Energia", "E > Q", ["Stellar Swirl DPS em campo: não persiga Recarga excessiva apenas para forçar o Supremo toda rotação."]),
+      varesa: profile(["ATQ%"], ["Bônus de Dano Electro", "ATQ%"], ["CRIT"], "ER até a meta > CRIT > ATQ%", "NA > Q > E", ["DPS de Ataques Imersivos: Juramento da Noite Eterna e Códice de Obsidiana variam conforme os buffs e a eficiência de resina."]),
+      ororon: profile(["ATQ%", "ER"], ["Bônus de Dano Electro"], ["CRIT"], "ER até a meta > CRIT > ATQ% > Proficiência Elemental", "E > Q", ["Suporte Electro fora de campo; Pergaminho é o conjunto padrão deste time."]),
     },
 
     teams: {
@@ -89,15 +92,39 @@
         },
         lanYan: { energy: energy("160–200%", "Solo Anemo; Q quando disponível", ["Com Hakushin Ring, priorize a rotação que permita capturar as partículas da Habilidade. Se o Supremo não for usado toda rotação, a necessidade cai."]) },
       },
-      "raiden-overload": {
-        raiden: { energy: energy("200–220%") },
-        chevreuse: { energy: energy("105–135%", "Q toda rotação", ["Se usar Q apenas quando disponível, 100% basta."]) },
-        xiangling: {
-          mainStats: { sands: ["ER", "ATQ%"], goblet: ["Bônus de Dano Pyro"], circlet: ["CRIT"] },
-          substats: "ER > CRIT > ATQ%",
-          energy: energy("195–205%", "Padrão", ["~175–185% com Favonius; ~145–155% com Kitain R5."]),
+      "raiden-rational": {
+        raiden: {
+          role: "On-Field DPS / Battery / Burst Buffer",
+          mainStats: { sands: ["ER%", "ATQ%"], goblet: ["Bônus de Dano Electro", "ATQ%"], circlet: ["Taxa CRIT", "Dano CRIT"] },
+          substats: "ER até a necessidade > CRIT > ATQ%",
+          talentPriority: "Q > E",
+          energy: energy("200–220%", "Solo Electro · Raiden C0", ["Com Engulfing Lightning R1, ER adicional também pode contribuir para o dano; 220% é uma referência, não um teto.", "A Build Atual tem 269,9% ER, ER Sands, Cálice Electro e Tiara CRIT; não troque essas peças automaticamente."]),
+          notes: ["A Raiden entra depois dos Supremos aliados, causa a janela principal de dano e devolve Energia ao grupo.", "Engulfing Lightning converte ER em ATQ e a Ascensão da Raiden transforma ER adicional em Bônus Electro."]
         },
-        bennett: { energy: energy("145–210%", "Raiden reduz a necessidade de ER") },
+        xingqiu: {
+          role: "Off-Field Hydro DPS / Hydro Enabler",
+          mainStats: { sands: ["ATQ%", "ER%"], goblet: ["Bônus de Dano Hydro"], circlet: ["CRIT"] },
+          substats: "ER até a necessidade > CRIT > ATQ%",
+          talentPriority: "Q > E",
+          energy: energyLabel("Ajustar pela rotação", "Xingqiu C6 · Sacrificial R5 · Raiden", ["A faixa geral da KQM para C6 + Sacrificial R3+ é 130–150% ER; Raiden reduz ainda mais a necessidade.", "A Build Atual tem 197,4% ER. Só converta parte da ER em dano se o Supremo continuar disponível em toda rotação."]),
+          notes: ["Xingqiu fornece Hydro fora de campo para a Xiangling Vaporizar.", "A Espada do Sacrifício R5 é totalmente funcional; o segundo uso da Skill não precisa ser forçado se alongar a rotação."]
+        },
+        xiangling: {
+          role: "Off-Field Pyro DPS / Vaporize DPS",
+          mainStats: { sands: ["Proficiência Elemental", "ATQ%", "ER%"], goblet: ["Bônus de Dano Pyro"], circlet: ["CRIT"] },
+          substats: "ER até a meta > CRIT > ATQ% ≈ Proficiência Elemental",
+          talentPriority: "Q > E",
+          energy: energy("195–205%", "Rational · Raiden + dois funnels de Bennett", ["Referência da KQM para rotação de 20–21s com 1 Skill da Xiangling e 2 Skills do Bennett.", "A Build Atual tem 245,6% ER com A Fisgada R5; é segura e confortável, mas está acima da referência. Só converta ER em CRIT, EM ou ATQ% se a rotação continuar estável."]),
+          notes: ["A Xiangling faz Vaporize e algumas Overloads; por isso Proficiência Elemental tem valor real.", "Uma Areia de Proficiência Elemental é especialmente relevante quando a meta de ER já estiver satisfeita."]
+        },
+        bennett: {
+          role: "ATQ Buffer / Healer / Pyro Battery",
+          mainStats: { sands: ["ER%", "HP%"], goblet: ["HP%"], circlet: ["Bônus de Cura", "HP%"] },
+          substats: "ER até a necessidade > HP%",
+          talentPriority: "Q > E",
+          energy: energy("145–210%", "Bennett C6 · Raiden reduz a necessidade", ["A Build Atual tem 206,3% ER e já está dentro da faixa geral com Raiden.", "Aquila Favonia R1 é utilizável pelo Base ATQ alto; Favonius é apenas uma alternativa se a Energia do time virar um problema."]),
+          notes: ["Bennett C6 não sobrescreve a conversão Electro da Raiden durante Musou Isshin.", "Use o Supremo para buffar e curar; a Skill gera partículas Pyro para a Xiangling."]
+        },
       },
       "ganyu-freeze": {
         ganyu: { energy: energy("115–130%", "Dois procs de Favonius", ["Acrescente aproximadamente 10–15% por proc ausente."]) },
@@ -154,6 +181,48 @@
         gorou: { energy: energy("~220%", "Q toda rotação com Favonius", ["Sem Favonius, a referência chega a ~250%."]) },
         albedo: { energy: energyLabel("100% / sem ER", "Q não necessária") },
         zhongli: { energy: energyLabel("100% / sem ER", "Q não necessária") },
+      },
+      "mizuki-stellar-swirl": {
+        mizuki: {
+          role: "On-Field Stellar Swirl DPS",
+          energy: energy("100–120%", "Supremo a cada duas rotações com Sucrose", ["Use o Supremo quando disponível ou necessário; ER adicional é bônus, não prioridade ofensiva."]),
+          notes: ["Mizuki permanece em campo durante a Skill e causa Stellar Swirl automaticamente; Skill > Burst."]
+        },
+        travelerCryo: {
+          role: "Stellar Swirl Enabler / Off-Field Cryo / Quickswap",
+          energy: energy("Ajustar à rotação", "Viajante Cryo C0", ["C2 e C6 são upgrades futuros e não estão possuídos nesta composição."]),
+          notes: ["Coração Forjado ×4 é a recomendação específica deste time sem Odette; isso não altera a Build Atual."]
+        },
+        diona: {
+          role: "Shield / Heal / Stellar Swirl Support C6",
+          energy: energy("A cada duas rotações", "Diona C6", ["Use Q quando a rotação curta permitir; ER/HP priorizam proteção, cura e o buff do C6."]),
+          notes: ["Não usa Coração Forjado como padrão porque o Viajante Cryo já segura o conjunto."]
+        },
+        sucrose: {
+          role: "EM / Anemo Support C6",
+          energy: energy("Quando disponível", "Sucrose C6", ["EM/EM/EM; Sombra Verde ×4 é o padrão e Instrutor ×4 é alternativa."]),
+          notes: ["Sacrifício de Jade é uma boa opção de Proficiência Elemental; TTDS pode ser usado para buff quando fizer sentido."]
+        },
+      },
+      "varesa-overload": {
+        varesa: {
+          role: "Main DPS / Plunge DPS",
+          energy: energy("120–145%", "Double Electro com Ororon; 2 sQ por rotação", ["Aproximadamente 100% é suficiente quando o objetivo é apenas 1 short Burst; Favonius reduz a pressão."])
+        },
+        mavuika: {
+          role: "Off-Field DPS / Pyro Enabler / Buffer",
+          energy: energyLabel("Não utiliza Recarga de Energia", "Fighting Spirit", ["Códice de Obsidiana ×4 continua excelente; Ororon é o portador do Pergaminho neste time."]),
+          notes: ["Este override é exclusivo de Varesa Overload e não altera Mavuika Melt."]
+        },
+        chevreuse: {
+          role: "Buff Support / Healer C3",
+          energy: energy("Até a necessidade do Q", "Chevreuse C3", ["Antigo Ritual Real ×4; mire até aproximadamente 40.000 HP para o teto do buff A4, sem falsificar a Build Atual."])
+        },
+        ororon: {
+          role: "Off-Field Electro DPS / Support C1",
+          energy: energy("100–120%", "Double Electro", ["~100% quando o padrão permite 2 Skills por Supremo. C6 é apenas upgrade futuro."]),
+          notes: ["Ororon segura o Pergaminho. Não precisa de Hydro: Varesa e Mavuika ativam sua passiva por dano alinhado a Nightsoul; build full EM é condicional, não padrão."]
+        },
       },
     },
   };
